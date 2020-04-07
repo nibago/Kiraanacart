@@ -13,6 +13,10 @@
 		1858E0A3243AF81800FC403E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1858E0A1243AF81800FC403E /* Main.storyboard */; };
 		1858E0A5243AF81900FC403E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1858E0A4243AF81900FC403E /* Assets.xcassets */; };
 		1858E0A8243AF81900FC403E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1858E0A6243AF81900FC403E /* LaunchScreen.storyboard */; };
+		944FCAD0243CAD11004A1230 /* initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944FCACF243CAD11004A1230 /* initialViewController.swift */; };
+		944FCAD3243CAE6A004A1230 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944FCAD2243CAE6A004A1230 /* Slide.xib */; };
+		944FCAD5243CAE70004A1230 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944FCAD4243CAE70004A1230 /* Slide.swift */; };
+		944FCAD7243CAEC9004A1230 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944FCAD6243CAEC9004A1230 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		1858E0A4243AF81900FC403E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1858E0A7243AF81900FC403E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1858E0A9243AF81900FC403E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		944FCACF243CAD11004A1230 /* initialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initialViewController.swift; sourceTree = "<group>"; };
+		944FCAD2243CAE6A004A1230 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		944FCAD4243CAE70004A1230 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		944FCAD6243CAEC9004A1230 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,24 @@
 				1858E09B243AF81800FC403E /* AppDelegate.swift */,
 				1858E09D243AF81800FC403E /* SceneDelegate.swift */,
 				1858E09F243AF81800FC403E /* ViewController.swift */,
+				944FCAD6243CAEC9004A1230 /* LoginViewController.swift */,
+				944FCAD4243CAE70004A1230 /* Slide.swift */,
+				944FCAD2243CAE6A004A1230 /* Slide.xib */,
+				944FCAD1243CAD1F004A1230 /* InitialViews */,
 				1858E0A1243AF81800FC403E /* Main.storyboard */,
 				1858E0A4243AF81900FC403E /* Assets.xcassets */,
 				1858E0A6243AF81900FC403E /* LaunchScreen.storyboard */,
 				1858E0A9243AF81900FC403E /* Info.plist */,
 			);
 			path = Kiraanacart;
+			sourceTree = "<group>";
+		};
+		944FCAD1243CAD1F004A1230 /* InitialViews */ = {
+			isa = PBXGroup;
+			children = (
+				944FCACF243CAD11004A1230 /* initialViewController.swift */,
+			);
+			path = InitialViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +148,7 @@
 				1858E0A8243AF81900FC403E /* LaunchScreen.storyboard in Resources */,
 				1858E0A5243AF81900FC403E /* Assets.xcassets in Resources */,
 				1858E0A3243AF81800FC403E /* Main.storyboard in Resources */,
+				944FCAD3243CAE6A004A1230 /* Slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				944FCAD7243CAEC9004A1230 /* LoginViewController.swift in Sources */,
 				1858E0A0243AF81800FC403E /* ViewController.swift in Sources */,
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
 				1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */,
+				944FCAD0243CAD11004A1230 /* initialViewController.swift in Sources */,
+				944FCAD5243CAE70004A1230 /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

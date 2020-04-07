@@ -46,11 +46,9 @@ class initialViewController: UIViewController, UIScrollViewDelegate {
         
      let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//        self.navigationController?.pushViewController(nextViewController, animated:true)
-    //    self.navigationController?.showDetailViewController(nextViewController, sender: nil)
-      //   self.present(nextViewController, animated: true, completion: nil)
+         self.present(nextViewController, animated: true, completion: nil)
       
-        self.navigationController?.popToViewController(nextViewController, animated: true)
+      
     }
     
     
