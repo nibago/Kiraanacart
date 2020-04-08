@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnTermsConditions: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+      navigationItem.hidesBackButton = true
         designing()
         
         // Do any additional setup after loading the view.
@@ -43,5 +43,10 @@ class ViewController: UIViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
+    }
+    
 }
 

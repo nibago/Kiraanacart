@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fm9-V5-tBp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XXO-JW-DTB">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,24 +108,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3380" y="103.89805097451276"/>
+            <point key="canvasLocation" x="4652" y="103.89805097451276"/>
         </scene>
         <!--Verification Page-->
         <scene sceneID="qAn-jY-0XU">
             <objects>
                 <viewController id="qVT-OU-gan" customClass="OTPViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="xj9-kb-SIG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTP-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fTD-DC-AXL">
-                                <rect key="frame" x="141" y="120" width="93" height="93.5"/>
+                                <rect key="frame" x="142" y="116.5" width="91" height="90.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fTD-DC-AXL" secondAttribute="height" multiplier="1:1" id="yQD-lo-DxF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code has been sent to you on your mobile number, please enter it below" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66z-SG-ifd">
-                                <rect key="frame" x="47.5" y="286.5" width="280" height="38.5"/>
+                                <rect key="frame" x="47.5" y="280" width="280" height="38.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="TLy-il-qDs"/>
                                 </constraints>
@@ -134,7 +134,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oiy-xf-2T2">
-                                <rect key="frame" x="51.5" y="345" width="272" height="59"/>
+                                <rect key="frame" x="51.5" y="338.5" width="272" height="59"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My0-mf-SQ9">
                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="59"/>
@@ -186,13 +186,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't Receive Code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-pS-Khj">
-                                <rect key="frame" x="106" y="414" width="163" height="21"/>
+                                <rect key="frame" x="106" y="407.5" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPG-Pj-DJ0">
-                                <rect key="frame" x="37.5" y="450" width="300" height="40"/>
+                                <rect key="frame" x="37.5" y="443.5" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T6E-P8-vXR"/>
                                     <constraint firstAttribute="width" constant="300" id="lui-hM-Uh1"/>
@@ -203,7 +203,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY MOBILE NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivu-1j-RGL">
-                                <rect key="frame" x="62.5" y="243.5" width="250" height="23"/>
+                                <rect key="frame" x="62.5" y="237" width="250" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="tZG-S8-vYM"/>
                                 </constraints>
@@ -244,25 +244,98 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6j-6Y-SFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4087.1999999999998" y="96.7016491754123"/>
+            <point key="canvasLocation" x="5026.3999999999996" y="96.7016491754123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MCf-JD-Htc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fm9-V5-tBp" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fMC-tZ-d5E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ssE-3j-T4K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VW6-a6-zDe"/>
+                        <segue destination="MwA-QL-MqP" kind="relationship" relationship="rootViewController" id="7CR-uy-Ag0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npj-oI-Dmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.8000000000002" y="103.89805097451276"/>
+            <point key="canvasLocation" x="3380" y="103.89805097451276"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Sol-DC-du9">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="MwA-QL-MqP" customClass="HomeViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Of-YH-EcR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="isg-1w-bN2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aTT-fE-QkY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atd-0z-9hk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4024.8000000000002" y="115.59220389805098"/>
+        </scene>
+        <!--initialViewController-->
+        <scene sceneID="dBT-Wc-6E4">
+            <objects>
+                <viewController storyboardIdentifier="initialViewController" id="Fjf-lB-wqF" userLabel="initialViewController" customClass="initialViewController" customModule="KiraanaCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fe9-nw-6CJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jux-Vi-JVm">
+                                <rect key="frame" x="0.0" y="22" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Ke-rAO">
+                                <rect key="frame" x="160" y="570" width="55" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jux-Vi-JVm" firstAttribute="width" secondItem="fe9-nw-6CJ" secondAttribute="width" id="LnI-sv-OjO"/>
+                            <constraint firstItem="jux-Vi-JVm" firstAttribute="centerY" secondItem="YU2-8J-yOc" secondAttribute="centerY" id="eEH-re-naU"/>
+                            <constraint firstItem="jux-Vi-JVm" firstAttribute="height" secondItem="fe9-nw-6CJ" secondAttribute="height" id="nrb-lb-t2X"/>
+                            <constraint firstItem="jux-Vi-JVm" firstAttribute="centerX" secondItem="YU2-8J-yOc" secondAttribute="centerX" id="uxC-cW-cGF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YU2-8J-yOc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dZg-1H-1py"/>
+                    <connections>
+                        <outlet property="pageControl" destination="siK-Ke-rAO" id="Oh8-Fc-b8L"/>
+                        <outlet property="scrollView" destination="jux-Vi-JVm" id="CD0-OC-PC4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3rQ-Te-hH1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392.8000000000002" y="103.89805097451276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ya-2A-5CU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XXO-JW-DTB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Np8-hT-xf7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fjf-lB-wqF" kind="relationship" relationship="rootViewController" id="D7y-0W-22Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTX-fW-403" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.5999999999999" y="103.89805097451276"/>
         </scene>
     </scenes>
     <resources>
