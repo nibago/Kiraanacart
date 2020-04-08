@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         
         //lblRequest
         lblRequest.textColor = #colorLiteral(red: 0.04602403267, green: 0.4012767146, blue: 0.4401372144, alpha: 1)
-        lblRequest.font = UIFont(name: "Roboto", size: 34.0)
+        lblRequest.font = UIFont(name: "Roboto", size: 18.0)
         //txtMobileNum
         txtMobileNum.layer.cornerRadius = 13
         txtMobileNum.clipsToBounds = true
