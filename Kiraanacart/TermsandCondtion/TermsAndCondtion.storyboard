@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms Condtion View Controller-->
+        <scene sceneID="Fj8-0k-IaI">
+            <objects>
+                <viewController storyboardIdentifier="TermsCondtionViewController" id="gX4-wY-Xml" customClass="TermsCondtionViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tva-oN-NLd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yep-zA-3a3">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fFS-UH-o6q" firstAttribute="bottom" secondItem="Yep-zA-3a3" secondAttribute="bottom" constant="20" id="3Tp-d9-pl9"/>
+                            <constraint firstItem="fFS-UH-o6q" firstAttribute="trailing" secondItem="Yep-zA-3a3" secondAttribute="trailing" constant="20" id="VsU-fH-bKm"/>
+                            <constraint firstItem="Yep-zA-3a3" firstAttribute="top" secondItem="fFS-UH-o6q" secondAttribute="top" constant="20" id="bb2-Ls-Psi"/>
+                            <constraint firstItem="Yep-zA-3a3" firstAttribute="leading" secondItem="fFS-UH-o6q" secondAttribute="leading" constant="20" id="xvW-xC-ne4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fFS-UH-o6q"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Yep-zA-3a3" id="6pK-6N-H0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ymt-mt-iSh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.913043478260875" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+</document>

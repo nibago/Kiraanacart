@@ -52,27 +52,27 @@ class initialViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func coolFunc(_ sender:UIButton!) {
 
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MobileLoginViewController") as? MobileLoginViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         }
     
     
     func createSlides() -> [Slide] {
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-               slide1.imageView.image = UIImage(named: "ic_onboarding_1")
+               slide1.imageView.image = UIImage(named: "splash1")
                slide1.labelTitle.text = "Find Grosery you need"
                slide1.labelDesc.text = "Discover the best quility groceries fromer  1,000 Brands"
                slide1.skipbuttonClick.addTarget(self, action: #selector(coolFunc(_:)), for: .touchUpInside)
         
                
                let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-               slide2.imageView.image = UIImage(named: "ic_onboarding_2")
+               slide2.imageView.image = UIImage(named: "splash2")
                slide2.labelTitle.text = "Fast Delivery"
                slide2.labelDesc.text = "Fast Delivery to home, office and wherever you are"
                slide2.skipbuttonClick.addTarget(self, action: #selector(coolFunc(_:)), for: .touchUpInside)
                
                let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-               slide3.imageView.image = UIImage(named: "ic_onboarding_3")
+               slide3.imageView.image = UIImage(named: "splash3")
                slide3.labelTitle.text = "Live Tracking"
                slide3.labelDesc.text = "Real Time Tracking of your grocery on the app ofter ordered"
                slide3.skipbuttonClick.addTarget(self, action: #selector(coolFunc(_:)), for: .touchUpInside)

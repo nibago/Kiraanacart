@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mobile Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MobileLoginViewController" id="BYZ-38-t0r" customClass="MobileLoginViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                 <color key="textColor" red="0.069450075400311242" green="0.37559763436217769" blue="0.50616671954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoX-6d-u4v">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoX-6d-u4v" customClass="SkyFloatingLabelTextField" customModule="Kiraanacart" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="325" width="300" height="40"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -56,6 +56,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYm-rf-ICn"/>
                                     <segue destination="qVT-OU-gan" kind="show" id="3VW-4X-VQ7"/>
                                 </connections>
                             </button>
@@ -72,6 +73,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.046024032669999999" green="0.40127671459999997" blue="0.44013721439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Terms &amp; Conditions Applied*"/>
+                                <connections>
+                                    <action selector="termsButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKl-uT-1Ru"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -99,11 +103,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Pbt-TB-qf7"/>
                     <connections>
-                        <outlet property="appIMG" destination="1mC-TU-jkH" id="Grf-1E-3sQ"/>
-                        <outlet property="btnNext" destination="uch-9m-jFy" id="Ks8-lE-cJA"/>
-                        <outlet property="btnTermsConditions" destination="oh9-ss-7nm" id="Toh-ug-91m"/>
-                        <outlet property="lblRequest" destination="78R-5f-aoO" id="dXf-tv-WfH"/>
-                        <outlet property="txtMobileNum" destination="FoX-6d-u4v" id="9it-Nn-7xa"/>
+                        <outlet property="appIMG" destination="shN-Qd-oTT" id="bq6-dS-Sbo"/>
+                        <outlet property="btnNext" destination="uch-9m-jFy" id="Rju-dV-JhJ"/>
+                        <outlet property="btnTermsConditions" destination="oh9-ss-7nm" id="EbX-on-41v"/>
+                        <outlet property="lblRequest" destination="78R-5f-aoO" id="mlK-No-9M3"/>
+                        <outlet property="txtMobileNum" destination="FoX-6d-u4v" id="dpS-Sp-P1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,7 +119,7 @@
             <objects>
                 <viewController id="qVT-OU-gan" customClass="OTPViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="xj9-kb-SIG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTP-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fTD-DC-AXL">
@@ -244,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6j-6Y-SFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5026.3999999999996" y="96.7016491754123"/>
+            <point key="canvasLocation" x="5471" y="104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MCf-JD-Htc">
@@ -253,7 +257,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fMC-tZ-d5E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ssE-3j-T4K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -284,7 +287,7 @@
         <!--initialViewController-->
         <scene sceneID="dBT-Wc-6E4">
             <objects>
-                <viewController storyboardIdentifier="initialViewController" id="Fjf-lB-wqF" userLabel="initialViewController" customClass="initialViewController" customModule="KiraanaCart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialViewController" id="Fjf-lB-wqF" userLabel="initialViewController" customClass="initialViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fe9-nw-6CJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -325,7 +328,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XXO-JW-DTB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Np8-hT-xf7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
