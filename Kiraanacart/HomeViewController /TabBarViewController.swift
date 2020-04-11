@@ -1,14 +1,14 @@
 //
-//  HomeViewController.swift
+//  TabBarViewController.swift
 //  Kiraanacart
 //
-//  Created by CHINNA on 08/04/20.
+//  Created by CHINNA on 10/04/20.
 //  Copyright © 2020 NibagoHomeServieces. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
 
 
 }

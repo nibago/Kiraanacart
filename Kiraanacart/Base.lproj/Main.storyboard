@@ -33,7 +33,7 @@
                                 <color key="textColor" red="0.069450075400311242" green="0.37559763436217769" blue="0.50616671954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoX-6d-u4v" customClass="SkyFloatingLabelTextField" customModule="Kiraanacart" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9966141512" borderStyle="roundedRect" placeholder="mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FoX-6d-u4v" customClass="SkyFloatingLabelTextField" customModule="Kiraanacart" customModuleProvider="target">
                                 <rect key="frame" x="37.5" y="325" width="300" height="40"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -57,7 +57,6 @@
                                 </state>
                                 <connections>
                                     <action selector="nextButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYm-rf-ICn"/>
-                                    <segue destination="qVT-OU-gan" kind="show" id="3VW-4X-VQ7"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Call-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WmW-Fe-xh7">
@@ -112,24 +111,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4652" y="103.89805097451276"/>
+            <point key="canvasLocation" x="4762" y="116"/>
         </scene>
         <!--Verification Page-->
         <scene sceneID="qAn-jY-0XU">
             <objects>
-                <viewController id="qVT-OU-gan" customClass="OTPViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTPViewController" id="qVT-OU-gan" customClass="OTPViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="xj9-kb-SIG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTP-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fTD-DC-AXL">
-                                <rect key="frame" x="142" y="116.5" width="91" height="90.5"/>
+                                <rect key="frame" x="141" y="120" width="93" height="93.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fTD-DC-AXL" secondAttribute="height" multiplier="1:1" id="yQD-lo-DxF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code has been sent to you on your mobile number, please enter it below" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66z-SG-ifd">
-                                <rect key="frame" x="47.5" y="280" width="280" height="38.5"/>
+                                <rect key="frame" x="47.5" y="286.5" width="280" height="38.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="TLy-il-qDs"/>
                                 </constraints>
@@ -138,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oiy-xf-2T2">
-                                <rect key="frame" x="51.5" y="338.5" width="272" height="59"/>
+                                <rect key="frame" x="51.5" y="345" width="272" height="59"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My0-mf-SQ9">
                                         <rect key="frame" x="0.0" y="0.0" width="55.5" height="59"/>
@@ -190,13 +189,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't Receive Code?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-pS-Khj">
-                                <rect key="frame" x="106" y="407.5" width="163" height="21"/>
+                                <rect key="frame" x="106" y="414" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPG-Pj-DJ0">
-                                <rect key="frame" x="37.5" y="443.5" width="300" height="40"/>
+                                <rect key="frame" x="37.5" y="450" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T6E-P8-vXR"/>
                                     <constraint firstAttribute="width" constant="300" id="lui-hM-Uh1"/>
@@ -207,7 +206,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VERIFY MOBILE NUMBER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivu-1j-RGL">
-                                <rect key="frame" x="62.5" y="237" width="250" height="23"/>
+                                <rect key="frame" x="62.5" y="243.5" width="250" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="tZG-S8-vYM"/>
                                 </constraints>
@@ -257,6 +256,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fMC-tZ-d5E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ssE-3j-T4K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -296,19 +296,22 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Ke-rAO">
-                                <rect key="frame" x="160" y="570" width="55" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="siK-Ke-rAO">
+                                <rect key="frame" x="160" y="611" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.31764705879999999" green="0.21176470589999999" blue="0.56078431370000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="siK-Ke-rAO" firstAttribute="leading" secondItem="YU2-8J-yOc" secondAttribute="leading" constant="160" id="1sx-as-ORW"/>
+                            <constraint firstItem="YU2-8J-yOc" firstAttribute="trailing" secondItem="siK-Ke-rAO" secondAttribute="trailing" constant="160" id="7Wr-Zg-pYe"/>
                             <constraint firstItem="jux-Vi-JVm" firstAttribute="width" secondItem="fe9-nw-6CJ" secondAttribute="width" id="LnI-sv-OjO"/>
+                            <constraint firstItem="YU2-8J-yOc" firstAttribute="bottom" secondItem="siK-Ke-rAO" secondAttribute="bottom" constant="19" id="MZW-q2-BRe"/>
                             <constraint firstItem="jux-Vi-JVm" firstAttribute="centerY" secondItem="YU2-8J-yOc" secondAttribute="centerY" id="eEH-re-naU"/>
                             <constraint firstItem="jux-Vi-JVm" firstAttribute="height" secondItem="fe9-nw-6CJ" secondAttribute="height" id="nrb-lb-t2X"/>
                             <constraint firstItem="jux-Vi-JVm" firstAttribute="centerX" secondItem="YU2-8J-yOc" secondAttribute="centerX" id="uxC-cW-cGF"/>
+                            <constraint firstItem="siK-Ke-rAO" firstAttribute="centerX" secondItem="fe9-nw-6CJ" secondAttribute="centerX" id="xeR-W9-3Mf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YU2-8J-yOc"/>
                     </view>
@@ -328,6 +331,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XXO-JW-DTB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Np8-hT-xf7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
