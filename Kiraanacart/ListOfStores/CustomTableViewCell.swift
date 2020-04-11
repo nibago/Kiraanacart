@@ -17,6 +17,10 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var CustomView: UIView!
     
+    
+    @IBOutlet weak var nameOfsupermarket: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

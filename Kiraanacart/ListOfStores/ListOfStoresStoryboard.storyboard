@@ -45,7 +45,7 @@
                                                                 <constraint firstAttribute="height" constant="60" id="Eei-0s-4Eu"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dmart super market " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svJ-75-Ch2">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dmart super market " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svJ-75-Ch2">
                                                             <rect key="frame" x="85" y="4.9999999999999982" width="175" height="29.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -151,6 +151,7 @@
                                         <color key="tintColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="CustomView" destination="7HJ-yX-3Pw" id="AUr-zS-NFo"/>
+                                            <outlet property="nameOfsupermarket" destination="svJ-75-Ch2" id="6Y5-sA-hcP"/>
                                             <outlet property="ratingLabel" destination="KYc-IJ-fVm" id="nvf-5a-7nW"/>
                                             <outlet property="storeImage" destination="dsY-VV-HNO" id="YM7-Ly-gH1"/>
                                         </connections>

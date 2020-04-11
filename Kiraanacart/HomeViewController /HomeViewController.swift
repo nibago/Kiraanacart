@@ -18,6 +18,9 @@ class HomeViewController: UIViewController {
     }
     
     
+    
+    
+    
 override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
       self.tabBarController?.navigationItem.hidesBackButton = true
@@ -30,6 +33,11 @@ override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
-    
+  
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.view.setNeedsLayout()
+        navigationController?.view.layoutIfNeeded()
+    }
     
 }
