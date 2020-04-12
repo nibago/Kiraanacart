@@ -29,8 +29,6 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
     
     @IBOutlet weak var TableView: UITableView!
     
-//    let imageofArray  = ["image1","image2","image3","image4","image5","image6","image7","image8","image9","image10","image11","image12"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -66,7 +64,6 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        let row = indexPath.row
        
         let entry = searchController.isActive ?
                              searchResults[indexPath.row] : entries[indexPath.row]
@@ -109,22 +106,5 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
          return 120
     }
     
-//
-//    func addSearchbar(){
-//            if #available(iOS 11.0, *) {
-//                let sc = UISearchController(searchResultsController: nil)
-//                let scb = sc.searchBar
-//                scb.tintColor = UIColor.white
-//                scb.searchTextField.attributedPlaceholder = NSAttributedString(string: "Enter Search Here", attributes: [NSAttributedString.Key.foregroundColor :Constants.BM_MainColor ])
-//
-//                if let navigationbar = self.navigationController?.navigationBar {
-//                    navigationbar.barTintColor = Constants.BM_MainColor
-//                  }
-//
-//                navigationController?.navigationBar.tintColor = UIColor.white
-//                navigationItem.searchController = sc
-//                navigationItem.hidesSearchBarWhenScrolling = false
-//            }
-//    }
 
 }

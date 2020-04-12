@@ -21,6 +21,9 @@
 		946A124D243DC8B000CABD78 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946A124B243DC8AF00CABD78 /* Slide.xib */; };
 		946A124E243DC8B000CABD78 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A124C243DC8B000CABD78 /* Slide.swift */; };
 		946A1250243DC8C400CABD78 /* initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946A124F243DC8C300CABD78 /* initialViewController.swift */; };
+		9475DBAF244301B400421D47 /* userProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475DBAE244301B400421D47 /* userProfileViewController.swift */; };
+		9475DBB124430C5100421D47 /* profileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475DBB024430C5100421D47 /* profileTableViewCell.swift */; };
+		9475DBB3244320F900421D47 /* SupportExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9475DBB2244320F900421D47 /* SupportExtensions.swift */; };
 		947F3F86243EE3F700D61CFA /* Constants .swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F85243EE3F700D61CFA /* Constants .swift */; };
 		947F3F8A243F341F00D61CFA /* TermsAndCondtion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947F3F89243F341F00D61CFA /* TermsAndCondtion.storyboard */; };
 		947F3F8C243F34F400D61CFA /* TermsCondtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F8B243F34F400D61CFA /* TermsCondtionViewController.swift */; };
@@ -51,6 +54,9 @@
 		946A124B243DC8AF00CABD78 /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		946A124C243DC8B000CABD78 /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		946A124F243DC8C300CABD78 /* initialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = initialViewController.swift; sourceTree = "<group>"; };
+		9475DBAE244301B400421D47 /* userProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userProfileViewController.swift; sourceTree = "<group>"; };
+		9475DBB024430C5100421D47 /* profileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileTableViewCell.swift; sourceTree = "<group>"; };
+		9475DBB2244320F900421D47 /* SupportExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportExtensions.swift; sourceTree = "<group>"; };
 		947F3F85243EE3F700D61CFA /* Constants .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants .swift"; sourceTree = "<group>"; };
 		947F3F89243F341F00D61CFA /* TermsAndCondtion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsAndCondtion.storyboard; sourceTree = "<group>"; };
 		947F3F8B243F34F400D61CFA /* TermsCondtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				1858E09B243AF81800FC403E /* AppDelegate.swift */,
 				1858E09D243AF81800FC403E /* SceneDelegate.swift */,
+				9475DBA72442E22B00421D47 /* ProfileViewController  */,
 				944D36D62441A692003D73EA /* ListOfStores */,
 				94F51E6624408BF800AC8169 /* HomeViewController  */,
 				947F3F8D243F34FA00D61CFA /* TermsandCondtion */,
@@ -149,6 +156,15 @@
 			path = SIgnupViewContoller;
 			sourceTree = "<group>";
 		};
+		9475DBA72442E22B00421D47 /* ProfileViewController  */ = {
+			isa = PBXGroup;
+			children = (
+				9475DBAE244301B400421D47 /* userProfileViewController.swift */,
+				9475DBB024430C5100421D47 /* profileTableViewCell.swift */,
+			);
+			path = "ProfileViewController ";
+			sourceTree = "<group>";
+		};
 		947F3F8D243F34FA00D61CFA /* TermsandCondtion */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,7 @@
 		947F3F90243F438E00D61CFA /* Depending */ = {
 			isa = PBXGroup;
 			children = (
+				9475DBB2244320F900421D47 /* SupportExtensions.swift */,
 				947F3F85243EE3F700D61CFA /* Constants .swift */,
 			);
 			path = Depending;
@@ -255,12 +272,15 @@
 				183A0B32243C737A006A67DD /* OTPViewController.swift in Sources */,
 				946A1250243DC8C400CABD78 /* initialViewController.swift in Sources */,
 				183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */,
+				9475DBAF244301B400421D47 /* userProfileViewController.swift in Sources */,
 				94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */,
 				946A124E243DC8B000CABD78 /* Slide.swift in Sources */,
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
 				947F3F86243EE3F700D61CFA /* Constants .swift in Sources */,
+				9475DBB124430C5100421D47 /* profileTableViewCell.swift in Sources */,
 				947F3F8C243F34F400D61CFA /* TermsCondtionViewController.swift in Sources */,
 				94F51E6124404D3A00AC8169 /* Extensions.swift in Sources */,
+				9475DBB3244320F900421D47 /* SupportExtensions.swift in Sources */,
 				944D36D52441A652003D73EA /* CustomTableViewCell.swift in Sources */,
 				944D36D224419347003D73EA /* ListOfStoresViewController.swift in Sources */,
 				1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */,
