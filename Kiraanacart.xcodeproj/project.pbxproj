@@ -28,6 +28,8 @@
 		947F3F8A243F341F00D61CFA /* TermsAndCondtion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947F3F89243F341F00D61CFA /* TermsAndCondtion.storyboard */; };
 		947F3F8C243F34F400D61CFA /* TermsCondtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947F3F8B243F34F400D61CFA /* TermsCondtionViewController.swift */; };
 		9482FCE1243F46F800A238CF /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9482FCE0243F46F800A238CF /* MobileLoginViewController.swift */; };
+		94986EB624443B4F004F7A80 /* profileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94986EB524443B4F004F7A80 /* profileStoryboard.storyboard */; };
+		94986EB824443D6F004F7A80 /* userinfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94986EB724443D6F004F7A80 /* userinfoTableViewController.swift */; };
 		94F51E6124404D3A00AC8169 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F51E6024404D3A00AC8169 /* Extensions.swift */; };
 		94F51E632440803A00AC8169 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94F51E622440803A00AC8169 /* HomeStoryboard.storyboard */; };
 		94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F51E64244080C500AC8169 /* TabBarViewController.swift */; };
@@ -61,6 +63,8 @@
 		947F3F89243F341F00D61CFA /* TermsAndCondtion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsAndCondtion.storyboard; sourceTree = "<group>"; };
 		947F3F8B243F34F400D61CFA /* TermsCondtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCondtionViewController.swift; sourceTree = "<group>"; };
 		9482FCE0243F46F800A238CF /* MobileLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
+		94986EB524443B4F004F7A80 /* profileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = profileStoryboard.storyboard; sourceTree = "<group>"; };
+		94986EB724443D6F004F7A80 /* userinfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userinfoTableViewController.swift; sourceTree = "<group>"; };
 		94F51E6024404D3A00AC8169 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		94F51E622440803A00AC8169 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		94F51E64244080C500AC8169 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			children = (
 				9475DBAE244301B400421D47 /* userProfileViewController.swift */,
 				9475DBB024430C5100421D47 /* profileTableViewCell.swift */,
+				94986EB524443B4F004F7A80 /* profileStoryboard.storyboard */,
+				94986EB724443D6F004F7A80 /* userinfoTableViewController.swift */,
 			);
 			path = "ProfileViewController ";
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				94F51E632440803A00AC8169 /* HomeStoryboard.storyboard in Resources */,
 				1858E0A3243AF81800FC403E /* Main.storyboard in Resources */,
 				947F3F8A243F341F00D61CFA /* TermsAndCondtion.storyboard in Resources */,
+				94986EB624443B4F004F7A80 /* profileStoryboard.storyboard in Resources */,
 				946A124D243DC8B000CABD78 /* Slide.xib in Resources */,
 				944D36D024419320003D73EA /* ListOfStoresStoryboard.storyboard in Resources */,
 			);
@@ -274,6 +281,7 @@
 				183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */,
 				9475DBAF244301B400421D47 /* userProfileViewController.swift in Sources */,
 				94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */,
+				94986EB824443D6F004F7A80 /* userinfoTableViewController.swift in Sources */,
 				946A124E243DC8B000CABD78 /* Slide.swift in Sources */,
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
 				947F3F86243EE3F700D61CFA /* Constants .swift in Sources */,

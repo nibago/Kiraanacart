@@ -69,10 +69,45 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 55
+        return 65
         
     }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+     
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? profileTableViewCell {
+            
+            switch cell.menunameLabel.text {
+            case "My Account":
+                print("My Account")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "profileStoryboard", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "userinfoTableViewController") as! userinfoTableViewController
+                    self.navigationController?.pushViewController(nextViewController, animated: true)
+                
+            case "My Wallet":
+                print("My Wallet")
+            case "Refer a Friend":
+                print("Refer a Friend")
+            case "Settings":
+                print("Settings")
+            case "Support":
+                print("Support")
+             case "Rate Us":
+                print("Rate Us")
+            case "Notification":
+            print("Notification")
+            default:
+                print("nothing is selected")
+                
+            }
+            
+           }
+        
+        
+    }
  
    
 }
