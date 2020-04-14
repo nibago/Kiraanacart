@@ -18,6 +18,9 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var txtOTP2: UITextField!
     @IBOutlet weak var txtOTP3: UITextField!
     @IBOutlet weak var txtOTP4: UITextField!
+    var LoginStatus = false
+   let prefs:UserDefaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         designing()
@@ -126,11 +129,14 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
                 
                  if str.count == 3
                  {
-                    print("this is calling")
+                   
+                    prefs.set(1, forKey: "ISLOGGEDIN")
                 
                     let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
                     self.navigationController?.pushViewController(nextViewController, animated: true)
+//                    self.defaults.set(self.LoginStatus, forKey: "true")
+                    self.prefs.synchronize()
                     
                  }
         

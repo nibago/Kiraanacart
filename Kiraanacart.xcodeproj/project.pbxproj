@@ -14,6 +14,10 @@
 		1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858E09D243AF81800FC403E /* SceneDelegate.swift */; };
 		1858E0A3243AF81800FC403E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1858E0A1243AF81800FC403E /* Main.storyboard */; };
 		1858E0A8243AF81900FC403E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1858E0A6243AF81900FC403E /* LaunchScreen.storyboard */; };
+		940E1D4324457B8E009AB382 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4224457B8E009AB382 /* OrderViewController.swift */; };
+		940E1D4524457BB1009AB382 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4424457BB1009AB382 /* OffersViewController.swift */; };
+		940E1D4E24459CAB009AB382 /* HomeCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */; };
+		9433C7352445D1660045F4A2 /* CustomListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */; };
 		944D36CE2441929D003D73EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944D36CD2441929D003D73EA /* HomeViewController.swift */; };
 		944D36D024419320003D73EA /* ListOfStoresStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944D36CF24419320003D73EA /* ListOfStoresStoryboard.storyboard */; };
 		944D36D224419347003D73EA /* ListOfStoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944D36D124419347003D73EA /* ListOfStoresViewController.swift */; };
@@ -45,6 +49,10 @@
 		1858E0A2243AF81800FC403E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1858E0A7243AF81900FC403E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1858E0A9243AF81900FC403E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940E1D4224457B8E009AB382 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		940E1D4424457BB1009AB382 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomTableViewCell.swift; sourceTree = "<group>"; };
+		9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListCollectionViewCell.swift; sourceTree = "<group>"; };
 		944D36CD2441929D003D73EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		944D36CF24419320003D73EA /* ListOfStoresStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfStoresStoryboard.storyboard; sourceTree = "<group>"; };
 		944D36D124419347003D73EA /* ListOfStoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfStoresViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +110,12 @@
 			children = (
 				1858E09B243AF81800FC403E /* AppDelegate.swift */,
 				1858E09D243AF81800FC403E /* SceneDelegate.swift */,
+				9433C72F2445C6C20045F4A2 /* OfferViewContoller */,
+				9433C72E2445C6B20045F4A2 /* OrderViewController */,
+				940E1D4F24459CCA009AB382 /* HomeViewController */,
 				9475DBA72442E22B00421D47 /* ProfileViewController  */,
 				944D36D62441A692003D73EA /* ListOfStores */,
-				94F51E6624408BF800AC8169 /* HomeViewController  */,
+				94F51E6624408BF800AC8169 /* TabviewContoller  */,
 				947F3F8D243F34FA00D61CFA /* TermsandCondtion */,
 				946A1253243DCF4700CABD78 /* IntialViewController */,
 				946A1254243DCF7100CABD78 /* SIgnupViewContoller */,
@@ -116,6 +127,39 @@
 				1858E0A9243AF81900FC403E /* Info.plist */,
 			);
 			path = Kiraanacart;
+			sourceTree = "<group>";
+		};
+		940E1D4624459C28009AB382 /* DepndingFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DepndingFrameworks;
+			sourceTree = "<group>";
+		};
+		940E1D4F24459CCA009AB382 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				944D36CD2441929D003D73EA /* HomeViewController.swift */,
+				940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */,
+				9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		9433C72E2445C6B20045F4A2 /* OrderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				940E1D4224457B8E009AB382 /* OrderViewController.swift */,
+			);
+			path = OrderViewController;
+			sourceTree = "<group>";
+		};
+		9433C72F2445C6C20045F4A2 /* OfferViewContoller */ = {
+			isa = PBXGroup;
+			children = (
+				940E1D4424457BB1009AB382 /* OffersViewController.swift */,
+			);
+			path = OfferViewContoller;
 			sourceTree = "<group>";
 		};
 		944D36D62441A692003D73EA /* ListOfStores */ = {
@@ -183,20 +227,20 @@
 		947F3F90243F438E00D61CFA /* Depending */ = {
 			isa = PBXGroup;
 			children = (
+				940E1D4624459C28009AB382 /* DepndingFrameworks */,
 				9475DBB2244320F900421D47 /* SupportExtensions.swift */,
 				947F3F85243EE3F700D61CFA /* Constants .swift */,
 			);
 			path = Depending;
 			sourceTree = "<group>";
 		};
-		94F51E6624408BF800AC8169 /* HomeViewController  */ = {
+		94F51E6624408BF800AC8169 /* TabviewContoller  */ = {
 			isa = PBXGroup;
 			children = (
-				94F51E64244080C500AC8169 /* TabBarViewController.swift */,
-				944D36CD2441929D003D73EA /* HomeViewController.swift */,
 				94F51E622440803A00AC8169 /* HomeStoryboard.storyboard */,
+				94F51E64244080C500AC8169 /* TabBarViewController.swift */,
 			);
-			path = "HomeViewController ";
+			path = "TabviewContoller ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +325,14 @@
 				183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */,
 				9475DBAF244301B400421D47 /* userProfileViewController.swift in Sources */,
 				94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */,
+				9433C7352445D1660045F4A2 /* CustomListCollectionViewCell.swift in Sources */,
 				94986EB824443D6F004F7A80 /* userinfoTableViewController.swift in Sources */,
 				946A124E243DC8B000CABD78 /* Slide.swift in Sources */,
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
+				940E1D4524457BB1009AB382 /* OffersViewController.swift in Sources */,
 				947F3F86243EE3F700D61CFA /* Constants .swift in Sources */,
+				940E1D4324457B8E009AB382 /* OrderViewController.swift in Sources */,
+				940E1D4E24459CAB009AB382 /* HomeCustomTableViewCell.swift in Sources */,
 				9475DBB124430C5100421D47 /* profileTableViewCell.swift in Sources */,
 				947F3F8C243F34F400D61CFA /* TermsCondtionViewController.swift in Sources */,
 				94F51E6124404D3A00AC8169 /* Extensions.swift in Sources */,
