@@ -9,18 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
- 
-  
-    @IBOutlet weak var Tableview: UITableView!
    
-    
+    @IBOutlet weak var Tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        
-        
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,12 +27,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    
-//override func viewWillAppear(_ animated: Bool) {
-//      super.viewWillAppear(animated)
-//      self.tabBarController?.navigationItem.hidesBackButton = true
-//  }
-//    
     @IBAction func homeButtonClick(_ sender: UIButton) {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
@@ -47,11 +35,6 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
   
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        navigationController?.view.setNeedsLayout()
-//        navigationController?.view.layoutIfNeeded()
-//    }
 
     
     

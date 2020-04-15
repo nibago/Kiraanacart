@@ -32,16 +32,17 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-       
-        self.navigationController?.navigationBar.topItem?.title = "Account"
+        
+        
+        //        self.navigationController?.navigationBar.topItem?.title = "Account"
+        title = "Account"
         
         TableView.tableFooterView = UIView(frame: .zero)
         self.TableView.tableFooterView?.isHidden = true
         self.TableView.layer.cornerRadius = 10.0
         self.TableView.layer.borderColor = UIColor(red:205.0/255.0, green:205.0/255.0, blue:205.0/255.0, alpha: 1.0).cgColor
         self.TableView.layer.borderWidth = 1
-     let anyAvatarImage:UIImage = UIImage(named: "child")!
+        let anyAvatarImage:UIImage = UIImage(named: "child")!
         profilepicimage.maskCircle(anyImage: anyAvatarImage)
         
     }
@@ -60,7 +61,7 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         let result = entries[indexPath.row]
         cell.menulistimage.image =  UIImage(named: result.image)
         cell.menunameLabel.text = result.title
-
+        
         TableView.heightAnchor.constraint(equalToConstant: tableView.contentSize.height).isActive = true
         cell.selectionStyle = .none
         return cell
@@ -72,11 +73,9 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         return 65
         
     }
-
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-     
         
         if let cell = tableView.cellForRow(at: indexPath) as? profileTableViewCell {
             
@@ -84,34 +83,44 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
             case "My Account":
                 print("My Account")
                 let storyBoard : UIStoryboard = UIStoryboard(name: "profileStoryboard", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "userinfoTableViewController") as! userinfoTableViewController
-                    self.navigationController?.pushViewController(nextViewController, animated: true)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "userinfoTableViewController") as! userinfoTableViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
                 
             case "My Wallet":
                 print("My Wallet")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "WalletStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "walletViewController") as! walletViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+                
             case "Refer a Friend":
-                print("Refer a Friend")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "ReferStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReferViewController") as! ReferViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
             case "Settings":
                 print("Settings")
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "SettingStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
             case "Support":
                 print("Support")
-             case "Rate Us":
+            case "Rate Us":
                 print("Rate Us")
             case "Notification":
-            print("Notification")
+                print("Notification")
             default:
                 print("nothing is selected")
                 
             }
             
-           }
-        
+        }
+        //
         
     }
- 
-   
+    
+    
 }
 
-    
-    
-   
+
+
+

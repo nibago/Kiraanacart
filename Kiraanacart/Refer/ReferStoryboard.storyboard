@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Refer View Controller-->
+        <scene sceneID="upt-Al-Ks0">
+            <objects>
+                <viewController storyboardIdentifier="ReferViewController" id="fOF-SE-Lxc" customClass="ReferViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s4a-rM-o1K">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR REFERAL CODE " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-qS-1gX">
+                                <rect key="frame" x="20" y="334" width="984" height="30"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R5i-Iy-cdh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0X-eI-qKL">
+                                <rect key="frame" x="30" y="446" width="964" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="E9f-l2-wF0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="REFER NOW">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer your Friends &amp; Earn now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JX-v5-bqX">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Z1I-Qb-KOr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="refer" translatesAutoresizingMaskIntoConstraints="NO" id="FbJ-Pk-TaF">
+                                <rect key="frame" x="16" y="86" width="992" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="ie0-B1-tfC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AXYND9932M" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT9-qD-H0h">
+                                <rect key="frame" x="434.5" y="386" width="161" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bEM-sO-C3F"/>
+                                    <constraint firstAttribute="width" constant="161" id="pbj-ln-Ksi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q0X-eI-qKL" firstAttribute="top" secondItem="VT9-qD-H0h" secondAttribute="bottom" constant="30" id="5aR-WI-Kl3"/>
+                            <constraint firstItem="VT9-qD-H0h" firstAttribute="centerX" secondItem="g8I-ak-TzC" secondAttribute="centerX" constant="3" id="81y-tz-4Rz"/>
+                            <constraint firstItem="g8I-ak-TzC" firstAttribute="trailing" secondItem="q0X-eI-qKL" secondAttribute="trailing" constant="30" id="Dv6-Jo-0Q7"/>
+                            <constraint firstItem="q0X-eI-qKL" firstAttribute="leading" secondItem="g8I-ak-TzC" secondAttribute="leading" constant="30" id="GNW-XA-dLG"/>
+                            <constraint firstItem="FbJ-Pk-TaF" firstAttribute="top" secondItem="4JX-v5-bqX" secondAttribute="bottom" constant="5" id="Iee-U7-nWm"/>
+                            <constraint firstItem="VT9-qD-H0h" firstAttribute="top" secondItem="sq8-qS-1gX" secondAttribute="bottom" constant="22" id="KMe-0C-3Bh"/>
+                            <constraint firstItem="g8I-ak-TzC" firstAttribute="trailing" secondItem="4JX-v5-bqX" secondAttribute="trailing" id="Lg1-ke-iWF"/>
+                            <constraint firstItem="sq8-qS-1gX" firstAttribute="centerX" secondItem="g8I-ak-TzC" secondAttribute="centerX" id="MUO-MW-wDA"/>
+                            <constraint firstItem="sq8-qS-1gX" firstAttribute="top" secondItem="FbJ-Pk-TaF" secondAttribute="bottom" constant="8" id="QmX-gK-rGd"/>
+                            <constraint firstItem="FbJ-Pk-TaF" firstAttribute="leading" secondItem="g8I-ak-TzC" secondAttribute="leading" constant="16" id="Vdp-pL-Jfu"/>
+                            <constraint firstItem="4JX-v5-bqX" firstAttribute="top" secondItem="g8I-ak-TzC" secondAttribute="top" constant="20" id="Xm8-wV-xkJ"/>
+                            <constraint firstItem="g8I-ak-TzC" firstAttribute="trailing" secondItem="FbJ-Pk-TaF" secondAttribute="trailing" constant="16" id="aNB-gP-4tL"/>
+                            <constraint firstItem="4JX-v5-bqX" firstAttribute="leading" secondItem="g8I-ak-TzC" secondAttribute="leading" id="cdm-Ii-xTS"/>
+                            <constraint firstItem="q0X-eI-qKL" firstAttribute="centerX" secondItem="g8I-ak-TzC" secondAttribute="centerX" id="esd-MI-YOs"/>
+                            <constraint firstItem="sq8-qS-1gX" firstAttribute="leading" secondItem="g8I-ak-TzC" secondAttribute="leading" constant="20" id="odz-ki-9BX"/>
+                            <constraint firstItem="g8I-ak-TzC" firstAttribute="trailing" secondItem="sq8-qS-1gX" secondAttribute="trailing" constant="20" id="tK0-Xs-tU1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8I-ak-TzC"/>
+                    </view>
+                    <connections>
+                        <outlet property="referalcodeLabel" destination="VT9-qD-H0h" id="FGG-j9-Tmq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMc-Ib-g0J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="77.58620689655173"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="refer" width="455" height="280"/>
+    </resources>
+</document>

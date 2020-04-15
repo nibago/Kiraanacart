@@ -17,6 +17,14 @@
 		940E1D4324457B8E009AB382 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4224457B8E009AB382 /* OrderViewController.swift */; };
 		940E1D4524457BB1009AB382 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4424457BB1009AB382 /* OffersViewController.swift */; };
 		940E1D4E24459CAB009AB382 /* HomeCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */; };
+		942E2E81244728F700795FE9 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942E2E80244728F700795FE9 /* SettingsTableViewCell.swift */; };
+		9431E0852446C9F000E79F55 /* WalletStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9431E0842446C9F000E79F55 /* WalletStoryboard.storyboard */; };
+		9431E08A2446CB5500E79F55 /* walletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E0892446CB5500E79F55 /* walletViewController.swift */; };
+		9431E08C2446E3D600E79F55 /* HomeNavigtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E08B2446E3D600E79F55 /* HomeNavigtionViewController.swift */; };
+		9431E0982446FAB100E79F55 /* ReferStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9431E0972446FAB100E79F55 /* ReferStoryboard.storyboard */; };
+		9431E09A2446FAC000E79F55 /* ReferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E0992446FAC000E79F55 /* ReferViewController.swift */; };
+		9431E0A42446FE9000E79F55 /* SettingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9431E0A32446FE9000E79F55 /* SettingStoryboard.storyboard */; };
+		9431E0A62446FEA000E79F55 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E0A52446FEA000E79F55 /* SettingViewController.swift */; };
 		9433C7352445D1660045F4A2 /* CustomListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */; };
 		944D36CE2441929D003D73EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944D36CD2441929D003D73EA /* HomeViewController.swift */; };
 		944D36D024419320003D73EA /* ListOfStoresStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944D36CF24419320003D73EA /* ListOfStoresStoryboard.storyboard */; };
@@ -52,6 +60,14 @@
 		940E1D4224457B8E009AB382 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		940E1D4424457BB1009AB382 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
 		940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomTableViewCell.swift; sourceTree = "<group>"; };
+		942E2E80244728F700795FE9 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		9431E0842446C9F000E79F55 /* WalletStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletStoryboard.storyboard; sourceTree = "<group>"; };
+		9431E0892446CB5500E79F55 /* walletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletViewController.swift; sourceTree = "<group>"; };
+		9431E08B2446E3D600E79F55 /* HomeNavigtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigtionViewController.swift; sourceTree = "<group>"; };
+		9431E0972446FAB100E79F55 /* ReferStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReferStoryboard.storyboard; sourceTree = "<group>"; };
+		9431E0992446FAC000E79F55 /* ReferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferViewController.swift; sourceTree = "<group>"; };
+		9431E0A32446FE9000E79F55 /* SettingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingStoryboard.storyboard; sourceTree = "<group>"; };
+		9431E0A52446FEA000E79F55 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListCollectionViewCell.swift; sourceTree = "<group>"; };
 		944D36CD2441929D003D73EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		944D36CF24419320003D73EA /* ListOfStoresStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfStoresStoryboard.storyboard; sourceTree = "<group>"; };
@@ -110,15 +126,18 @@
 			children = (
 				1858E09B243AF81800FC403E /* AppDelegate.swift */,
 				1858E09D243AF81800FC403E /* SceneDelegate.swift */,
-				9433C72F2445C6C20045F4A2 /* OfferViewContoller */,
-				9433C72E2445C6B20045F4A2 /* OrderViewController */,
-				940E1D4F24459CCA009AB382 /* HomeViewController */,
-				9475DBA72442E22B00421D47 /* ProfileViewController  */,
+				9431E0A22446FB9D00E79F55 /* Settings */,
+				9431E09B2446FAC700E79F55 /* Refer */,
+				9431E0882446CA1C00E79F55 /* Wallet */,
+				9433C72F2445C6C20045F4A2 /* Offers */,
+				9433C72E2445C6B20045F4A2 /* Orders */,
+				940E1D4F24459CCA009AB382 /* MainHome */,
+				9475DBA72442E22B00421D47 /* Profile */,
 				944D36D62441A692003D73EA /* ListOfStores */,
 				94F51E6624408BF800AC8169 /* TabviewContoller  */,
 				947F3F8D243F34FA00D61CFA /* TermsandCondtion */,
-				946A1253243DCF4700CABD78 /* IntialViewController */,
-				946A1254243DCF7100CABD78 /* SIgnupViewContoller */,
+				946A1253243DCF4700CABD78 /* IntialView */,
+				946A1254243DCF7100CABD78 /* SIgnup */,
 				947F3F90243F438E00D61CFA /* Depending */,
 				944D36D72441C570003D73EA /* Fonts  */,
 				183A0B2D243B58B5006A67DD /* Assets.xcassets */,
@@ -136,30 +155,59 @@
 			path = DepndingFrameworks;
 			sourceTree = "<group>";
 		};
-		940E1D4F24459CCA009AB382 /* HomeViewController */ = {
+		940E1D4F24459CCA009AB382 /* MainHome */ = {
 			isa = PBXGroup;
 			children = (
 				944D36CD2441929D003D73EA /* HomeViewController.swift */,
 				940E1D4D24459CAB009AB382 /* HomeCustomTableViewCell.swift */,
 				9433C7342445D1660045F4A2 /* CustomListCollectionViewCell.swift */,
 			);
-			path = HomeViewController;
+			path = MainHome;
 			sourceTree = "<group>";
 		};
-		9433C72E2445C6B20045F4A2 /* OrderViewController */ = {
+		9431E0882446CA1C00E79F55 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				9431E0892446CB5500E79F55 /* walletViewController.swift */,
+				9431E0842446C9F000E79F55 /* WalletStoryboard.storyboard */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		9431E09B2446FAC700E79F55 /* Refer */ = {
+			isa = PBXGroup;
+			children = (
+				9431E0972446FAB100E79F55 /* ReferStoryboard.storyboard */,
+				9431E0992446FAC000E79F55 /* ReferViewController.swift */,
+			);
+			path = Refer;
+			sourceTree = "<group>";
+		};
+		9431E0A22446FB9D00E79F55 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9431E0A32446FE9000E79F55 /* SettingStoryboard.storyboard */,
+				9431E0A52446FEA000E79F55 /* SettingViewController.swift */,
+				942E2E80244728F700795FE9 /* SettingsTableViewCell.swift */,
+			);
+			name = Settings;
+			path = Profile/Settings;
+			sourceTree = "<group>";
+		};
+		9433C72E2445C6B20045F4A2 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
 				940E1D4224457B8E009AB382 /* OrderViewController.swift */,
 			);
-			path = OrderViewController;
+			path = Orders;
 			sourceTree = "<group>";
 		};
-		9433C72F2445C6C20045F4A2 /* OfferViewContoller */ = {
+		9433C72F2445C6C20045F4A2 /* Offers */ = {
 			isa = PBXGroup;
 			children = (
 				940E1D4424457BB1009AB382 /* OffersViewController.swift */,
 			);
-			path = OfferViewContoller;
+			path = Offers;
 			sourceTree = "<group>";
 		};
 		944D36D62441A692003D73EA /* ListOfStores */ = {
@@ -183,17 +231,17 @@
 			path = "Fonts ";
 			sourceTree = "<group>";
 		};
-		946A1253243DCF4700CABD78 /* IntialViewController */ = {
+		946A1253243DCF4700CABD78 /* IntialView */ = {
 			isa = PBXGroup;
 			children = (
 				946A124F243DC8C300CABD78 /* initialViewController.swift */,
 				946A124C243DC8B000CABD78 /* Slide.swift */,
 				946A124B243DC8AF00CABD78 /* Slide.xib */,
 			);
-			path = IntialViewController;
+			path = IntialView;
 			sourceTree = "<group>";
 		};
-		946A1254243DCF7100CABD78 /* SIgnupViewContoller */ = {
+		946A1254243DCF7100CABD78 /* SIgnup */ = {
 			isa = PBXGroup;
 			children = (
 				9482FCE0243F46F800A238CF /* MobileLoginViewController.swift */,
@@ -201,10 +249,10 @@
 				183A0B2F243C4003006A67DD /* UtilitiesAndDesign.swift */,
 				183A0B31243C737A006A67DD /* OTPViewController.swift */,
 			);
-			path = SIgnupViewContoller;
+			path = SIgnup;
 			sourceTree = "<group>";
 		};
-		9475DBA72442E22B00421D47 /* ProfileViewController  */ = {
+		9475DBA72442E22B00421D47 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				9475DBAE244301B400421D47 /* userProfileViewController.swift */,
@@ -212,7 +260,7 @@
 				94986EB524443B4F004F7A80 /* profileStoryboard.storyboard */,
 				94986EB724443D6F004F7A80 /* userinfoTableViewController.swift */,
 			);
-			path = "ProfileViewController ";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		947F3F8D243F34FA00D61CFA /* TermsandCondtion */ = {
@@ -238,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				94F51E622440803A00AC8169 /* HomeStoryboard.storyboard */,
+				9431E08B2446E3D600E79F55 /* HomeNavigtionViewController.swift */,
 				94F51E64244080C500AC8169 /* TabBarViewController.swift */,
 			);
 			path = "TabviewContoller ";
@@ -307,6 +356,9 @@
 				1858E0A3243AF81800FC403E /* Main.storyboard in Resources */,
 				947F3F8A243F341F00D61CFA /* TermsAndCondtion.storyboard in Resources */,
 				94986EB624443B4F004F7A80 /* profileStoryboard.storyboard in Resources */,
+				9431E0982446FAB100E79F55 /* ReferStoryboard.storyboard in Resources */,
+				9431E0852446C9F000E79F55 /* WalletStoryboard.storyboard in Resources */,
+				9431E0A42446FE9000E79F55 /* SettingStoryboard.storyboard in Resources */,
 				946A124D243DC8B000CABD78 /* Slide.xib in Resources */,
 				944D36D024419320003D73EA /* ListOfStoresStoryboard.storyboard in Resources */,
 			);
@@ -323,6 +375,7 @@
 				183A0B32243C737A006A67DD /* OTPViewController.swift in Sources */,
 				946A1250243DC8C400CABD78 /* initialViewController.swift in Sources */,
 				183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */,
+				9431E08A2446CB5500E79F55 /* walletViewController.swift in Sources */,
 				9475DBAF244301B400421D47 /* userProfileViewController.swift in Sources */,
 				94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */,
 				9433C7352445D1660045F4A2 /* CustomListCollectionViewCell.swift in Sources */,
@@ -335,10 +388,14 @@
 				940E1D4E24459CAB009AB382 /* HomeCustomTableViewCell.swift in Sources */,
 				9475DBB124430C5100421D47 /* profileTableViewCell.swift in Sources */,
 				947F3F8C243F34F400D61CFA /* TermsCondtionViewController.swift in Sources */,
+				9431E09A2446FAC000E79F55 /* ReferViewController.swift in Sources */,
+				942E2E81244728F700795FE9 /* SettingsTableViewCell.swift in Sources */,
+				9431E08C2446E3D600E79F55 /* HomeNavigtionViewController.swift in Sources */,
 				94F51E6124404D3A00AC8169 /* Extensions.swift in Sources */,
 				9475DBB3244320F900421D47 /* SupportExtensions.swift in Sources */,
 				944D36D52441A652003D73EA /* CustomTableViewCell.swift in Sources */,
 				944D36D224419347003D73EA /* ListOfStoresViewController.swift in Sources */,
+				9431E0A62446FEA000E79F55 /* SettingViewController.swift in Sources */,
 				1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */,
 				944D36CE2441929D003D73EA /* HomeViewController.swift in Sources */,
 			);

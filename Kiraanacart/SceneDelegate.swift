@@ -21,11 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
          if(isLoggedIn == 0){
         
-             //if prefs.bool(forKey: "true") == true{
-                 print("this is calling ")
                 let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-                                  
                  window?.makeKeyAndVisible()
                  window?.rootViewController = nextViewController
                  
