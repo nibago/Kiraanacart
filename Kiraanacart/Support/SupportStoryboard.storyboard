@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Support View Controller-->
+        <scene sceneID="Yyc-Wy-IFT">
+            <objects>
+                <viewController storyboardIdentifier="SupportViewController" id="GhG-cn-pDK" customClass="SupportViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lPh-hh-HlT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-forward-24" translatesAutoresizingMaskIntoConstraints="NO" id="kEB-Tb-f2Z">
+                                <rect key="frame" x="374" y="65" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="AmE-AS-O6B"/>
+                                    <constraint firstAttribute="width" constant="20" id="y1f-cE-ht3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="support-icon" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-X0-13i">
+                                <rect key="frame" x="20" y="65" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="N2a-hx-DwM"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kPu-Of-W3h"/>
+                                    <constraint firstAttribute="height" constant="30" id="qfI-eS-lt1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fm-EZ-zIH">
+                                <rect key="frame" x="10" y="53" width="388" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Ymx-C2-j91"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                <state key="normal" title="Call Us">
+                                    <color key="titleColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="callusButtonClick:" destination="GhG-cn-pDK" eventType="touchUpInside" id="1j7-39-CrV"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter" translatesAutoresizingMaskIntoConstraints="NO" id="tHE-Tw-v6C">
+                                <rect key="frame" x="20" y="154" width="30" height="30"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-forward-24" translatesAutoresizingMaskIntoConstraints="NO" id="bT3-lt-iMV">
+                                <rect key="frame" x="374" y="154" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Am5-YT-UVI"/>
+                                    <constraint firstAttribute="height" constant="20" id="SmS-cj-JHT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-Bz-7j3">
+                                <rect key="frame" x="10" y="142" width="394" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="gHh-86-xlA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                <state key="normal" title="Contact us">
+                                    <color key="titleColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="contactUsButtonClick:" destination="GhG-cn-pDK" eventType="touchUpInside" id="nIR-Ud-ge0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1fm-EZ-zIH" firstAttribute="leading" secondItem="dMK-cL-eUE" secondAttribute="leading" constant="10" id="3cx-uI-LJv"/>
+                            <constraint firstItem="Izt-Bz-7j3" firstAttribute="leading" secondItem="1fm-EZ-zIH" secondAttribute="leading" id="3ec-4A-PXM"/>
+                            <constraint firstItem="bT3-lt-iMV" firstAttribute="top" secondItem="tHE-Tw-v6C" secondAttribute="top" id="6u7-Xm-fKk"/>
+                            <constraint firstItem="h2c-X0-13i" firstAttribute="leading" secondItem="dMK-cL-eUE" secondAttribute="leading" constant="20" id="9Qg-yK-2TJ"/>
+                            <constraint firstItem="tHE-Tw-v6C" firstAttribute="trailing" secondItem="h2c-X0-13i" secondAttribute="trailing" id="DS5-Gd-tZA"/>
+                            <constraint firstItem="Izt-Bz-7j3" firstAttribute="top" secondItem="1fm-EZ-zIH" secondAttribute="bottom" constant="35" id="FLW-yb-WSy"/>
+                            <constraint firstItem="Izt-Bz-7j3" firstAttribute="centerY" secondItem="tHE-Tw-v6C" secondAttribute="centerY" id="PdE-iB-g4D"/>
+                            <constraint firstItem="dMK-cL-eUE" firstAttribute="trailing" secondItem="kEB-Tb-f2Z" secondAttribute="trailing" constant="20" id="Qet-r5-A3B"/>
+                            <constraint firstItem="tHE-Tw-v6C" firstAttribute="leading" secondItem="h2c-X0-13i" secondAttribute="leading" id="R4y-M7-2dR"/>
+                            <constraint firstItem="1fm-EZ-zIH" firstAttribute="top" secondItem="dMK-cL-eUE" secondAttribute="top" constant="53" id="U79-jI-4NW"/>
+                            <constraint firstItem="bT3-lt-iMV" firstAttribute="centerY" secondItem="Izt-Bz-7j3" secondAttribute="centerY" constant="-5" id="a4C-5p-JyF"/>
+                            <constraint firstItem="1fm-EZ-zIH" firstAttribute="trailing" secondItem="dMK-cL-eUE" secondAttribute="trailing" constant="-16" id="bm6-Og-Xkv"/>
+                            <constraint firstItem="bT3-lt-iMV" firstAttribute="leading" secondItem="kEB-Tb-f2Z" secondAttribute="leading" id="eMY-hb-zO6"/>
+                            <constraint firstItem="Izt-Bz-7j3" firstAttribute="centerX" secondItem="lPh-hh-HlT" secondAttribute="centerX" id="mfp-wy-wfb"/>
+                            <constraint firstItem="kEB-Tb-f2Z" firstAttribute="centerY" secondItem="1fm-EZ-zIH" secondAttribute="centerY" constant="-5" id="wi0-xP-bvu"/>
+                            <constraint firstItem="h2c-X0-13i" firstAttribute="centerY" secondItem="1fm-EZ-zIH" secondAttribute="centerY" id="wzD-A4-k8Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dMK-cL-eUE"/>
+                    </view>
+                    <connections>
+                        <outlet property="callusButton" destination="1fm-EZ-zIH" id="mTZ-OY-n4S"/>
+                        <outlet property="contactUsButton" destination="Izt-Bz-7j3" id="tfe-Dt-6zn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbK-S1-siA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-136.875" y="53.87323943661972"/>
+        </scene>
+        <!--Contactus View Controller-->
+        <scene sceneID="Z7g-7A-l1n">
+            <objects>
+                <viewController storyboardIdentifier="ContactusViewController" id="71q-Pg-uHf" customClass="ContactusViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oUE-pZ-efU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-I6-vg5">
+                                <rect key="frame" x="10" y="42" width="394" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="jTp-xY-Uzc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gu5-gt-CJI" customClass="KMPlaceholderTextView" customModule="Kiraanacart" customModuleProvider="target">
+                                <rect key="frame" x="10" y="95" width="394" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="jD5-bX-Go0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBn-ld-KpT">
+                                <rect key="frame" x="10" y="154" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NvS-Nx-J1X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fAC-8X-mzo" customClass="KMPlaceholderTextView" customModule="Kiraanacart" customModuleProvider="target">
+                                <rect key="frame" x="10" y="204" width="394" height="127"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="Gge-tH-2Ya"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CxI-PD-2He" firstAttribute="trailing" secondItem="fAC-8X-mzo" secondAttribute="trailing" constant="10" id="6r6-up-jU1"/>
+                            <constraint firstItem="CxI-PD-2He" firstAttribute="trailing" secondItem="Gu5-gt-CJI" secondAttribute="trailing" constant="10" id="8WJ-Uk-SmX"/>
+                            <constraint firstItem="Gu5-gt-CJI" firstAttribute="leading" secondItem="CxI-PD-2He" secondAttribute="leading" constant="10" id="G0h-bG-MyB"/>
+                            <constraint firstItem="iBn-ld-KpT" firstAttribute="leading" secondItem="CxI-PD-2He" secondAttribute="leading" constant="10" id="G1J-ON-MtP"/>
+                            <constraint firstItem="fAC-8X-mzo" firstAttribute="top" secondItem="iBn-ld-KpT" secondAttribute="bottom" constant="10" id="HEC-q1-SO9"/>
+                            <constraint firstItem="iBn-ld-KpT" firstAttribute="top" secondItem="Gu5-gt-CJI" secondAttribute="bottom" constant="15" id="QHq-vP-Yyu"/>
+                            <constraint firstItem="Gu5-gt-CJI" firstAttribute="centerX" secondItem="CxI-PD-2He" secondAttribute="centerX" id="QvW-QN-q59"/>
+                            <constraint firstItem="Gu5-gt-CJI" firstAttribute="top" secondItem="0vw-I6-vg5" secondAttribute="bottom" constant="10" id="dB1-ok-9pG"/>
+                            <constraint firstItem="fAC-8X-mzo" firstAttribute="leading" secondItem="CxI-PD-2He" secondAttribute="leading" constant="10" id="hg5-48-kBg"/>
+                            <constraint firstItem="0vw-I6-vg5" firstAttribute="leading" secondItem="CxI-PD-2He" secondAttribute="leading" constant="10" id="hwm-PG-0tg"/>
+                            <constraint firstItem="0vw-I6-vg5" firstAttribute="top" secondItem="CxI-PD-2He" secondAttribute="top" constant="42" id="lMs-a0-gjT"/>
+                            <constraint firstItem="0vw-I6-vg5" firstAttribute="trailing" secondItem="CxI-PD-2He" secondAttribute="trailing" constant="-10" id="mMb-Qk-lOF"/>
+                            <constraint firstItem="0vw-I6-vg5" firstAttribute="centerX" secondItem="CxI-PD-2He" secondAttribute="centerX" id="nCe-Ib-j1q"/>
+                            <constraint firstItem="iBn-ld-KpT" firstAttribute="trailing" secondItem="CxI-PD-2He" secondAttribute="trailing" constant="10" id="piJ-bJ-5eX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CxI-PD-2He"/>
+                    </view>
+                    <connections>
+                        <outlet property="DescriptionConstrains" destination="Gge-tH-2Ya" id="Azd-SC-IVp"/>
+                        <outlet property="DescriptionTextView" destination="fAC-8X-mzo" id="Vrx-FP-MH1"/>
+                        <outlet property="subjectHightConstrains" destination="jD5-bX-Go0" id="csf-Jq-581"/>
+                        <outlet property="subjectTextView" destination="Gu5-gt-CJI" id="qNH-XP-YOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLg-eM-xp4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566.25" y="36.971830985915496"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-forward-24" width="24" height="24"/>
+        <image name="letter" width="16" height="16"/>
+        <image name="support-icon" width="1080" height="1080"/>
+    </resources>
+</document>

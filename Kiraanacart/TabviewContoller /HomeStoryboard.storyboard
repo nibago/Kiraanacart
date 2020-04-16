@@ -235,20 +235,61 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gr" translatesAutoresizingMaskIntoConstraints="NO" id="6RP-cU-ZEL">
-                                                    <rect key="frame" x="15" y="6" width="290" height="134"/>
-                                                </imageView>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mGq-ts-hXV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oIN-fW-Hsm">
+                                                        <size key="itemSize" width="319" height="146"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomListCollectionViewCell1" id="nfS-vK-xsa" customClass="CustomListCollectionViewCell1" customModule="Kiraanacart" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="146"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bRg-Ry-DeL">
+                                                                <rect key="frame" x="0.0" y="0.0" width="319" height="146"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L3R-WN-6zm">
+                                                                        <rect key="frame" x="5" y="5" width="309" height="136"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="L3R-WN-6zm" secondAttribute="trailing" constant="5" id="Mzb-UM-qhs"/>
+                                                                    <constraint firstItem="L3R-WN-6zm" firstAttribute="top" secondItem="bRg-Ry-DeL" secondAttribute="top" constant="5" id="Xuy-ky-B9A"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="L3R-WN-6zm" secondAttribute="bottom" constant="5" id="riE-oY-0lQ"/>
+                                                                    <constraint firstItem="L3R-WN-6zm" firstAttribute="leading" secondItem="bRg-Ry-DeL" secondAttribute="leading" constant="5" id="w5Z-gX-6gT"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="319" height="146"/>
+                                                            <connections>
+                                                                <outlet property="itemImage1" destination="L3R-WN-6zm" id="lo0-4r-eUT"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="zGW-gY-bf7" id="eTt-BE-cP7"/>
+                                                        <outlet property="delegate" destination="zGW-gY-bf7" id="FKJ-1C-7wB"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="6RP-cU-ZEL" secondAttribute="bottom" constant="6" id="OIa-0c-WzX"/>
-                                                <constraint firstItem="6RP-cU-ZEL" firstAttribute="leading" secondItem="2F4-tQ-uq6" secondAttribute="leading" constant="15" id="a1r-kz-yGY"/>
-                                                <constraint firstItem="6RP-cU-ZEL" firstAttribute="top" secondItem="2F4-tQ-uq6" secondAttribute="top" constant="6" id="lUe-Qi-j2I"/>
-                                                <constraint firstAttribute="trailing" secondItem="6RP-cU-ZEL" secondAttribute="trailing" constant="15" id="xJd-Iw-ZWz"/>
+                                                <constraint firstAttribute="trailing" secondItem="mGq-ts-hXV" secondAttribute="trailing" id="3Nh-et-rJW"/>
+                                                <constraint firstItem="mGq-ts-hXV" firstAttribute="top" secondItem="2F4-tQ-uq6" secondAttribute="top" id="Cwp-x8-jbJ"/>
+                                                <constraint firstItem="mGq-ts-hXV" firstAttribute="leading" secondItem="2F4-tQ-uq6" secondAttribute="leading" id="Lfu-29-394"/>
+                                                <constraint firstAttribute="bottom" secondItem="mGq-ts-hXV" secondAttribute="bottom" id="dtp-Le-pzs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="groceryImage" destination="6RP-cU-ZEL" id="uzw-ms-HAj"/>
+                                            <outlet property="collectionView" destination="mGq-ts-hXV" id="DMs-Fg-GZL"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" rowHeight="101" id="2Oj-uM-85W" customClass="HomeCustomTableViewCell1" customModule="Kiraanacart" customModuleProvider="target">
@@ -296,14 +337,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" rowHeight="317" id="nP2-wm-IQT" customClass="HomeCustomTableViewCell2" customModule="Kiraanacart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" tag="101" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" rowHeight="317" id="nP2-wm-IQT" customClass="HomeCustomTableViewCell2" customModule="Kiraanacart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="275" width="320" height="317"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nP2-wm-IQT" id="6s9-nT-Nld">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cgj-lG-PnK">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="101" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cgj-lG-PnK">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="317"/>
                                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJD-ch-ohq">
@@ -328,7 +369,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friuit &amp; juice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAX-RD-9uc">
-                                                                        <rect key="frame" x="3.5" y="96" width="93.5" height="20"/>
+                                                                        <rect key="frame" x="2" y="96" width="96" height="22.5"/>
                                                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -497,7 +538,6 @@
     <resources>
         <image name="cart-(-white-)-icon" width="1080" height="1080"/>
         <image name="child" width="300" height="168"/>
-        <image name="gr" width="2750" height="1259"/>
         <image name="location-pin-icon" width="1080" height="1080"/>
         <image name="offers" width="30" height="30"/>
         <image name="orders-icon-1" width="50" height="50"/>

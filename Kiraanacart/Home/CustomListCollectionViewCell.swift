@@ -17,3 +17,14 @@ class CustomListCollectionViewCell: UICollectionViewCell {
     
     
 }
+
+
+class CustomListCollectionViewCell1: UICollectionViewCell {
+    
+    @IBOutlet weak var itemImage1: UIImageView!
+    
+    
+
+    
+    
+}

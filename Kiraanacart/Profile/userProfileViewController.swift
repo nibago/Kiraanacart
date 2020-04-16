@@ -82,7 +82,7 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
             switch cell.menunameLabel.text {
             case "My Account":
                 print("My Account")
-                let storyBoard : UIStoryboard = UIStoryboard(name: "profileStoryboard", bundle:nil)
+                let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "userinfoTableViewController") as! userinfoTableViewController
                 self.navigationController?.pushViewController(nextViewController, animated: true)
                 
@@ -103,22 +103,21 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
                 self.navigationController?.pushViewController(nextViewController, animated: true)
             case "Support":
-                print("Support")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "SupportStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SupportViewController") as! SupportViewController
+                self.navigationController?.pushViewController(nextViewController, animated:true)
             case "Rate Us":
                 print("Rate Us")
             case "Notification":
-                print("Notification")
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "NotificationStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "NotificationViewController") as! NotificationViewController
+                self.navigationController?.pushViewController(nextViewController, animated:true)
             default:
                 print("nothing is selected")
-                
             }
-            
         }
-        //
-        
     }
-    
-    
 }
 
 

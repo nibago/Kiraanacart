@@ -29,9 +29,9 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @IBAction func homeButtonClick(_ sender: UIButton) {
         
-        let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+//        self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
   
@@ -51,16 +51,19 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
        
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! HomeCustomTableViewCell
-             cell.groceryImage.layer.cornerRadius = 10.0
+//             cell.groceryImage.layer.cornerRadius = 10.0
+            cell.selectionStyle = .none
             
             return cell
         } else if indexPath.section == 1
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! HomeCustomTableViewCell1
+         cell.selectionStyle = .none
             return cell
         }else if indexPath.section == 2
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! HomeCustomTableViewCell2
+            cell.selectionStyle = .none
             return cell
         }
         

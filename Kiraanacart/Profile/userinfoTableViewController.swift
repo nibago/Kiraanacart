@@ -17,7 +17,9 @@ class userinfoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = "Account"
+        title = "Account"
+                   navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+     //   self.navigationController?.navigationBar.topItem?.title = "Account"
         let anyAvatarImage:UIImage = UIImage(named: "child")!
         profilepicimage.maskCircle(anyImage: anyAvatarImage)
         
