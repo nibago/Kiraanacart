@@ -112,6 +112,8 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
         
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        self.contentView.isUserInteractionEnabled = true
         imageArray = ["Dairy _ Milk","Groceries","Vegetables-1","meat-&-sea-food-con","Organic-1","Fruits _ Juices"]
         imageArraytitle = ["Milk","Groceries","Vegetables","meat &seafood","Organic","Fruits&Juices"]
         getRandomColorsArray()
@@ -131,7 +133,6 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
     }
     
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomListCollectionViewCell", for: indexPath) as? CustomListCollectionViewCell
@@ -146,6 +147,7 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
             cell.itemImage.backgroundColor = self.colorsArray[randomNumber]
             let doubleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap))
             doubleTap.numberOfTapsRequired = 1
+            
             self.collectionView.addGestureRecognizer(doubleTap)
             
             return cell
@@ -156,7 +158,8 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
     
     @objc func didDoubleTap(sender: UITapGestureRecognizer) {
         
-        
+       
+     
         //     print("cell) was double tapped")
         
         let tapLocation = sender.location(in: self.collectionView)
@@ -165,8 +168,12 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
             let name = imageArray[indexPath.row]
             if indexPath.row == 0{
               
-        
-            //    self.show(secondViewController, sender: self)
+              callingfunc()
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
+                       let nextViewController = storyBoard.instantiateViewController(withIdentifier: "itemsViewController") as! itemsViewController
+             
+             //   self.show(secondViewController, sender: self)
                 
             }
             
@@ -178,11 +185,17 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
       
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-//        let size = CGSize(width: 120, height: 120)
-//        return size
-//    }
-//
+@objc func callingfunc()
+{
+  
+    
+    
+}
+   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("this is calling")
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -219,4 +232,5 @@ class HomeCustomTableViewCell2: UITableViewCell, UICollectionViewDelegate, UICol
     }
     
 }
+
 

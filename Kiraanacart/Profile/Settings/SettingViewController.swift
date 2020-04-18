@@ -54,17 +54,86 @@ class SettingViewController: UIViewController,UITableViewDelegate,UITableViewDat
                  cell.itemImages.image = UIImage(named: "Next-icon")
             }
                 
+                cell.imageButton.addTarget(self, action: #selector(buttonbtnlikePressed(_:event:)), for: .touchUpInside)
+            
+            
                 return cell
         } else if indexPath.section == 1{
     
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! SettingsTableViewCell2
-//                          cell.nameLabel.text = StringArray[indexPath.row]
-//                          cell.nameLabel.layer.borderColor = UIColor(red:205.0/255.0, green:205.0/255.0, blue:205.0/255.0, alpha: 1.0).cgColor
-//                              cell.nameLabel.layer.borderWidth = 1
             return cell
     }
         return UITableViewCell()
 
 }
+    
+
+//
+    @objc func buttonbtnlikePressed(_ sender: Any, event: Any) {
+        
+            let point : CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:TableView)
+            var indexPath =  self.TableView!.indexPathForRow(at: point)
+           
+        if indexPath?.row  == 4 {
+                 
+            let indexPath = IndexPath.init(row: 4, section: 0)
+                        let cell = TableView.cellForRow(at: indexPath) as! SettingsTableViewCell1
+            
+                            if let btnlike = sender as? UIButton{
+                                         if btnlike.isSelected{
+                                           
+                                              cell.itemImages.image = UIImage(named: "switchOff")
+                                            
+                                            btnlike.isSelected = false
+                                         }else{
+                                             btnlike.isSelected = true
+                                          cell.itemImages.image = UIImage(named: "switchOn")
+                                          
+                                         }
+                                     }
+        } else if indexPath?.row  == 3
+        {
+            let indexPath = IndexPath.init(row: 3, section: 0)
+                                  let cell = TableView.cellForRow(at: indexPath) as! SettingsTableViewCell1
+                      
+                                      if let btnlike = sender as? UIButton{
+                                                   if btnlike.isSelected{
+                                                     
+                                                        cell.itemImages.image = UIImage(named: "switchOff")
+                                                      
+                                                      btnlike.isSelected = false
+                                                   }else{
+                                                       btnlike.isSelected = true
+                                                    cell.itemImages.image = UIImage(named: "switchOn")
+                                                    
+                                                   }
+                                               }
+        }
+        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt
+     indexPath: IndexPath){
+    
+        if indexPath.row == 0
+        {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "ChangePasswordStoryboard", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ChangePasswordViewController") as! ChangePasswordViewController
+                          self.navigationController?.pushViewController(nextViewController, animated: true)
+            
+        } else if indexPath.row == 1
+        {
+            
+        }else if indexPath.row == 2
+        {
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "PrivacyStoryboard", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PrivacyViewController") as! PrivacyViewController
+             self.navigationController?.pushViewController(nextViewController, animated: true)
+        }
+        
+        
+    }
+    
+    
 }
 

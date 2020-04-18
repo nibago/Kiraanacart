@@ -18,11 +18,9 @@ class userinfoTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Account"
-                   navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-     //   self.navigationController?.navigationBar.topItem?.title = "Account"
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let anyAvatarImage:UIImage = UIImage(named: "child")!
         profilepicimage.maskCircle(anyImage: anyAvatarImage)
-        
         CutomView.layer.borderWidth = 1
         CutomView.layer.cornerRadius = 3
         CutomView.layer.masksToBounds = true

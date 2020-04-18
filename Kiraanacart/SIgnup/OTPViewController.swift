@@ -46,6 +46,9 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
             // Always adopt a light interface style.
             overrideUserInterfaceStyle = .light
         }
+        title = "OTP"
+               navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
@@ -134,14 +137,23 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
                 
                     let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-                    self.navigationController?.pushViewController(nextViewController, animated: true)
-//                    self.defaults.set(self.LoginStatus, forKey: "true")
+                    
+                  //   self.present(nextViewController, animated: true, completion: nil)
+                  //  self.navigationController?.pushViewController(nextViewController, animated: true)
+                    
+                    self.navigationController?.show(nextViewController, sender: nil)
+                  //  self.prefs.set(self.LoginStatus, forKey: "true")
                     self.prefs.synchronize()
                     
                  }
         
           
       }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     
     @IBAction func rightButtonClick()
      {

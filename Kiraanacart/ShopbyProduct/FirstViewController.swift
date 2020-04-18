@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var TableView :UITableView!
@@ -19,10 +20,16 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    let nib = UINib(nibName: "MyCustomCell", bundle: nil)
-              TableView.register(nib, forCellReuseIdentifier: "MyCustomCell")
-              TableView.dataSource = self
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = true
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+   // let nib = UINib(nibName: "MyCustomCell", bundle: nil)
+      //        TableView.register(nib, forCellReuseIdentifier: "MyCustomCell")
+           
+     let nib = UINib(nibName: "MyCustomCell", bundle: nil)
+             TableView.register(nib, forCellReuseIdentifier: "MyCustomCell")
+             TableView.dataSource = self
+//      
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,10 +43,14 @@ class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   
        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell") as? MyCustomCell
-            cell?.nameLabel.text = "Hello world."
+        cell?.nameLabel.text = "Milk"
         return cell!
         
       
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNormalMagnitude
     }
     
    

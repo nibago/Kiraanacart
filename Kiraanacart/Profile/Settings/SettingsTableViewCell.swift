@@ -12,6 +12,7 @@ class SettingsTableViewCell1: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var itemImages: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

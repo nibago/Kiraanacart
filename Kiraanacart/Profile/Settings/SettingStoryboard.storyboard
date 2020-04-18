@@ -44,19 +44,29 @@
                                                         <constraint firstAttribute="width" constant="35" id="vxh-tU-goL"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvF-zK-6NO">
+                                                    <rect key="frame" x="353" y="12.5" width="30" height="30"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hSt-8X-yq9" secondAttribute="trailing" constant="6" id="3rF-B0-uAJ"/>
                                                 <constraint firstItem="hSt-8X-yq9" firstAttribute="top" secondItem="Toq-hr-LzK" secondAttribute="topMargin" id="4aI-fT-r3I"/>
                                                 <constraint firstAttribute="trailing" secondItem="JaT-hK-JIm" secondAttribute="trailing" constant="5" id="KF3-lq-7A4"/>
                                                 <constraint firstItem="hSt-8X-yq9" firstAttribute="bottom" secondItem="Toq-hr-LzK" secondAttribute="bottomMargin" constant="-1" id="OMH-2h-xCc"/>
+                                                <constraint firstItem="uvF-zK-6NO" firstAttribute="centerX" secondItem="hSt-8X-yq9" secondAttribute="centerX" constant="-2.5" id="TqA-d2-RRx"/>
                                                 <constraint firstAttribute="bottom" secondItem="JaT-hK-JIm" secondAttribute="bottom" constant="5" id="bDa-t3-Eri"/>
                                                 <constraint firstItem="hSt-8X-yq9" firstAttribute="centerY" secondItem="JaT-hK-JIm" secondAttribute="centerY" constant="-0.5" id="cqK-IZ-ohG"/>
                                                 <constraint firstItem="JaT-hK-JIm" firstAttribute="leading" secondItem="Toq-hr-LzK" secondAttribute="leading" constant="5" id="h52-pi-3fk"/>
+                                                <constraint firstItem="uvF-zK-6NO" firstAttribute="centerY" secondItem="hSt-8X-yq9" secondAttribute="centerY" constant="-1" id="pt9-g4-B5A"/>
                                                 <constraint firstItem="JaT-hK-JIm" firstAttribute="top" secondItem="Toq-hr-LzK" secondAttribute="top" constant="5" id="pzL-9B-n2q"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageButton" destination="uvF-zK-6NO" id="qMS-IX-NHo"/>
                                             <outlet property="itemImages" destination="hSt-8X-yq9" id="VTf-7b-ARG"/>
                                             <outlet property="nameLabel" destination="JaT-hK-JIm" id="qP9-AF-b67"/>
                                         </connections>
@@ -130,6 +140,6 @@
     </scenes>
     <resources>
         <image name="icons8-forward-24" width="24" height="24"/>
-        <image name="power" catalog="system" width="32" height="32"/>
+        <image name="power" catalog="system" width="64" height="62"/>
     </resources>
 </document>

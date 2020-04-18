@@ -33,10 +33,7 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        //        self.navigationController?.navigationBar.topItem?.title = "Account"
         title = "Account"
-        
         TableView.tableFooterView = UIView(frame: .zero)
         self.TableView.tableFooterView?.isHidden = true
         self.TableView.layer.cornerRadius = 10.0
@@ -46,7 +43,6 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         profilepicimage.maskCircle(anyImage: anyAvatarImage)
         
     }
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -61,12 +57,9 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         let result = entries[indexPath.row]
         cell.menulistimage.image =  UIImage(named: result.image)
         cell.menunameLabel.text = result.title
-        
-        TableView.heightAnchor.constraint(equalToConstant: tableView.contentSize.height).isActive = true
+     TableView.heightAnchor.constraint(equalToConstant:tableView.contentSize.height).isActive = true
         cell.selectionStyle = .none
         return cell
-        
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,20 +67,19 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cell = tableView.cellForRow(at: indexPath) as? profileTableViewCell {
             
             switch cell.menunameLabel.text {
             case "My Account":
-                print("My Account")
-                let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "profileStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "userinfoTableViewController") as! userinfoTableViewController
                 self.navigationController?.pushViewController(nextViewController, animated: true)
                 
             case "My Wallet":
-                print("My Wallet")
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "WalletStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "walletViewController") as! walletViewController
                 self.navigationController?.pushViewController(nextViewController, animated: true)
@@ -97,7 +89,6 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ReferViewController") as! ReferViewController
                 self.navigationController?.pushViewController(nextViewController, animated: true)
             case "Settings":
-                print("Settings")
                 
                 let storyBoard : UIStoryboard = UIStoryboard(name: "SettingStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
@@ -116,7 +107,7 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
             default:
                 print("nothing is selected")
             }
-        }
+        }   
     }
 }
 

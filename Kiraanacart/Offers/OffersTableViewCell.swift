@@ -1,16 +1,17 @@
 //
-//  MyCustomCell.swift
-//  segmentController
+//  OffersTableViewCell.swift
+//  Kiraanacart
 //
-//  Created by Brandpier iOS on 1/6/20.
-//  Copyright © 2020 Brandpier iOS. All rights reserved.
+//  Created by CHINNA on 18/04/20.
+//  Copyright © 2020 NibagoHomeServieces. All rights reserved.
 //
 
 import UIKit
 
-class MyCustomCell: UITableViewCell {
+class OffersTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var offersDescprion: UILabel!
+    @IBOutlet weak var offersImages: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

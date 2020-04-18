@@ -8,9 +8,12 @@
 
 import UIKit
 
+
+
 class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
     @IBOutlet weak var Tableview: UITableView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +30,12 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    @IBAction func homeButtonClick(_ sender: UIButton) {
-        
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
-//        self.navigationController?.pushViewController(nextViewController, animated: true)
+    @objc func homeButtonClick() {
+       
+        print("this is calling")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
         
     }
   
@@ -63,6 +67,8 @@ class HomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }else if indexPath.section == 2
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! HomeCustomTableViewCell2
+            
+          
             cell.selectionStyle = .none
             return cell
         }
