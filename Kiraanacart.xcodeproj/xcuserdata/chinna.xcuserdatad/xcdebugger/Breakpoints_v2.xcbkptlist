@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "196"
             endingLineNumber = "196"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkName = "didDoubleTap(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
