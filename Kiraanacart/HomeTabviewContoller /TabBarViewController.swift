@@ -22,7 +22,7 @@ class TabBarViewController: UITabBarController {
            {
            if let HomeNavigationController = viewController as?  HomeNavigtionViewController
            {
-           if let HomeViewController  = HomeNavigationController.viewControllers.first as? HomeViewController
+           if let HomeViewController  = HomeNavigationController.viewControllers.first as? HomepageViewController
            {
                
                }

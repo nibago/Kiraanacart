@@ -29,7 +29,7 @@ class ShopbyProductViewController: SJSegmentedViewController {
             
             let button2 = UIButton(type: .custom)
             button2.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
-                                     button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+            button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
             button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
             button2.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
             //button.addTarget(target, action: nil, for: .touchUpInside)
@@ -82,6 +82,12 @@ class ShopbyProductViewController: SJSegmentedViewController {
         }
     
     
+    
+      override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+          self.tabBarController?.tabBar.isHidden = true
+      }
+    
   @objc func didTapEditButton(sender: AnyObject) {
       print("edit")
   }
@@ -114,6 +120,8 @@ class ShopbyProductViewController: SJSegmentedViewController {
                 selectedSegment?.titleColor(.red)
             }
         }
+        
+        
 
 }
 

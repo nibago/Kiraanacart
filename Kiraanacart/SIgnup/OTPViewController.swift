@@ -135,21 +135,16 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
                    
                     prefs.set(1, forKey: "ISLOGGEDIN")
                 
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-                    
-                  //   self.present(nextViewController, animated: true, completion: nil)
-                  //  self.navigationController?.pushViewController(nextViewController, animated: true)
-                    
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "LocationStoryboard", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetectLocViewController") as! DetectLocViewController
                     self.navigationController?.show(nextViewController, sender: nil)
-                  //  self.prefs.set(self.LoginStatus, forKey: "true")
                     self.prefs.synchronize()
                     
                  }
         
           
       }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)

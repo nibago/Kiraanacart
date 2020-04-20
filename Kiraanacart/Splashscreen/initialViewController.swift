@@ -66,7 +66,7 @@ class initialViewController: UIViewController, UIScrollViewDelegate {
         
                
                let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-               slide2.imageView.image = UIImage(named: "splash3")
+               slide2.imageView.image = UIImage(named: "splash2")
                slide2.labelTitle.text = "Fast Delivery"
                slide2.labelDesc.text = "Fast Delivery to home, office and wherever you are"
                slide2.skipbuttonClick.addTarget(self, action: #selector(coolFunc(_:)), for: .touchUpInside)

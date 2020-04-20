@@ -17,15 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           
         let prefs:UserDefaults = UserDefaults.standard
               
-        let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN") as Int
-        
+       let isLoggedIn:Int = prefs.integer(forKey: "ISLOGGEDIN") as Int
+
          if(isLoggedIn == 0){
-        
+
                 let storyBoard : UIStoryboard = UIStoryboard(name: "HomeStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
                  window?.makeKeyAndVisible()
                  window?.rootViewController = nextViewController
-                 
+
              } else
              {
                  print("this is falise ")

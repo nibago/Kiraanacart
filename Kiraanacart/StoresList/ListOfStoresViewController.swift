@@ -107,4 +107,29 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
 
+     
+    func tableView(_ tableView: UITableView, didSelectRowAt
+        indexPath: IndexPath){
+    
+        let storyBoard : UIStoryboard = UIStoryboard(name: "ShopbyproductStoryboard", bundle:nil)
+               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ShopbyProductViewController") as! ShopbyProductViewController
+               self.navigationController?.pushViewController(nextViewController, animated: true)
+    
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+  
+    
+    override func viewWillDisappear(_ animated: Bool) {
+          super.viewWillDisappear(animated)
+          // Show the navigation bar on other view controllers
+        
+          self.tabBarController?.tabBar.isHidden = false
+      }
+    
+    
 }
