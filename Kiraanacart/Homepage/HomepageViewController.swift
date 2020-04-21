@@ -182,12 +182,21 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         if collectionView == self.collectionView2 {
             
             if indexPath.row == 0{
-                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "MilkStoryboard", bundle:nil)
+                              let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MilkproductViewController") as! MilkproductViewController
+                              self.navigationController?.show(nextViewController, sender: nil)
             }else if indexPath.row == 1
             {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
                 self.navigationController?.show(nextViewController, sender: nil)
+            } else {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+                
+                
+                
+                              let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                              self.navigationController?.show(nextViewController, sender: nil)
             }
             
         }

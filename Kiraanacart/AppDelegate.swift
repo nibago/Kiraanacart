@@ -32,6 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+       func application(application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
+        let windows = UIApplication.shared.windows
+
+        for window in windows {
+            window.removeConstraints(window.constraints)
+        }
+    }
 
 }
 

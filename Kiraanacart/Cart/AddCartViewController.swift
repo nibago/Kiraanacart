@@ -75,8 +75,6 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     @objc func connected(sender: UIButton){
       
-        let buttonTag = sender.tag
-        
         let storyBoard : UIStoryboard = UIStoryboard(name: "CuponsStoryboard", bundle:nil)
               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CuponsViewController") as! CuponsViewController
               self.navigationController?.show(nextViewController, sender: nil)

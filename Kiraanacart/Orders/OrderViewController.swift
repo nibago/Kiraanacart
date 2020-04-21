@@ -49,4 +49,14 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
            return 199
        }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    
+
+    let storyBoard : UIStoryboard = UIStoryboard(name: "OrderDetailsStoryboard", bundle:nil)
+          let nextViewController = storyBoard.instantiateViewController(withIdentifier: "OrderDetailsViewController") as! OrderDetailsViewController
+          self.navigationController?.show(nextViewController, sender: nil)
+    
+    }
 }
