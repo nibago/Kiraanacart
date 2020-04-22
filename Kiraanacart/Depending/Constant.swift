@@ -1,16 +1,18 @@
 //
-//  Constants .swift
+//  Constant.swift
 //  Kiraanacart
 //
-//  Created by CHINNA on 09/04/20.
+//  Created by CHINNA on 22/04/20.
 //  Copyright © 2020 NibagoHomeServieces. All rights reserved.
 //
+
+import Foundation
 
 
 import Foundation
 import UIKit
 
-struct Constants
+struct Constant
 {
    static let BaseUrl = "https://rest.jioboomer.dev/API/"
    static let BaseUrl_Apps = "https://appstore.jioboomer.dev/v1/"

@@ -166,8 +166,8 @@ class MilkproductViewController: UIViewController,UICollectionViewDelegate, UICo
         if collectionView == self.CollectionView3 {
             
             if indexPath.row == 0{
-                let storyBoard : UIStoryboard = UIStoryboard(name: "FilterBrandsStoryboard", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FilterBrandsViewController") as! FilterBrandsViewController
+                let storyBoard : UIStoryboard = UIStoryboard(name: "FilterStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "FilterViewController") as! FilterViewController
                 self.navigationController?.show(nextViewController, sender: nil)
             }
             

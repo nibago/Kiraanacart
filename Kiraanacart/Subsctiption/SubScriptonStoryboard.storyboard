@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SubscriptionS View Controller-->
+        <scene sceneID="WmO-jk-Msb">
+            <objects>
+                <viewController storyboardIdentifier="SubscriptionSViewController" id="vKe-qg-WFz" customClass="SubscriptionSViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQT-2Q-TqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jst-xs-oQE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQE-1v-i6s">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LLN-Rt-auP">
+                                                <rect key="frame" x="20" y="49" width="374" height="166"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" From Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-AR-gbx">
+                                                        <rect key="frame" x="20" y="35" width="93.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbx-Cg-rQS">
+                                                        <rect key="frame" x="20" y="137.5" width="79" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yY8-do-jgr">
+                                                        <rect key="frame" x="115.5" y="28.5" width="250.5" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="oQU-Ta-ZIf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dv-cr-gdf">
+                                                        <rect key="frame" x="101" y="131" width="265" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="h26-kl-Wyt"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-icon" translatesAutoresizingMaskIntoConstraints="NO" id="xOC-9J-a92">
+                                                        <rect key="frame" x="121" y="33" width="25" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="6Vn-6w-kHS"/>
+                                                            <constraint firstAttribute="width" constant="25" id="7zQ-uJ-YZ7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-icon" translatesAutoresizingMaskIntoConstraints="NO" id="cY5-hC-DlB">
+                                                        <rect key="frame" x="112" y="135.5" width="25" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="2yW-P8-sfj"/>
+                                                            <constraint firstAttribute="width" constant="25" id="8B6-nI-gbV"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="yY8-do-jgr" firstAttribute="centerY" secondItem="cdm-AR-gbx" secondAttribute="centerY" id="3Fn-0b-haM"/>
+                                                    <constraint firstItem="yY8-do-jgr" firstAttribute="leading" secondItem="cdm-AR-gbx" secondAttribute="trailing" constant="2" id="8m8-az-Khx"/>
+                                                    <constraint firstItem="7dv-cr-gdf" firstAttribute="leading" secondItem="cY5-hC-DlB" secondAttribute="trailing" constant="-36" id="9aY-qT-MzI"/>
+                                                    <constraint firstItem="xOC-9J-a92" firstAttribute="centerY" secondItem="yY8-do-jgr" secondAttribute="centerY" id="Mo5-RA-hQt"/>
+                                                    <constraint firstItem="xOC-9J-a92" firstAttribute="leading" secondItem="cdm-AR-gbx" secondAttribute="trailing" constant="7.5" id="O3Z-ce-VBn"/>
+                                                    <constraint firstItem="pbx-Cg-rQS" firstAttribute="leading" secondItem="LLN-Rt-auP" secondAttribute="leading" constant="20" symbolic="YES" id="T0A-kx-FGD"/>
+                                                    <constraint firstItem="7dv-cr-gdf" firstAttribute="leading" secondItem="pbx-Cg-rQS" secondAttribute="trailing" constant="2" id="TEs-qp-3CR"/>
+                                                    <constraint firstItem="cY5-hC-DlB" firstAttribute="centerY" secondItem="7dv-cr-gdf" secondAttribute="centerY" id="Uzw-Wf-b9t"/>
+                                                    <constraint firstItem="pbx-Cg-rQS" firstAttribute="centerY" secondItem="7dv-cr-gdf" secondAttribute="centerY" id="bjt-Po-R51"/>
+                                                    <constraint firstAttribute="trailing" secondItem="yY8-do-jgr" secondAttribute="trailing" constant="8" id="ecP-Av-uRF"/>
+                                                    <constraint firstAttribute="height" constant="166" id="pJb-ZG-7WX"/>
+                                                    <constraint firstItem="yY8-do-jgr" firstAttribute="leading" secondItem="cdm-AR-gbx" secondAttribute="trailing" constant="2" id="svC-uK-ATU"/>
+                                                    <constraint firstItem="cdm-AR-gbx" firstAttribute="leading" secondItem="LLN-Rt-auP" secondAttribute="leading" constant="20" symbolic="YES" id="svc-yH-8I6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pbx-Cg-rQS" secondAttribute="bottom" constant="8" id="vY3-j4-a3r"/>
+                                                    <constraint firstItem="cdm-AR-gbx" firstAttribute="top" secondItem="LLN-Rt-auP" secondAttribute="top" constant="35" id="xmT-cH-4rb"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mix-Lb-tBw" customClass="CalendarView" customModule="Kiraanacart" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="255" width="398" height="369"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="369" id="Rcb-OY-CW2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How frequent do you want milk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spn-gq-gVC">
+                                                <rect key="frame" x="0.0" y="644" width="414" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q17-Pq-e9v">
+                                                <rect key="frame" x="5" y="690" width="118" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="118" id="w6s-LQ-o9m"/>
+                                                    <constraint firstAttribute="height" constant="38" id="wn2-0k-bDR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Every Day">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tec-do-EA2">
+                                                <rect key="frame" x="163" y="692" width="117" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="117" id="AHz-ih-bkD"/>
+                                                    <constraint firstAttribute="height" constant="37" id="qiX-sh-bxG"/>
+                                                </constraints>
+                                                <state key="normal" title="Alternate Days">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhV-iA-7ss">
+                                                <rect key="frame" x="318" y="690" width="90" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="kPO-98-rgn"/>
+                                                    <constraint firstAttribute="width" constant="90" id="udM-AR-tAo"/>
+                                                </constraints>
+                                                <state key="normal" title="Select Day">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pms-VO-SVP">
+                                                <rect key="frame" x="116" y="759" width="164" height="51"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="XhV-iA-7ss" firstAttribute="leading" secondItem="tec-do-EA2" secondAttribute="trailing" constant="38" id="30e-sz-Asq"/>
+                                            <constraint firstAttribute="trailing" secondItem="7dv-cr-gdf" secondAttribute="trailing" constant="28" id="5QG-o8-wSQ"/>
+                                            <constraint firstItem="q17-Pq-e9v" firstAttribute="firstBaseline" secondItem="tec-do-EA2" secondAttribute="firstBaseline" id="9bX-Wx-HKn"/>
+                                            <constraint firstItem="q17-Pq-e9v" firstAttribute="top" secondItem="XhV-iA-7ss" secondAttribute="top" id="Atm-rx-gjd"/>
+                                            <constraint firstItem="Mix-Lb-tBw" firstAttribute="top" secondItem="LLN-Rt-auP" secondAttribute="bottom" constant="40" id="EmS-ok-1Oe"/>
+                                            <constraint firstItem="Spn-gq-gVC" firstAttribute="top" secondItem="Mix-Lb-tBw" secondAttribute="bottom" constant="20" id="GnB-vK-5Dx"/>
+                                            <constraint firstAttribute="trailing" secondItem="Spn-gq-gVC" secondAttribute="trailing" id="J6D-9M-0Qf"/>
+                                            <constraint firstItem="Spn-gq-gVC" firstAttribute="leading" secondItem="kQE-1v-i6s" secondAttribute="leading" id="Kbd-z5-UKb"/>
+                                            <constraint firstItem="LLN-Rt-auP" firstAttribute="top" secondItem="kQE-1v-i6s" secondAttribute="top" constant="49" id="NdT-de-G3Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="yY8-do-jgr" secondAttribute="trailing" constant="28" id="QRd-5E-bWj"/>
+                                            <constraint firstItem="tec-do-EA2" firstAttribute="leading" secondItem="q17-Pq-e9v" secondAttribute="trailing" constant="40" id="QzV-R2-PuS"/>
+                                            <constraint firstItem="LLN-Rt-auP" firstAttribute="leading" secondItem="kQE-1v-i6s" secondAttribute="leading" constant="20" symbolic="YES" id="RCd-cy-QAx"/>
+                                            <constraint firstAttribute="width" constant="414" id="Rzl-6Z-Grv"/>
+                                            <constraint firstAttribute="height" constant="818" id="bUc-H2-CiH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Mix-Lb-tBw" secondAttribute="trailing" constant="8" id="cs9-4R-vPU"/>
+                                            <constraint firstItem="q17-Pq-e9v" firstAttribute="top" secondItem="Spn-gq-gVC" secondAttribute="bottom" constant="20.5" id="ogV-rt-CYf"/>
+                                            <constraint firstItem="Mix-Lb-tBw" firstAttribute="leading" secondItem="kQE-1v-i6s" secondAttribute="leading" constant="8" id="tqQ-jM-4N6"/>
+                                            <constraint firstItem="q17-Pq-e9v" firstAttribute="leading" secondItem="kQE-1v-i6s" secondAttribute="leading" constant="5" id="vEb-Ij-vT0"/>
+                                            <constraint firstItem="tec-do-EA2" firstAttribute="bottom" secondItem="XhV-iA-7ss" secondAttribute="bottom" id="xAr-2w-JuG"/>
+                                            <constraint firstAttribute="trailing" secondItem="LLN-Rt-auP" secondAttribute="trailing" constant="20" symbolic="YES" id="xk3-x5-KNC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kQE-1v-i6s" secondAttribute="trailing" constant="-20" id="KX8-QS-Oha"/>
+                                    <constraint firstItem="kQE-1v-i6s" firstAttribute="top" secondItem="jst-xs-oQE" secondAttribute="top" id="b7o-8b-aom"/>
+                                    <constraint firstAttribute="bottom" secondItem="kQE-1v-i6s" secondAttribute="bottom" constant="-20" id="e5k-hb-Jhe"/>
+                                    <constraint firstItem="kQE-1v-i6s" firstAttribute="leading" secondItem="jst-xs-oQE" secondAttribute="leading" id="zgG-fC-ZQt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jst-xs-oQE" firstAttribute="leading" secondItem="jJL-to-95B" secondAttribute="leading" id="3yE-2B-dif"/>
+                            <constraint firstItem="jJL-to-95B" firstAttribute="trailing" secondItem="jst-xs-oQE" secondAttribute="trailing" id="URE-Ua-luD"/>
+                            <constraint firstItem="jJL-to-95B" firstAttribute="bottom" secondItem="jst-xs-oQE" secondAttribute="bottom" id="Usb-Vg-MXM"/>
+                            <constraint firstItem="jst-xs-oQE" firstAttribute="top" secondItem="jJL-to-95B" secondAttribute="top" id="mNX-hq-vyJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jJL-to-95B"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="cal" destination="Mix-Lb-tBw" id="ADK-BH-gOv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmB-F3-75O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar-icon" width="1080" height="1080"/>
+    </resources>
+</document>

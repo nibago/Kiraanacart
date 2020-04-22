@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Filter View Controller-->
+        <scene sceneID="bsF-n6-gb2">
+            <objects>
+                <viewController storyboardIdentifier="FilterViewController" id="fDA-8h-Oxo" customClass="FilterViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JmR-RG-mfW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5q2-3j-hdy">
+                                <rect key="frame" x="0.0" y="129" width="375" height="663"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="123" id="kFy-vC-t2N">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="123"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kFy-vC-t2N" id="Ges-Iu-Ge4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fDA-8h-Oxo" id="Ggl-EA-vLu"/>
+                                    <outlet property="delegate" destination="fDA-8h-Oxo" id="Cop-4j-8uU"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Mh-DbB">
+                                <rect key="frame" x="0.0" y="54" width="375" height="72"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-7E-8Ae">
+                                        <rect key="frame" x="20" y="21" width="347" height="32"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Amul"/>
+                                            <segment title="Nadini"/>
+                                            <segment title="Heritage"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="0Ho-q2-8TB"/>
+                                    <constraint firstItem="qnI-7E-8Ae" firstAttribute="leading" secondItem="vDV-Mh-DbB" secondAttribute="leading" constant="20" symbolic="YES" id="FSv-SY-Bqp"/>
+                                    <constraint firstAttribute="trailing" secondItem="qnI-7E-8Ae" secondAttribute="trailing" constant="8" id="TAy-F1-RQl"/>
+                                    <constraint firstItem="qnI-7E-8Ae" firstAttribute="top" secondItem="vDV-Mh-DbB" secondAttribute="top" constant="21" id="ZFM-im-vf6"/>
+                                    <constraint firstAttribute="bottom" secondItem="qnI-7E-8Ae" secondAttribute="bottom" constant="20" id="oOI-J5-Ru6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vDV-Mh-DbB" firstAttribute="leading" secondItem="hb0-ka-KPL" secondAttribute="leading" id="Bdw-l4-FzM"/>
+                            <constraint firstAttribute="bottom" secondItem="5q2-3j-hdy" secondAttribute="bottom" constant="20" symbolic="YES" id="LiS-hh-k7U"/>
+                            <constraint firstItem="5q2-3j-hdy" firstAttribute="top" secondItem="vDV-Mh-DbB" secondAttribute="bottom" constant="3" id="QUZ-65-TyY"/>
+                            <constraint firstItem="vDV-Mh-DbB" firstAttribute="trailing" secondItem="hb0-ka-KPL" secondAttribute="trailing" id="RKf-C2-2t1"/>
+                            <constraint firstItem="5q2-3j-hdy" firstAttribute="trailing" secondItem="hb0-ka-KPL" secondAttribute="trailing" id="ajH-sP-2Cl"/>
+                            <constraint firstItem="5q2-3j-hdy" firstAttribute="leading" secondItem="hb0-ka-KPL" secondAttribute="leading" id="gUJ-IG-k1b"/>
+                            <constraint firstItem="vDV-Mh-DbB" firstAttribute="top" secondItem="hb0-ka-KPL" secondAttribute="top" constant="10" id="otZ-vH-ljI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hb0-ka-KPL"/>
+                    </view>
+                    <connections>
+                        <outlet property="Tableview" destination="5q2-3j-hdy" id="SR3-hI-jVw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-ea-oUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.8000000000000007" y="61.330049261083744"/>
+        </scene>
+    </scenes>
+</document>
