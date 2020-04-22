@@ -15,11 +15,27 @@ class FilterViewController: UIViewController,UITableViewDelegate,UITableViewData
     
        let items = ["img1", "img2", "img3", "img4","img5","img6"]
     
-      
+      @IBOutlet var tagListView: TaglistCollection!
+   // var listCategorys = Array<AnyObject>()
+    
+     var selectedCategoryID = "0"
+    var lastContentOffset: CGFloat = 0.0
+    var minHeaderHeight: CGFloat = 0.0
+    let maxHeaderHeight: CGFloat = 85.0
+    
+    let listCategorys: [[String] = [["nandini": "", "":""]]
+//    let listCategorys: [[String:String]] = [["":"values"]]
+    
+    
+//    let listCategorys: [String: String] = ["nadin":"raja"]
+    
+   // [["nadini":""]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupTaglistView()
+        
        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
                    
                    title = "Filter By Product"
@@ -50,6 +66,31 @@ class FilterViewController: UIViewController,UITableViewDelegate,UITableViewData
               self.navigationController?.show(nextViewController, sender: nil)
               
           }
+    
+    
+    func setupTaglistView() {
+        
+        self.tagListView.setupTagCollection()
+        self.tagListView.delegate = self
+        self.tagListView.isDeleteEnabled = false
+        self.tagListView.isShadowEnabled = true
+        self.tagListView.allowSingleSelection = true
+        let spaceChar = ""
+        self.tagListView.appendTag(tagName: "\(spaceChar)All\(spaceChar)")
+        
+        for i in 0..<self.listCategorys.count
+        {
+            if let dict = self.listCategorys[i] as? Dictionary<String,AnyObject>
+            {
+                let categorymodal = listCategorys
+                self.tagListView.appendTag(tagName: "\(spaceChar)\(categorymodal)\(spaceChar)")
+            }
+        }
+        self.tagListView.textFont = UIFont(name: "Helvetica Neue", size:13)!
+        
+    }
+    
+    
     
       func numberOfSections(in tableView: UITableView) -> Int {
           return 1
@@ -122,4 +163,37 @@ class FilterViewController: UIViewController,UITableViewDelegate,UITableViewData
       
     
 
+}
+
+extension FilterViewController : TagViewDelegate {
+    func didRemoveTag(_ indexPath: IndexPath) {
+        print("RemoveIndexPath==\(indexPath)")
+    }
+    
+    func didTaponTag(_ indexPath: IndexPath) {
+        print("Tag tapped: \(indexPath.row)")
+        
+        if indexPath.row == 0
+        {
+            self.selectedCategoryID = "0"
+        }
+        else
+        {
+//            if let dict = self.listCategorys[indexPath.row-1] as? Dictionary<String,AnyObject>
+                     if let dict = self.listCategorys[indexPath.row-1] as? Dictionary<String,AnyObject>
+                
+            {
+                if let categoryID = dict["CategoryID"] as? String
+                {
+                    self.selectedCategoryID = categoryID
+                }
+            }
+        }
+        
+        self.lastContentOffset = 0.0
+       // self.heightConstraint.constant = 85
+        
+      //  self.getList(pageNumber: 1)
+    }
+    
 }

@@ -33,27 +33,41 @@
                                     <outlet property="delegate" destination="fDA-8h-Oxo" id="Cop-4j-8uU"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Mh-DbB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-Mh-DbB" customClass="TaglistCollection" customModule="Kiraanacart" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="54" width="375" height="72"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qnI-7E-8Ae">
-                                        <rect key="frame" x="20" y="21" width="347" height="32"/>
-                                        <segments>
-                                            <segment title="All"/>
-                                            <segment title="Amul"/>
-                                            <segment title="Nadini"/>
-                                            <segment title="Heritage"/>
-                                        </segments>
-                                    </segmentedControl>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="0Ho-q2-8TB"/>
-                                    <constraint firstItem="qnI-7E-8Ae" firstAttribute="leading" secondItem="vDV-Mh-DbB" secondAttribute="leading" constant="20" symbolic="YES" id="FSv-SY-Bqp"/>
-                                    <constraint firstAttribute="trailing" secondItem="qnI-7E-8Ae" secondAttribute="trailing" constant="8" id="TAy-F1-RQl"/>
-                                    <constraint firstItem="qnI-7E-8Ae" firstAttribute="top" secondItem="vDV-Mh-DbB" secondAttribute="top" constant="21" id="ZFM-im-vf6"/>
-                                    <constraint firstAttribute="bottom" secondItem="qnI-7E-8Ae" secondAttribute="bottom" constant="20" id="oOI-J5-Ru6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagTextColor">
+                                        <color key="value" red="0.94901960780000005" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" red="0.76862745099999996" green="0.76862745099999996" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="closeIconTint">
+                                        <color key="value" red="0.94901960780000005" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="closeIconWidth">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="closeIconHeight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionBackgroundColor">
+                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionTagTextColor">
+                                        <color key="value" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionCloseIconTint">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -70,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="Tableview" destination="5q2-3j-hdy" id="SR3-hI-jVw"/>
+                        <outlet property="tagListView" destination="vDV-Mh-DbB" id="rJy-fI-7nR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-ea-oUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
