@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slot Details View Controller-->
+        <scene sceneID="tJF-Gx-3sY">
+            <objects>
+                <viewController storyboardIdentifier="SlotDetailsViewController" id="Lcl-KV-IlS" customClass="SlotDetailsViewController" customModule="Kiraanacart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYi-Lk-jF2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-jX-ZwS">
+                                <rect key="frame" x="0.0" y="84" width="414" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZsO-9a-Z7e"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Delivery "/>
+                                    <segment title="Pickup"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-Za-93B">
+                                <rect key="frame" x="10" y="164" width="394" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="DJl-Uk-IAV"/>
+                                </constraints>
+                                <state key="normal" title="KC primium Express Delivery with in 90 mins Rs 50.00">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUM-MU-p4E">
+                                <rect key="frame" x="10" y="224" width="394" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Pf4-fE-SX2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="primium express Delivery with in 120 mins RS 30.00">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhs-o7-ey3">
+                                <rect key="frame" x="212" y="299" width="192" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Tca-rV-FgE"/>
+                                </constraints>
+                                <state key="normal" title="Tomorrow Slots">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAH-q8-9uX">
+                                <rect key="frame" x="10" y="299" width="192" height="47"/>
+                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="tHi-g7-iWw"/>
+                                </constraints>
+                                <state key="normal" title="Today Slots">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc2-9d-cua">
+                                <rect key="frame" x="10" y="647" width="394" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mqb-VZ-HrL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Procced Next ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="procceedButtonclick:" destination="Lcl-KV-IlS" eventType="touchUpInside" id="w0R-Ge-sUk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ba-c3-UCO" firstAttribute="trailing" secondItem="cVZ-Za-93B" secondAttribute="trailing" constant="10" id="0W2-dl-r76"/>
+                            <constraint firstItem="KsQ-jX-ZwS" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" id="CQJ-LS-IAu"/>
+                            <constraint firstItem="Rhs-o7-ey3" firstAttribute="leading" secondItem="qAH-q8-9uX" secondAttribute="trailing" constant="10" id="DK4-Yj-Yy7"/>
+                            <constraint firstItem="KsQ-jX-ZwS" firstAttribute="top" secondItem="8ba-c3-UCO" secondAttribute="top" constant="40" id="GTE-FW-aZO"/>
+                            <constraint firstItem="oc2-9d-cua" firstAttribute="centerY" secondItem="yYi-Lk-jF2" secondAttribute="centerY" multiplier="1.5" id="KPJ-N1-xUn"/>
+                            <constraint firstItem="aUM-MU-p4E" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" constant="10" id="LT2-UZ-97J"/>
+                            <constraint firstItem="oc2-9d-cua" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" constant="10" id="RMY-EM-KNp"/>
+                            <constraint firstItem="qAH-q8-9uX" firstAttribute="top" secondItem="aUM-MU-p4E" secondAttribute="bottom" constant="30" id="VNG-iM-RtS"/>
+                            <constraint firstItem="KsQ-jX-ZwS" firstAttribute="trailing" secondItem="8ba-c3-UCO" secondAttribute="trailing" id="WH2-AD-R7J"/>
+                            <constraint firstItem="cVZ-Za-93B" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" constant="10" id="YUQ-cC-UCy"/>
+                            <constraint firstItem="oc2-9d-cua" firstAttribute="centerX" secondItem="yYi-Lk-jF2" secondAttribute="centerX" id="ZAn-vN-vRc"/>
+                            <constraint firstItem="8ba-c3-UCO" firstAttribute="trailing" secondItem="aUM-MU-p4E" secondAttribute="trailing" constant="10" id="bcc-Sl-8Gs"/>
+                            <constraint firstItem="8ba-c3-UCO" firstAttribute="trailing" secondItem="oc2-9d-cua" secondAttribute="trailing" constant="10" id="evB-Cc-MGU"/>
+                            <constraint firstItem="aUM-MU-p4E" firstAttribute="top" secondItem="cVZ-Za-93B" secondAttribute="bottom" constant="15" id="fmE-kq-a12"/>
+                            <constraint firstItem="Rhs-o7-ey3" firstAttribute="top" secondItem="aUM-MU-p4E" secondAttribute="bottom" constant="30" id="iO3-vU-8Od"/>
+                            <constraint firstItem="qAH-q8-9uX" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" constant="10" id="ida-tB-O6o"/>
+                            <constraint firstItem="8ba-c3-UCO" firstAttribute="trailing" secondItem="Rhs-o7-ey3" secondAttribute="trailing" constant="10" id="jcv-9v-oqs"/>
+                            <constraint firstItem="qAH-q8-9uX" firstAttribute="leading" secondItem="8ba-c3-UCO" secondAttribute="leading" constant="10" id="k7i-1K-r3M"/>
+                            <constraint firstItem="Rhs-o7-ey3" firstAttribute="height" secondItem="qAH-q8-9uX" secondAttribute="height" id="r3G-0g-ICv"/>
+                            <constraint firstItem="qAH-q8-9uX" firstAttribute="top" secondItem="aUM-MU-p4E" secondAttribute="bottom" constant="30" id="vNv-hb-i73"/>
+                            <constraint firstItem="cVZ-Za-93B" firstAttribute="top" secondItem="KsQ-jX-ZwS" secondAttribute="bottom" constant="30" id="w3k-73-bzd"/>
+                            <constraint firstItem="Rhs-o7-ey3" firstAttribute="width" secondItem="qAH-q8-9uX" secondAttribute="width" id="yrE-Gp-oGy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8ba-c3-UCO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0c-ox-ZNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46.376811594202906" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+</document>

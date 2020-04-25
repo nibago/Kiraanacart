@@ -13,7 +13,7 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     @IBOutlet weak var Tableview: UITableView!
     
-    let showimagesval = ["1","2"]
+    let showimagesval = ["img1","img2"]
     let items = ["sunflowerOil","suger"]
     
     override func viewDidLoad() {
@@ -36,6 +36,10 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
         if section == 0{
                        return 1
                   }
+        if section == 2
+        {
+            return items.count
+        }
         
          return 1
     }
@@ -52,28 +56,31 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
         return cell
         
         }
-        if indexPath.row == 2 && indexPath.section == 0{
+        if indexPath.section == 2 && indexPath.row == 0{
                let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! AddTableViewCell3
+            
+            cell.showimages.image = UIImage(named:showimagesval[indexPath.row])
+            cell.itemsNameLabel.text = items[indexPath.row]
                return cell
                }
               if indexPath.section == 3 && indexPath.row == 0{
                let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as! AddTableViewCell4
+                cell.ViewcupponButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                return cell
-               
+
                }
         if indexPath.section == 4 && indexPath.row == 0{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell5", for: indexPath) as! AddTableViewCell5
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell5", for: indexPath) as! AddTableViewCell5
+            return cell
         }
-        
+//
           return UITableViewCell()
         }
       
  
+ 
     
-    
-    
-    @objc func connected(sender: UIButton){
+    @objc func buttonClicked(sender: UIButton){
       
         let storyBoard : UIStoryboard = UIStoryboard(name: "CuponsStoryboard", bundle:nil)
               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CuponsViewController") as! CuponsViewController
@@ -82,14 +89,14 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 && indexPath.section == 0{
-             return 120
-        }else if indexPath.row == 1 && indexPath.section == 0{
-                return 20
-        }else if indexPath.row == 2{
-                    return 110
-               }else if indexPath.row == 3{
+             return 110
+        }else if indexPath.section == 1 {
+                return 23
+        }else if indexPath.section == 2{
+                    return 112
+               }else if indexPath.section == 3{
                        return 84
-               }else if indexPath.row == 4{
+               }else if indexPath.section == 4{
                        return 266
 
                 }

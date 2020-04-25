@@ -27,6 +27,20 @@ class userinfoTableViewController: UITableViewController {
         CutomView.layer.borderColor = UIColor(red:205.0/255.0, green:205.0/255.0, blue:205.0/255.0, alpha: 1.0).cgColor
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+                  super.viewWillAppear(animated)
+                 self.tabBarController?.tabBar.isHidden = true
+             }
+       
+       
+       override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
+           // Show the navigation bar on other view controllers
+         
+           self.tabBarController?.tabBar.isHidden = false
+       }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {

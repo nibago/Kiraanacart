@@ -12,17 +12,27 @@ import Foundation
 import Foundation
 import UIKit
 
-struct BLFonts
+struct KCFonts
 {
    static let BaseUrl = "https://rest.jioboomer.dev/API/"
    static let BaseUrl_Apps = "https://appstore.jioboomer.dev/v1/"
 
     
-    static let BM_Gradient_1 = UIColor(red:35.0/255.0 , green:194.0/255.0 , blue:199.0/255.0 , alpha: 1)
+    
+     static let BM_Gradient_1 = UIColor(red:35.0/255.0 , green:194.0/255.0 , blue:199.0/255.0 , alpha: 1)
+    
+    
+    static let BM_Default = UIColor(red:0.0/255.0 , green:89.0/255.0 , blue:92.0/255.0 , alpha: 1)
+    
+    static let BM_White = UIColor(red:255.0/255.0 , green:255.0/255.0 , blue:255.0/255.0 , alpha: 1)
+    
+    
      static let BM_ThemeColor = UIColor(red:33.0/255.0 , green:180.0/255.0 , blue:203.0/255.0 , alpha: 1)
     
       static let BM_MainColor = UIColor(red:0.0/255.0 , green:158.0/255.0 , blue:143.0/255.0 , alpha: 1)
    
+   
+      static let BL_lightLineColor = UIColor(red:170.0/255.0 , green:170.0/255.0 , blue:170.0/255.0 , alpha: 0.1)
     
     //*****************************
     //MARK: Fonts

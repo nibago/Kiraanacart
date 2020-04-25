@@ -58,5 +58,17 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
         return 108
     }
   
+    
+    @IBAction func addressButtonClick(_ sender: UIButton) {
+        
+                 let storyBoard : UIStoryboard = UIStoryboard(name: "AddAddressStoryboard", bundle:nil)
+                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddAddressViewController") as! AddAddressViewController
+                     self.navigationController?.show(nextViewController, sender: true)
+                 
+        
+        
+    }
+    
+    
 
 }

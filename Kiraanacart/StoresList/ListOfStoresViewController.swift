@@ -111,9 +111,9 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt
         indexPath: IndexPath){
     
-        let storyBoard : UIStoryboard = UIStoryboard(name: "ShopbyproductStoryboard", bundle:nil)
-               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ShopbyProductViewController") as! ShopbyProductViewController
-               self.navigationController?.pushViewController(nextViewController, animated: true)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "ShopbyStoryboard", bundle:nil)
+               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "shopbyprViewController") as! shopbyprViewController
+        self.navigationController?.show(nextViewController, sender: true)
     
     }
     

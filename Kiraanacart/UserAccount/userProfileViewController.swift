@@ -43,6 +43,19 @@ class userProfileViewController: UIViewController,UITableViewDelegate,UITableVie
         profilepicimage.maskCircle(anyImage: anyAvatarImage)
         
     }
+     
+    override func viewWillAppear(_ animated: Bool) {
+               super.viewWillAppear(animated)
+              self.tabBarController?.tabBar.isHidden = false
+          }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+      
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

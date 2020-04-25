@@ -1,18 +1,15 @@
 //
-//  SecondViewController.swift
-//  segmentController
+//  IntialpageViewController.swift
+//  Kiraanacart
 //
-//  Created by Brandpier iOS on 1/6/20.
-//  Copyright © 2020 Brandpier iOS. All rights reserved.
+//  Created by CHINNA on 24/04/20.
+//  Copyright © 2020 NibagoHomeServieces. All rights reserved.
 //
 
 import UIKit
 
+class IntialpageViewController: UIViewController {
 
-class SecondViewController: UIViewController {
- var headerTitString = ""
-    var headerText = ""
-    var mainView : ShopbyProductViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
 

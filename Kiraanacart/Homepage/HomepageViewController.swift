@@ -10,6 +10,8 @@ import UIKit
 
 class HomepageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     
+    @IBOutlet weak var selfpickupButton: UIButton!
+    @IBOutlet weak var DeliveryButton: UIButton!
     @IBOutlet weak var RightButton: UIBarButtonItem!
     @IBOutlet weak var LeftButton: UIBarButtonItem!
     
@@ -31,8 +33,8 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         collectionView.dataSource = self
         imageArray1 = ["1","2","3","4"]
         
-        imageArray = ["Dairy _ Milk","Groceries","Vegetables-1","meat-&-sea-food-con","Organic-1","Fruits _ Juices"]
-        imageArraytitle = ["Milk","Groceries","Vegetables","meat &seafood","Organic","Fruits&Juices"]
+        imageArray = ["Groceries","Vegetables-1","meat-&-sea-food-con","Organic-1","Fruits _ Juices"]
+        imageArraytitle = ["Groceries","Vegetables","meat &seafood","Organic","Fruits&Juices"]
         
         let firstFrame = CGRect(x: 0, y: 0, width: view.frame.width/2, height: view.frame.height)
         let firstLabel = UILabel(frame: firstFrame)
@@ -44,7 +46,7 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         let button = UIButton(type: .custom)
         button.setImage(UIImage (named: "location-pin-icon"), for: .normal)
         button.frame = CGRect(x: 30.0, y: 0.0, width: 35.0, height: 35.0)
-        button.tintColor = .white
+        button.tintColor = .black
         //button.addTarget(target, action: nil, for: .touchUpInside)
         button.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
         button.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
@@ -53,7 +55,7 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         self.navigationItem.leftBarButtonItems = [barButtonItem]
         
         let button2 = UIButton(type: .custom)
-        button2.tintColor = .white
+        button2.tintColor = .black
         button2.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
         button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
         button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
@@ -74,6 +76,12 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         self.navigationController?.show(nextViewController, sender: nil)
         
     }
+    
+    
+  override func viewWillAppear(_ animated: Bool) {
+             super.viewWillAppear(animated)
+            self.tabBarController?.tabBar.isHidden = false 
+        }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -182,9 +190,10 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         if collectionView == self.collectionView2 {
             
             if indexPath.row == 0{
-                let storyBoard : UIStoryboard = UIStoryboard(name: "MilkStoryboard", bundle:nil)
-                              let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MilkproductViewController") as! MilkproductViewController
-                              self.navigationController?.show(nextViewController, sender: nil)
+               let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+                               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                               self.navigationController?.show(nextViewController, sender: nil)
+                           
             }else if indexPath.row == 1
             {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
@@ -213,6 +222,29 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         }
         
     }
+    
+    
+    
+    @IBAction func DeliveryButtonclick(_ sender: UIButton) {
+        
+        print("this click")
+        
+//        selfpickupButton.backgroundColor = KCFonts.BM_Default
+//        DeliveryButton.backgroundColor = KCFonts.BM_White
+        
+    }
+    
+    
+    
+    
+    
+    @IBAction func Selfpickup(_ sender: UIButton) {
+       
+      //  selfpickupButton.backgroundColor = KCFonts.BM_Default
+        //DeliveryButton.backgroundColor = KCFonts.BM_White
+          print("this click")
+    }
+    
     
     
 }

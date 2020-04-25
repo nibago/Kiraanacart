@@ -17,7 +17,7 @@ class OffersViewController: UIViewController ,UITableViewDataSource,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shopItemsImages =  ["shop1","shop2","shop3"]
+        shopItemsImages =  ["disk","disk2","disk3"]
 
         title = "Offers"
              navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
