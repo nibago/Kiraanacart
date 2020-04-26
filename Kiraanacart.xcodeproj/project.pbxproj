@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		183A0B2E243B58B5006A67DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183A0B2D243B58B5006A67DD /* Assets.xcassets */; };
-		183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0B2F243C4003006A67DD /* UtilitiesAndDesign.swift */; };
 		183A0B32243C737A006A67DD /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A0B31243C737A006A67DD /* OTPViewController.swift */; };
 		1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858E09B243AF81800FC403E /* AppDelegate.swift */; };
 		1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858E09D243AF81800FC403E /* SceneDelegate.swift */; };
@@ -49,6 +48,14 @@
 		942A10C324517DCE00B05C39 /* SlotDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942A10C224517DCE00B05C39 /* SlotDetailsViewController.swift */; };
 		942A10C624517DF800B05C39 /* DelveryDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942A10C524517DF800B05C39 /* DelveryDetailsStoryboard.storyboard */; };
 		942A10C824517E0900B05C39 /* DeliveryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942A10C724517E0900B05C39 /* DeliveryDetailsViewController.swift */; };
+		942AB09524559C5300184D7D /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942AB09124559C5300184D7D /* LoginStoryboard.storyboard */; };
+		942AB09624559C5300184D7D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09224559C5300184D7D /* LoginViewController.swift */; };
+		942AB09724559C5300184D7D /* 200x200.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AB09324559C5300184D7D /* 200x200.png */; };
+		942AB09824559C5300184D7D /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09424559C5300184D7D /* OtpViewController.swift */; };
+		942AB09E24559CA400184D7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09A24559CA300184D7D /* MainViewController.swift */; };
+		942AB09F24559CA400184D7D /* ViewControllerPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09B24559CA300184D7D /* ViewControllerPage1.swift */; };
+		942AB0A024559CA400184D7D /* ViewControllerPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09C24559CA300184D7D /* ViewControllerPage2.swift */; };
+		942AB0A124559CA400184D7D /* ViewControllerPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AB09D24559CA400184D7D /* ViewControllerPage3.swift */; };
 		9431E0852446C9F000E79F55 /* WalletStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9431E0842446C9F000E79F55 /* WalletStoryboard.storyboard */; };
 		9431E08A2446CB5500E79F55 /* walletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E0892446CB5500E79F55 /* walletViewController.swift */; };
 		9431E08C2446E3D600E79F55 /* HomeNavigtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431E08B2446E3D600E79F55 /* HomeNavigtionViewController.swift */; };
@@ -108,7 +115,6 @@
 
 /* Begin PBXFileReference section */
 		183A0B2D243B58B5006A67DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		183A0B2F243C4003006A67DD /* UtilitiesAndDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitiesAndDesign.swift; sourceTree = "<group>"; };
 		183A0B31243C737A006A67DD /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		1858E098243AF81800FC403E /* Kiraanacart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiraanacart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1858E09B243AF81800FC403E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +157,14 @@
 		942A10C224517DCE00B05C39 /* SlotDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotDetailsViewController.swift; sourceTree = "<group>"; };
 		942A10C524517DF800B05C39 /* DelveryDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DelveryDetailsStoryboard.storyboard; sourceTree = "<group>"; };
 		942A10C724517E0900B05C39 /* DeliveryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryDetailsViewController.swift; sourceTree = "<group>"; };
+		942AB09124559C5300184D7D /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		942AB09224559C5300184D7D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		942AB09324559C5300184D7D /* 200x200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 200x200.png; sourceTree = "<group>"; };
+		942AB09424559C5300184D7D /* OtpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		942AB09A24559CA300184D7D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		942AB09B24559CA300184D7D /* ViewControllerPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPage1.swift; sourceTree = "<group>"; };
+		942AB09C24559CA300184D7D /* ViewControllerPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPage2.swift; sourceTree = "<group>"; };
+		942AB09D24559CA400184D7D /* ViewControllerPage3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPage3.swift; sourceTree = "<group>"; };
 		9431E0842446C9F000E79F55 /* WalletStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletStoryboard.storyboard; sourceTree = "<group>"; };
 		9431E0892446CB5500E79F55 /* walletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walletViewController.swift; sourceTree = "<group>"; };
 		9431E08B2446E3D600E79F55 /* HomeNavigtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigtionViewController.swift; sourceTree = "<group>"; };
@@ -253,7 +267,8 @@
 			children = (
 				1858E09B243AF81800FC403E /* AppDelegate.swift */,
 				1858E09D243AF81800FC403E /* SceneDelegate.swift */,
-				94633E7C2454630A003E3CEE /* ShopByProduct */,
+				942AB09924559C7E00184D7D /* Spla */,
+				942AB09024559C4100184D7D /* Login */,
 				94E947E72451B28200753699 /* shopbyt */,
 				942A10C924517E1000B05C39 /* DelveryDetails */,
 				942A10C424517DD500B05C39 /* SlotDetails */,
@@ -432,6 +447,28 @@
 			path = DelveryDetails;
 			sourceTree = "<group>";
 		};
+		942AB09024559C4100184D7D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				942AB09324559C5300184D7D /* 200x200.png */,
+				942AB09124559C5300184D7D /* LoginStoryboard.storyboard */,
+				942AB09224559C5300184D7D /* LoginViewController.swift */,
+				942AB09424559C5300184D7D /* OtpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		942AB09924559C7E00184D7D /* Spla */ = {
+			isa = PBXGroup;
+			children = (
+				942AB09A24559CA300184D7D /* MainViewController.swift */,
+				942AB09B24559CA300184D7D /* ViewControllerPage1.swift */,
+				942AB09C24559CA300184D7D /* ViewControllerPage2.swift */,
+				942AB09D24559CA400184D7D /* ViewControllerPage3.swift */,
+			);
+			path = Spla;
+			sourceTree = "<group>";
+		};
 		9431E0882446CA1C00E79F55 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,13 +557,6 @@
 			path = "Fonts ";
 			sourceTree = "<group>";
 		};
-		94633E7C2454630A003E3CEE /* ShopByProduct */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShopByProduct;
-			sourceTree = "<group>";
-		};
 		946A1253243DCF4700CABD78 /* Splashscreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,7 +573,6 @@
 			children = (
 				9482FCE0243F46F800A238CF /* MobileLoginViewController.swift */,
 				94F51E6024404D3A00AC8169 /* Extensions.swift */,
-				183A0B2F243C4003006A67DD /* UtilitiesAndDesign.swift */,
 				183A0B31243C737A006A67DD /* OTPViewController.swift */,
 			);
 			path = SIgnup;
@@ -719,7 +748,9 @@
 				1858E0A3243AF81800FC403E /* Main.storyboard in Resources */,
 				945A1EE32449DC7100106B5C /* MyCustomCell.xib in Resources */,
 				94E947E62451B05200753699 /* ShopbyStoryboard.storyboard in Resources */,
+				942AB09524559C5300184D7D /* LoginStoryboard.storyboard in Resources */,
 				94B46146244D92D000AB53E9 /* CartStoryboard.storyboard in Resources */,
+				942AB09724559C5300184D7D /* 200x200.png in Resources */,
 				947F3F8A243F341F00D61CFA /* TermsAndCondtion.storyboard in Resources */,
 				942A10C124517DA900B05C39 /* SlotDetailsStoryboard.storyboard in Resources */,
 				9420BEAC244828A600CAF4B6 /* SupportStoryboard.storyboard in Resources */,
@@ -787,9 +818,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942AB09824559C5300184D7D /* OtpViewController.swift in Sources */,
 				942744632449BFD1001BEE95 /* SJShadow.swift in Sources */,
 				942744642449BFD1001BEE95 /* SJUtil.swift in Sources */,
 				941D0EB7244EDBCD0027E6FC /* OrderDetailsViewController.swift in Sources */,
+				942AB09624559C5300184D7D /* LoginViewController.swift in Sources */,
 				94E6F480244C5FCA00EFC8AC /* DetectLocViewController.swift in Sources */,
 				9482FCE1243F46F800A238CF /* MobileLoginViewController.swift in Sources */,
 				942A10C824517E0900B05C39 /* DeliveryDetailsViewController.swift in Sources */,
@@ -798,8 +831,8 @@
 				183A0B32243C737A006A67DD /* OTPViewController.swift in Sources */,
 				946A1250243DC8C400CABD78 /* initialViewController.swift in Sources */,
 				942744652449BFD1001BEE95 /* SJSegmentTab.swift in Sources */,
+				942AB09E24559CA400184D7D /* MainViewController.swift in Sources */,
 				94B4614B244D9BC200AB53E9 /* AddTableViewCell.swift in Sources */,
-				183A0B30243C4003006A67DD /* UtilitiesAndDesign.swift in Sources */,
 				9406E9C5245445FA0095DD7A /* Theme.swift in Sources */,
 				94328D1A244DD238005158FD /* CuponTableViewCell.swift in Sources */,
 				94B46148244D92EB00AB53E9 /* AddCartViewController.swift in Sources */,
@@ -819,12 +852,14 @@
 				943A3F2C244B08A200E2B6FC /* PrivacyViewController.swift in Sources */,
 				944B2046244C521100A4BCEE /* CustomListCollectionViewCell.swift in Sources */,
 				946A124E243DC8B000CABD78 /* Slide.swift in Sources */,
+				942AB0A024559CA400184D7D /* ViewControllerPage2.swift in Sources */,
 				94633E8224546A08003E3CEE /* SecondTableViewController.swift in Sources */,
 				944B09CD244C9886002A8AC3 /* ManageAddressViewController.swift in Sources */,
 				942744692449BFD2001BEE95 /* SJSegmentView.swift in Sources */,
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
 				940E1D4524457BB1009AB382 /* offers.swift in Sources */,
 				9426B62F244DBF71008BF6D9 /* CuponsViewController.swift in Sources */,
+				942AB09F24559CA400184D7D /* ViewControllerPage1.swift in Sources */,
 				947E2150245060D5004A8EC8 /* CalendarView.swift in Sources */,
 				942744662449BFD1001BEE95 /* SJSegmentedViewController.swift in Sources */,
 				9406E9C6245445FA0095DD7A /* StringExtentions.swift in Sources */,
@@ -853,6 +888,7 @@
 				943A3F22244AF5D600E2B6FC /* OffersTableViewCell.swift in Sources */,
 				1858E09E243AF81800FC403E /* SceneDelegate.swift in Sources */,
 				944B2044244C3C7E00A4BCEE /* HomepageViewController.swift in Sources */,
+				942AB0A124559CA400184D7D /* ViewControllerPage3.swift in Sources */,
 				94F878BF244B37D7000C10A4 /* SettingViewController.swift in Sources */,
 				943A3F27244B028800E2B6FC /* ChangePasswordViewController.swift in Sources */,
 			);

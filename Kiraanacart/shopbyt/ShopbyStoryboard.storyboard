@@ -140,7 +140,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="proceedButtonClick:" destination="IiZ-oP-yaV" eventType="touchUpInside" id="bTv-Iw-JNB"/>
+                                            <action selector="procceedButtonclick:" destination="IiZ-oP-yaV" eventType="touchUpInside" id="rDO-tZ-hdY"/>
                                         </connections>
                                     </button>
                                 </subviews>

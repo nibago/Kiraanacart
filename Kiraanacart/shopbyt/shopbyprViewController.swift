@@ -89,17 +89,7 @@ class shopbyprViewController:UIViewController {
     
     
     
-    @IBAction func procceedButtonclick(_ sender: UIButton) {
-        
-       
-        let storyBoard : UIStoryboard = UIStoryboard(name: "SlotDetailsStoryboard", bundle:nil)
-                   let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SlotDetailsViewController") as! SlotDetailsViewController
-            self.navigationController?.show(nextViewController, sender: true)
-        
-        
-        
-    }
-    
+ 
 
 }
 

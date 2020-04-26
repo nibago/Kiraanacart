@@ -44,10 +44,16 @@ class FirstTableViewController: UIViewController,UITableViewDataSource,UITableVi
       }
     
     
-    
-    @IBAction func proceedButtonClick(_ sender: Any) {
+      @IBAction func procceedButtonclick(_ sender: UIButton) {
+         
         
-        print("this is click")
-    }
+         let storyBoard : UIStoryboard = UIStoryboard(name: "SlotDetailsStoryboard", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SlotDetailsViewController") as! SlotDetailsViewController
+             self.navigationController?.show(nextViewController, sender: true)
+         
+         
+         
+     }
+     
     
 }
