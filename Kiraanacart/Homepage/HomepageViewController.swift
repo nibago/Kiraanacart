@@ -70,7 +70,7 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     
     @objc func buttonClicked(sender: UIBarButtonItem) {
-
+        
         let storyBoard : UIStoryboard = UIStoryboard(name: "CartStoryboard", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddCartViewController") as! AddCartViewController
         self.navigationController?.show(nextViewController, sender: nil)
@@ -78,10 +78,10 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     }
     
     
-  override func viewWillAppear(_ animated: Bool) {
-             super.viewWillAppear(animated)
-            self.tabBarController?.tabBar.isHidden = false 
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -190,10 +190,10 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         if collectionView == self.collectionView2 {
             
             if indexPath.row == 0{
-               let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
-                               let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
-                               self.navigationController?.show(nextViewController, sender: nil)
-                           
+                let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                self.navigationController?.show(nextViewController, sender: nil)
+                
             }else if indexPath.row == 1
             {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
@@ -204,8 +204,8 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
                 
                 
                 
-                              let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
-                              self.navigationController?.show(nextViewController, sender: nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                self.navigationController?.show(nextViewController, sender: nil)
             }
             
         }
@@ -229,8 +229,8 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         
         print("this click")
         
-//        selfpickupButton.backgroundColor = KCFonts.BM_Default
-//        DeliveryButton.backgroundColor = KCFonts.BM_White
+        //        selfpickupButton.backgroundColor = KCFonts.BM_Default
+        //        DeliveryButton.backgroundColor = KCFonts.BM_White
         
     }
     
@@ -239,10 +239,10 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     
     @IBAction func Selfpickup(_ sender: UIButton) {
-       
-      //  selfpickupButton.backgroundColor = KCFonts.BM_Default
+        
+        //  selfpickupButton.backgroundColor = KCFonts.BM_Default
         //DeliveryButton.backgroundColor = KCFonts.BM_White
-          print("this click")
+        print("this click")
     }
     
     

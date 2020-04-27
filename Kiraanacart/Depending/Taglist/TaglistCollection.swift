@@ -246,6 +246,9 @@ protocol TagViewDelegate: class {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = scrollIndicator
         
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        
         // 4 - register nib
         let frameworkBundle = Bundle(identifier: "co.boomerapp.JioLocal")
         let tagCollectionNib = UINib(nibName: String(describing: TagCollectionCell.self), bundle: frameworkBundle)

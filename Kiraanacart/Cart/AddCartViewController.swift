@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import Razorpay
 
 class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
+    var razorpay: RazorpayCheckout!
+    
     @IBOutlet weak var Tableview: UITableView!
+    
+     // var razorpayObj : Razorpay? = nil
+      let defaultHeight : CGFloat = 40
+      let defaultWidth : CGFloat = 120
+      
+      let razorpayKey = "rzp_live_r93szJEV3Ee2S8"
     
     let showimagesval = ["img1","img2"]
     let items = ["sunflowerOil","suger"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         
+        razorpay = RazorpayCheckout.initWithKey(razorpayKey, andDelegate: self)
         self.Tableview.rowHeight = UITableView.automaticDimension
         title = "Cart"
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -97,7 +108,7 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
                }else if indexPath.section == 3{
                        return 84
                }else if indexPath.section == 4{
-                       return 266
+                       return 314
 
                 }
          return 100
@@ -109,4 +120,51 @@ class AddCartViewController: UIViewController,UITableViewDataSource,UITableViewD
             self.tabBarController?.tabBar.isHidden = true
         }
 
+    
+    
+    @IBAction func openCheckoutAction(_ sender: UIButton) {
+        self.openRazorpayCheckout()
+    }
+    
+  
+    
+    private func openRazorpayCheckout() {
+        // 1. Initialize razorpay object with provided key. Also depending on your requirement you can assign delegate to self. It can be one of the protocol from RazorpayPaymentCompletionProtocolWithData, RazorpayPaymentCompletionProtocol.
+         let options: [String:Any] = [
+                     "amount" : "1000", //mandatory in paise like:- 1000 paise ==  10 rs
+                     "description": "purchase description",
+                     "image": "ss",
+                     "name": "Swift Series",
+                     "prefill": [
+                     "contact": "9797979797",
+                     "email": "foo@bar.com"
+                     ],
+                     "theme": [
+                         "color": "#00595D"
+                     ]
+                 ]
+                razorpay?.open(options)
+             }
+    
 }
+
+
+      
+
+
+
+    extension AddCartViewController: RazorpayPaymentCompletionProtocol {
+        func onPaymentSuccess(_ payment_id: String) {
+            let alert = UIAlertController(title: "Paid", message: "Payment Success", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        func onPaymentError(_ code: Int32, description str: String) {
+            let alert = UIAlertController(title: "Error", message: "\(code)\n\(str)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }

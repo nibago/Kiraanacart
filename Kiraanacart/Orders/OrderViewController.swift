@@ -14,11 +14,13 @@ class OrderViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet weak var Tableview: UITableView!
     var shopItemsImages = [String]()
     var shopItems = [String]()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
      shopItems = ["BigBazar","More","Dmart"]
-     shopItemsImages =  ["shop1","shop2","shop3"]
+     shopItemsImages =  ["1","2","3"]
         
         title = "order"
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

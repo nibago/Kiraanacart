@@ -15,9 +15,9 @@ private let mainColor = UIColor(red: 1.0/255.0, green: 55.0/255.0, blue: 132.0/2
 class shopbyprViewController:UIViewController {
     
     
-
+    
     @IBOutlet weak var viewPagerNavigationBar: BmoViewPagerNavigationBar!
-       @IBOutlet weak var viewPager: BmoViewPager!
+    @IBOutlet weak var viewPager: BmoViewPager!
     
     
     @IBOutlet weak var proceedButton: UIButton!
@@ -25,72 +25,61 @@ class shopbyprViewController:UIViewController {
     @IBOutlet weak var segmentcont: UISegmentedControl!
     @IBOutlet weak var Searchcontol: UISearchBar!
     @IBOutlet weak var shoplogimage: UIImageView!
-  
-     
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationItem.leftBarButtonItem = nil
-
-//                   let button = UIButton(type: .custom)
-//                   button.setImage(UIImage (named: "search-icon"), for: .normal)
-//                   button.frame = CGRect(x: 30.0, y: 0.0, width: 35.0, height: 35.0)
-//                   button.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
-//                   button.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
-//                   let barButtonItem = UIBarButtonItem(customView: button)
-//
-                   let button2 = UIButton(type: .custom)
-                   button2.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
-                   button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
-                   button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
-                   button2.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
-              
-                   let barButtonItem2 = UIBarButtonItem(customView: button2)
-                   self.navigationItem.rightBarButtonItems = [barButtonItem2]
-           
+        let button2 = UIButton(type: .custom)
+        button2.tintColor = .black
+        button2.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
+        button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
+        button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
+        button2.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
         
-//        let nib = UINib(nibName: "MyCustomCell", bundle: nil)
-//                 Tableview.register(nib, forCellReuseIdentifier: "MyCustomCell")
-//                // Tableview.dataSource = self
-//
+        button2.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
+        let barButtonItem2 = UIBarButtonItem(customView: button2)
+        self.navigationItem.rightBarButtonItems = [barButtonItem2]
         
-       viewPager.dataSource = self
-                viewPagerNavigationBar.autoFocus = false
-                viewPagerNavigationBar.viewPager = viewPager
-                
-                viewPager.layer.borderWidth = 1.0
-                viewPager.layer.cornerRadius = 5.0
-                viewPager.layer.masksToBounds = true
-                viewPager.layer.borderColor = UIColor.white.cgColor
+        viewPager.dataSource = self
+        viewPagerNavigationBar.autoFocus = false
+        viewPagerNavigationBar.viewPager = viewPager
+        
+        viewPager.layer.borderWidth = 1.0
+        viewPager.layer.cornerRadius = 5.0
+        viewPager.layer.masksToBounds = true
+        viewPager.layer.borderColor = UIColor.white.cgColor
         
         
         // Do any additional setup after loading the view.
     }
     
     
+    @objc func buttonClicked(sender: UIBarButtonItem) {
+           
+           let storyBoard : UIStoryboard = UIStoryboard(name: "CartStoryboard", bundle:nil)
+           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddCartViewController") as! AddCartViewController
+           self.navigationController?.show(nextViewController, sender: nil)
+           
+       }
+    
     
     override func viewWillAppear(_ animated: Bool) {
-                super.viewWillAppear(animated)
-               self.tabBarController?.tabBar.isHidden = true
-           }
-       
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         // Show the navigation bar on other view controllers
-      
+        
         self.tabBarController?.tabBar.isHidden = true
     }
     
-   
-
     
-    
-    
-    
- 
-
 }
 
 
@@ -121,7 +110,7 @@ extension shopbyprViewController: BmoViewPagerDataSource {
             return "House Grosery"
         }
         else if page == 1{
-         return "Home & Clean"
+            return "Home & Clean"
         } else {
             return "House Grosery"
         }
@@ -141,11 +130,11 @@ extension shopbyprViewController: BmoViewPagerDataSource {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "SecondTableViewController") as? SecondTableViewController {
                 return vc
             }
-            case 2:
-                       if let vc = storyboard?.instantiateViewController(withIdentifier: "ThirdTableViewController") as? ThirdTableViewController {
-                           return vc
-                       }
-        
+        case 2:
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "ThirdTableViewController") as? ThirdTableViewController {
+                return vc
+            }
+            
         default:
             break
         }

@@ -12,7 +12,7 @@ import Foundation
 import Foundation
 import UIKit
 
-struct KCFonts
+struct Constants 
 {
    static let BaseUrl = "https://rest.jioboomer.dev/API/"
    static let BaseUrl_Apps = "https://appstore.jioboomer.dev/v1/"
@@ -22,7 +22,7 @@ struct KCFonts
      static let BM_Gradient_1 = UIColor(red:35.0/255.0 , green:194.0/255.0 , blue:199.0/255.0 , alpha: 1)
     
     
-    static let BM_Default = UIColor(red:0.0/255.0 , green:89.0/255.0 , blue:92.0/255.0 , alpha: 1)
+    static let BM_Default = UIColor(red:0.0/255.0 , green:89.0/255.0 , blue:93.0/255.0 , alpha: 1)
     
     static let BM_White = UIColor(red:255.0/255.0 , green:255.0/255.0 , blue:255.0/255.0 , alpha: 1)
     
@@ -33,6 +33,9 @@ struct KCFonts
    
    
       static let BL_lightLineColor = UIColor(red:170.0/255.0 , green:170.0/255.0 , blue:170.0/255.0 , alpha: 0.1)
+    
+    
+   
     
     //*****************************
     //MARK: Fonts
@@ -111,14 +114,6 @@ struct KCFonts
 //       
 
 
-}
-
-
-
-
-struct BLColors {
-    
-    
     static let BL_Gradient_1 = UIColor(red:35.0/255.0 , green:194.0/255.0 , blue:199.0/255.0 , alpha: 1)
     
     static let BL_Gradient_2 = UIColor(red:32.0/255.0 , green:165.0/255.0 , blue:208.0/255.0 , alpha: 1)
@@ -143,7 +138,6 @@ struct BLColors {
     
     static let BL_CardStackDescrptionColor = UIColor(red:142.0/255.0 , green:142.0/255.0 , blue:147.0/255.0 , alpha: 1)
     
-    static let BL_lightLineColor = UIColor(red:170.0/255.0 , green:170.0/255.0 , blue:170.0/255.0 , alpha: 0.1)
     
     static let BL_ViewBackgrondColor = UIColor(red:245.0/255.0 , green:245.0/255.0 , blue:248.0/255.0 , alpha: 1)
     

@@ -44,18 +44,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h84-xi-tEa" customClass="BmoViewPager" customModule="BmoViewPager">
-                                                <rect key="frame" x="20" y="321" width="374" height="601"/>
+                                                <rect key="frame" x="0.0" y="321" width="414" height="601"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="922" id="1Hx-dP-nEF"/>
-                                            <constraint firstItem="h84-xi-tEa" firstAttribute="leading" secondItem="Vf8-Yg-5Xf" secondAttribute="leading" constant="20" symbolic="YES" id="1ck-Dg-Eig"/>
+                                            <constraint firstItem="h84-xi-tEa" firstAttribute="leading" secondItem="Vf8-Yg-5Xf" secondAttribute="leading" id="1ck-Dg-Eig"/>
                                             <constraint firstAttribute="trailing" secondItem="ujf-tA-AdF" secondAttribute="trailing" constant="5" id="4b0-1i-1bb"/>
                                             <constraint firstItem="Ze1-Fv-taQ" firstAttribute="top" secondItem="ujf-tA-AdF" secondAttribute="bottom" id="5kl-ZU-6hb"/>
                                             <constraint firstItem="ujf-tA-AdF" firstAttribute="leading" secondItem="Vf8-Yg-5Xf" secondAttribute="leading" constant="5" id="82o-0X-q3O"/>
-                                            <constraint firstAttribute="trailing" secondItem="h84-xi-tEa" secondAttribute="trailing" constant="20" symbolic="YES" id="ESY-3Y-ooK"/>
+                                            <constraint firstAttribute="trailing" secondItem="h84-xi-tEa" secondAttribute="trailing" id="ESY-3Y-ooK"/>
                                             <constraint firstItem="eHg-iL-aCK" firstAttribute="leading" secondItem="Vf8-Yg-5Xf" secondAttribute="leading" id="Kby-Ak-Fib"/>
                                             <constraint firstAttribute="trailing" secondItem="Ze1-Fv-taQ" secondAttribute="trailing" constant="6" id="MMk-Aj-MBa"/>
                                             <constraint firstAttribute="trailing" secondItem="eHg-iL-aCK" secondAttribute="trailing" id="Opc-k2-64Z"/>
