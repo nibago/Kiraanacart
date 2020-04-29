@@ -34,5 +34,19 @@ class PrivacyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+                      super.viewWillAppear(animated)
+                     self.tabBarController?.tabBar.isHidden = true
+                 }
+           
+           
+           override func viewWillDisappear(_ animated: Bool) {
+               super.viewWillDisappear(animated)
+               // Show the navigation bar on other view controllers
+             
+               self.tabBarController?.tabBar.isHidden = true
+           }
+       
 
 }

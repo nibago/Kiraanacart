@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import CoreTelephony
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+   var network: NetworkManager = NetworkManager.sharedInstance
+   let reachability = Reachability.init()
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+    
+        
+        // Setup the Network Info and create a CTCarrier object
+              let networkInfo = CTTelephonyNetworkInfo()
+              if #available(iOS 12.0, *) {
+                  let carrier = networkInfo.serviceSubscriberCellularProviders?.first?.value
+                  print(carrier?.carrierName)
+              } else {
+                  // Fallback on earlier versions
+                  let carrier = networkInfo.subscriberCellularProvider
+                  let carrierName = carrier?.carrierName
+                  print(carrierName)
+              }
+              
+            self.intilizeNetwork()
+        
         return true
     }
 

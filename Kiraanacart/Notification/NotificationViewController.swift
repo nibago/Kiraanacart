@@ -46,4 +46,19 @@ class NotificationViewController: UIViewController,UITableViewDelegate,UITableVi
         return 143
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+                   super.viewWillAppear(animated)
+                  self.tabBarController?.tabBar.isHidden = true
+              }
+        
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            // Show the navigation bar on other view controllers
+          
+            self.tabBarController?.tabBar.isHidden = false 
+        }
+    
+    
 }

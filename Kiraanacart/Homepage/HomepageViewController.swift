@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
+
+
 
 class HomepageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
     
@@ -14,25 +17,24 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     @IBOutlet weak var DeliveryButton: UIButton!
     @IBOutlet weak var RightButton: UIBarButtonItem!
     @IBOutlet weak var LeftButton: UIBarButtonItem!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView2: UICollectionView!
     
     var imageArray1 = [String] ()
     var imageArray = [String] ()
     var colorsArray: [UIColor] = [UIColor]()
-    
     var Scrollinftimer = Timer()
     var imageArraytitle = [String] ()
+    var i=Int()
     
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionView2: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        imageArray1 = ["1","2","3","4"]
         
+        imageArray1 = ["1","2","3","4"]
         imageArray = ["Groceries","Vegetables-1","meat-&-sea-food-con","Organic-1","Fruits _ Juices"]
         imageArraytitle = ["Groceries","Vegetables","meat &seafood","Organic","Fruits&Juices"]
         
@@ -47,6 +49,8 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         button.setImage(UIImage (named: "location-pin-icon"), for: .normal)
         button.frame = CGRect(x: 30.0, y: 0.0, width: 35.0, height: 35.0)
         button.tintColor = .black
+        
+        button.addTarget(self, action: #selector(MapButtonClicked(sender:)), for: .touchUpInside)
         //button.addTarget(target, action: nil, for: .touchUpInside)
         button.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
         button.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
@@ -60,16 +64,39 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
         button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
         button2.frame = CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0)
-        button2.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(cartButtonClicked(sender:)), for: .touchUpInside)
         let barButtonItem2 = UIBarButtonItem(customView: button2)
         self.navigationItem.rightBarButtonItems = [barButtonItem2]
         
         getRandomColorsArray()
-        // Do any additional setup after loading the view.
+        
+        Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(imageChange), userInfo: nil, repeats: true)
+        
+        
     }
     
     
-    @objc func buttonClicked(sender: UIBarButtonItem) {
+    
+    @objc func imageChange(){
+        
+        let cellSize = view.frame.size
+        
+        //get current content Offset of the Collection view
+        let contentOffset = collectionView.contentOffset
+        
+        if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width
+        {
+            let r = CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
+            collectionView.scrollRectToVisible(r, animated: true)
+            
+        } else {
+            let r = CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
+            collectionView.scrollRectToVisible(r, animated: true);
+        }
+        
+    }
+    
+    @objc func cartButtonClicked(sender: UIBarButtonItem) {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "CartStoryboard", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddCartViewController") as! AddCartViewController
@@ -78,10 +105,62 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     }
     
     
+    @objc func MapButtonClicked(sender: UIBarButtonItem) {
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                print("No access")
+                
+                
+                guard let popupVC = storyboard?.instantiateViewController(withIdentifier: "ExamplePopupViewController") as? ExamplePopupViewController else { return }
+                popupVC.height = 300
+                popupVC.topCornerRadius = 35
+                popupVC.presentDuration = 1.5
+                popupVC.dismissDuration = 1.5
+                popupVC.shouldDismissInteractivelty = true
+                popupVC.popupDelegate = self
+                present(popupVC, animated: true, completion: nil)
+            case .authorizedAlways, .authorizedWhenInUse:
+                
+                guard let popupVC = storyboard?.instantiateViewController(withIdentifier: "ExamplePopupViewController") as? ExamplePopupViewController else { return }
+                popupVC.height = 534.49
+                popupVC.topCornerRadius = 35
+                popupVC.presentDuration =  0.51
+                popupVC.dismissDuration = 0.51
+                popupVC.shouldDismissInteractivelty = true
+                popupVC.popupDelegate = self
+                present(popupVC, animated: true, completion: nil)
+                
+                
+                print("Access")
+            @unknown default:
+                break
+            }
+        } else {
+            
+            if let BUNDLE_IDENTIFIER = Bundle.main.bundleIdentifier,
+                let url = URL(string: "\(UIApplication.openSettingsURLString)&path=LOCATION/\(BUNDLE_IDENTIFIER)") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            
+        }
+        
+    }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //   self.view.endEditing(true)
         self.tabBarController?.tabBar.isHidden = false
     }
+    
+    //enable disable gps
+    
+    
+    
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -149,8 +228,7 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
                     rowIndex = 0
                 }
                 
-                Scrollinftimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(startTimer(timersset:)), userInfo: rowIndex, repeats: true)
-                //
+                
                 return cell
                 
             }
@@ -160,11 +238,9 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
                 
                 let randomNumber = Int(arc4random_uniform(UInt32(imageArraytitle.count)))
                 cell.itemImage1.image = UIImage(named: imageArray[indexPath.row])
-                let image = imageArray[indexPath.row]
+                //    let image = imageArray[indexPath.row]
                 cell.ItemNameLabel.text = imageArraytitle[indexPath.row]
                 cell.itemImage1.backgroundColor = self.colorsArray[randomNumber]
-                
-                
                 return cell
                 
             }
@@ -174,18 +250,9 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     
     
-    @objc func startTimer(timersset : Timer)
-    {
-        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations:
-            {
-                self.collectionView.scrollToItem(at: IndexPath(row: timersset.userInfo! as! Int,section:0), at: .centeredHorizontally, animated: false)
-        }, completion: nil)
-    }
-    
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("this is not clling")
+        
         
         if collectionView == self.collectionView2 {
             
@@ -227,10 +294,22 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     @IBAction func DeliveryButtonclick(_ sender: UIButton) {
         
+        DeliveryButton.backgroundColor = .clear
+        DeliveryButton.layer.cornerRadius = 5
+        DeliveryButton.layer.borderWidth = 0.5
+        //        DeliveryButton.layer.borderColor =  Constants.BL_lightLineColor
+        selfpickupButton.backgroundColor = .clear
+        selfpickupButton.layer.cornerRadius = 5
+        selfpickupButton.layer.borderWidth = 0.5
+        //             selfpickupButton.layer.borderColor = Constants.BL_lightLineColor
+        
+        DeliveryButton.setTitleColor(Constants.BM_White, for: .normal)
+        DeliveryButton.backgroundColor = Constants.BM_Default
+        selfpickupButton.setTitleColor(Constants.BM_Default, for: .normal)
+        
+        selfpickupButton.backgroundColor = Constants.BM_White
         print("this click")
         
-        //        selfpickupButton.backgroundColor = KCFonts.BM_Default
-        //        DeliveryButton.backgroundColor = KCFonts.BM_White
         
     }
     
@@ -239,6 +318,15 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     
     @IBAction func Selfpickup(_ sender: UIButton) {
+        
+        DeliveryButton.backgroundColor = .clear
+        DeliveryButton.layer.cornerRadius = 5
+        DeliveryButton.layer.borderWidth = 0.5
+        
+        DeliveryButton.setTitleColor(Constants.BM_Default, for: .normal)
+        DeliveryButton.backgroundColor = Constants.BM_White
+        selfpickupButton.setTitleColor(Constants.BM_White, for: .normal)
+        selfpickupButton.backgroundColor = Constants.BM_Default
         
         //  selfpickupButton.backgroundColor = KCFonts.BM_Default
         //DeliveryButton.backgroundColor = KCFonts.BM_White
@@ -249,6 +337,36 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
 }
 
+
+
+
+
+extension HomepageViewController: BottomPopupDelegate {
+    
+    func bottomPopupViewLoaded() {
+        print("bottomPopupViewLoaded")
+    }
+    
+    func bottomPopupWillAppear() {
+        print("bottomPopupWillAppear")
+    }
+    
+    func bottomPopupDidAppear() {
+        print("bottomPopupDidAppear")
+    }
+    
+    func bottomPopupWillDismiss() {
+        print("bottomPopupWillDismiss")
+    }
+    
+    func bottomPopupDidDismiss() {
+        print("bottomPopupDidDismiss")
+    }
+    
+    func bottomPopupDismissInteractionPercentChanged(from oldValue: CGFloat, to newValue: CGFloat) {
+        print("bottomPopupDismissInteractionPercentChanged fromValue: \(oldValue) to: \(newValue)")
+    }
+}
 
 
 

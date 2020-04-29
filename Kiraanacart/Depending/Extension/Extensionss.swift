@@ -116,3 +116,12 @@ extension UIView {
 }
 
 
+
+//extension String {
+//    var isValidContact: Bool {
+//        let phoneNumberRegex = "^[6-9]\\d{9}$"
+//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+//        let isValidPhone = phoneTest.evaluate(with: self)
+//        return isValidPhone
+//    }
+//}

@@ -20,7 +20,24 @@ class NotificationTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+      
+        
+        
         // Configure the view for the selected state
     }
 
+    
+//     func viewWillAppear(_ animated: Bool) {
+//                  super.viewWillAppear(animated)
+//                 self.tabBarController?.tabBar.isHidden = true
+//             }
+//
+//
+//        func viewWillDisappear(_ animated: Bool) {
+//           super.viewWillDisappear(animated)
+//           // Show the navigation bar on other view controllers
+//
+//           self.tabBarController?.tabBar.isHidden = false
+//       }
+    
 }

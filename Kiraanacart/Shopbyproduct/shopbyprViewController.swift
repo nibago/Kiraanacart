@@ -14,19 +14,13 @@ private let mainColor = UIColor(red: 1.0/255.0, green: 55.0/255.0, blue: 132.0/2
 
 class shopbyprViewController:UIViewController {
     
-    
-    
     @IBOutlet weak var viewPagerNavigationBar: BmoViewPagerNavigationBar!
     @IBOutlet weak var viewPager: BmoViewPager!
-    
-    
     @IBOutlet weak var proceedButton: UIButton!
     @IBOutlet weak var Tableview: UITableView!
     @IBOutlet weak var segmentcont: UISegmentedControl!
     @IBOutlet weak var Searchcontol: UISearchBar!
     @IBOutlet weak var shoplogimage: UIImageView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +52,12 @@ class shopbyprViewController:UIViewController {
     
     
     @objc func buttonClicked(sender: UIBarButtonItem) {
-           
-           let storyBoard : UIStoryboard = UIStoryboard(name: "CartStoryboard", bundle:nil)
-           let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddCartViewController") as! AddCartViewController
-           self.navigationController?.show(nextViewController, sender: nil)
-           
-       }
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "CartStoryboard", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddCartViewController") as! AddCartViewController
+        self.navigationController?.show(nextViewController, sender: nil)
+        
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {

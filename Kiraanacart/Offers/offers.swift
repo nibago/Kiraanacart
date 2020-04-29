@@ -11,6 +11,8 @@ import UIKit
 class OffersViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate{
 
     @IBOutlet weak var Tableview: UITableView!
+    let reachability = Reachability.init()
+     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var shopItemsImages = [String]()
     let status = ["CashBack on Grocery,Vegitables,Meat,Seafoods,organicFood,Fruid&Juice","CashBack on Grocery,Vegitables,Meat,Seafoods,organicFood,Fruid&Juice","CashBack on Grocery,Vegitables,Meat,Seafoods,organicFood,Fruid&Juice"]

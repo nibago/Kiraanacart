@@ -28,10 +28,10 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         
         title = "ManageAddress"
-     navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         
         let button2 = UIButton(type: .custom)
@@ -46,13 +46,13 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
         CurrentIconImage.tintColor =   .black
         
         locationManager = CLLocationManager()
-           locationManager.delegate = self
-           locationManager.desiredAccuracy = kCLLocationAccuracyBest
-           locationManager.requestAlwaysAuthorization()
-
-           if CLLocationManager.locationServicesEnabled(){
-               locationManager.startUpdatingLocation()
-           }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled(){
+            locationManager.startUpdatingLocation()
+        }
         
         
         // Do any additional setup after loading the view.
@@ -83,37 +83,37 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
     }
     
     @objc func editButtonClick(_ sender: AnyObject) {
-
-    //    CurrentAddressButton.backgroundColor = const
+        
+        //    CurrentAddressButton.backgroundColor = const
         
         
-
-      }
+        
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 119
     }
     
-   
+    
     
     
     
     
     @IBAction func CurrentLocationButtonclick(_ sender: UIButton) {
         
-      //  locationManager.startUpdatingLocation()
+        //  locationManager.startUpdatingLocation()
         
         CurrentIconImage.tintColor =   Constants.BM_Default
         CurrenImageLabel.textColor =  Constants.BM_Default
-//        CurrentIconImage.backgroundColor = Constants.BM_Default
+        //        CurrentIconImage.backgroundColor = Constants.BM_Default
         let latvalues = "13.0272,77.5939"
-             
-             performGoogleSearch(string:latvalues )
-     
-     
         
-//        Toast(text: "text", duration: Delay.long)
-    
+        performGoogleSearch(string:latvalues )
+        
+        
+        
+        //        Toast(text: "text", duration: Delay.long)
+        
         
         
         
@@ -126,34 +126,34 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "AddAddressViewController") as! AddAddressViewController
         self.navigationController?.show(nextViewController, sender: true)
         
-     
+        
         
     }
     
     
     
     func performGoogleSearch(string: String) {
-       // string = ""
-      //  tableView.reloadData()
-
+        // string = ""
+        //  tableView.reloadData()
+        
         var components = URLComponents(string: "https://maps.googleapis.com/maps/api/geocode/json")!
         let key = URLQueryItem(name: "key", value: "AIzaSyAFLOApaH_UAxWRuWIKIiukF8kQZ2xu3MI") // use your key
         let address = URLQueryItem(name: "address", value: string)
         components.queryItems = [key, address]
-
+        
         let task = URLSession.shared.dataTask(with: components.url!) { data, response, error in
             guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, error == nil else {
                 print(String(describing: response))
                 print(String(describing: error))
                 return
             }
-
+            
             guard let json = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any] else {
                 print("not JSON format expected")
                 print(String(data: data, encoding: .utf8) ?? "Not string?!?")
                 return
             }
-
+            
             guard let results = json["results"] as? [[String: Any]],
                 let status = json["status"] as? String,
                 status == "OK" else {
@@ -161,42 +161,42 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
                     print(String(describing: json))
                     return
             }
-
+            
             DispatchQueue.main.async {
                 // now do something with the results, e.g. grab `formatted_address`:
                 let stringsvalues = results.compactMap { $0["formatted_address"] as? String
                     
-                   
+                    
                 }
-        
+                
                 if let addressStringval = stringsvalues.first {
                     
                     self.addressString = addressStringval
                     print("this is addrss ",self.addressString)
                     self.view.makeToast(self.addressString, duration: 3.0, position: .top)
                 }
-               // print(stringsvalues.first)
-              
+                // print(stringsvalues.first)
+                
             }
         }
-
+        
         task.resume()
     }
-
+    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-             if let cell = tableView.cellForRow(at: indexPath)as? ManageTableViewCell{
-                cell.selectImages.tintColor = Constants.BM_Default
-                cell.selectImages.image = UIImage(named: "check")
-
-               }
-              }
-      func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-             if let cell = tableView.cellForRow(at: indexPath)as? ManageTableViewCell{
-             cell.selectImages.image = UIImage(named: "uncheck")
-                 }
-             }
+        if let cell = tableView.cellForRow(at: indexPath)as? ManageTableViewCell{
+            cell.selectImages.tintColor = Constants.BM_Default
+            cell.selectImages.image = UIImage(named: "check")
+            
+        }
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath)as? ManageTableViewCell{
+            cell.selectImages.image = UIImage(named: "uncheck")
+        }
+    }
     
     
 }
@@ -205,18 +205,18 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
 
 extension ManageAddressViewController:CLLocationManagerDelegate
 {
-
-
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation :CLLocation = locations[0] as CLLocation
-
+        
         print("user latitude = \(userLocation.coordinate.latitude)")
         print("user longitude = \(userLocation.coordinate.longitude)")
-
-     //   self.labelLat.text = "\(userLocation.coordinate.latitude)"
-      //  self.labelLongi.text = "\(userLocation.coordinate.longitude)"
-       var address :String = ""
-
+        
+        //   self.labelLat.text = "\(userLocation.coordinate.latitude)"
+        //  self.labelLongi.text = "\(userLocation.coordinate.longitude)"
+        var address :String = ""
+        
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(userLocation) { (placemarks, error) in
             if (error != nil){
@@ -224,54 +224,18 @@ extension ManageAddressViewController:CLLocationManagerDelegate
             }
             let placemark = placemarks! as [CLPlacemark]
             if placemark.count>0{
-                let placemark = placemarks![0]
-//                print(placemark.locality!)
-//                print(placemark.administrativeArea!)
-//                print(placemark.country!)
-
-//
-//                if let locationName = placemark.addressDictionary?["Name"] as? String {
-//                           address += locationName + ", "
-//                       }
-//
-//                       // Street address
-//                       if let street = placemark.addressDictionary?["Thoroughfare"] as? String {
-//                           address += street + ", "
-//                       }
-//
-//                       // City
-//                       if let city = placemark.addressDictionary?["City"] as? String {
-//                           address += city + ", "
-//                       }
-//
-//                       // Zip code
-//                       if let zip = placemark.addressDictionary?["ZIP"] as? String {
-//                           address += zip + ", "
-//                       }
-//
-//                       // Country
-//                       if let country = placemark.addressDictionary?["Country"] as? String {
-//                           address += country
-//                       }
-//
-//
-//                print("address",address)
-
-
-
-            //     = "\(placemark.locality!), \(placemark.administrativeArea!), \(placemark.country!)"
-
-
+            let placemark = placemarks![0]
+                
             }
         }
-
-           print("address",address)
-
+        
+        print("address",address)
+        
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error \(error)")
     }
-
-
-
+    
+    
+    
 }

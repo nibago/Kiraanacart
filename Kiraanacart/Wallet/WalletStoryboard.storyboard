@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqE-os-4h3">
-                                <rect key="frame" x="10" y="93" width="394" height="163"/>
+                                <rect key="frame" x="10" y="93" width="394" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4e-Cl-seX">
                                         <rect key="frame" x="8" y="24" width="333" height="36"/>
@@ -29,7 +29,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ₹ 0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-oe-oJ8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" ₹ 200.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl4-oe-oJ8">
                                         <rect key="frame" x="8" y="78" width="316" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="OnQ-0J-gk8"/>
@@ -46,37 +46,141 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-jP-V20">
-                                        <rect key="frame" x="331" y="78" width="50" height="30"/>
-                                        <color key="backgroundColor" red="0.0" green="0.61960784310000006" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="341" y="78" width="40" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="I4a-az-uq2"/>
-                                            <constraint firstAttribute="width" constant="50" id="ZRF-9m-fIG"/>
+                                            <constraint firstAttribute="width" constant="40" id="ZRF-9m-fIG"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqB-fm-LLv">
-                                        <rect key="frame" x="333.5" y="78" width="45" height="30"/>
-                                        <state key="normal" title="+ ADD">
+                                        <rect key="frame" x="341" y="78" width="40" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="ADD">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addButtonClick:" destination="Myf-CR-7WV" eventType="touchUpInside" id="4PA-7f-cX9"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="₹100.00" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vo-M7-tMI">
+                                        <rect key="frame" x="5" y="119" width="384" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="voq-hv-3JL"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-vr-CSb">
+                                        <rect key="frame" x="5" y="174" width="384" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3g-EB-KZw">
+                                                <rect key="frame" x="0.0" y="0.0" width="121.5" height="30"/>
+                                                <state key="normal" title="₹100">
+                                                    <color key="titleColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKh-uH-vkX">
+                                                <rect key="frame" x="131.5" y="0.0" width="121" height="30"/>
+                                                <state key="normal" title="₹200">
+                                                    <color key="titleColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzD-vn-g4f">
+                                                <rect key="frame" x="262.5" y="0.0" width="121.5" height="30"/>
+                                                <state key="normal" title="₹500">
+                                                    <color key="titleColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="j1y-MU-ipr"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-86-Psp">
+                                        <rect key="frame" x="10" y="234" width="374" height="56"/>
+                                        <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Add Amount ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="amountButtonClick:" destination="Myf-CR-7WV" eventType="touchUpInside" id="x8J-xJ-RKn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="YNO-jP-V20" secondAttribute="trailing" constant="13" id="0g7-QJ-t3v"/>
+                                    <constraint firstItem="Zfk-86-Psp" firstAttribute="top" secondItem="nKy-vr-CSb" secondAttribute="bottom" constant="30" id="2E5-eW-dra"/>
+                                    <constraint firstItem="OqB-fm-LLv" firstAttribute="leading" secondItem="YNO-jP-V20" secondAttribute="leading" id="9Jc-7J-MFg"/>
                                     <constraint firstItem="Qv9-gG-qJn" firstAttribute="leading" secondItem="Z4e-Cl-seX" secondAttribute="trailing" constant="8" id="9li-Jd-H27"/>
                                     <constraint firstItem="wl4-oe-oJ8" firstAttribute="trailing" secondItem="Z4e-Cl-seX" secondAttribute="trailing" constant="-17" id="AfU-Gh-msk"/>
+                                    <constraint firstAttribute="trailing" secondItem="nKy-vr-CSb" secondAttribute="trailing" constant="5" id="Bq0-F1-hlu"/>
+                                    <constraint firstItem="nKy-vr-CSb" firstAttribute="leading" secondItem="LqE-os-4h3" secondAttribute="leading" constant="5" id="DN6-1n-nmR"/>
+                                    <constraint firstItem="Zfk-86-Psp" firstAttribute="leading" secondItem="LqE-os-4h3" secondAttribute="leading" constant="10" id="Gsh-mS-pGg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zfk-86-Psp" secondAttribute="trailing" constant="10" id="Hgj-qw-5Z5"/>
                                     <constraint firstAttribute="trailing" secondItem="Qv9-gG-qJn" secondAttribute="trailing" constant="15" id="Im5-vK-62V"/>
                                     <constraint firstItem="Z4e-Cl-seX" firstAttribute="top" secondItem="LqE-os-4h3" secondAttribute="top" constant="24" id="Mpx-Px-fJf"/>
                                     <constraint firstItem="wl4-oe-oJ8" firstAttribute="top" secondItem="Z4e-Cl-seX" secondAttribute="bottom" constant="18" id="Rzq-dd-Hlu"/>
-                                    <constraint firstItem="OqB-fm-LLv" firstAttribute="centerX" secondItem="YNO-jP-V20" secondAttribute="centerX" id="Xu2-Vg-hdK"/>
-                                    <constraint firstItem="OqB-fm-LLv" firstAttribute="centerY" secondItem="YNO-jP-V20" secondAttribute="centerY" id="YxK-1K-PZO"/>
+                                    <constraint firstAttribute="trailing" secondItem="2vo-M7-tMI" secondAttribute="trailing" constant="5" id="Ucg-FI-5vS"/>
+                                    <constraint firstItem="2vo-M7-tMI" firstAttribute="leading" secondItem="LqE-os-4h3" secondAttribute="leading" constant="5" id="XNc-va-506"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zfk-86-Psp" secondAttribute="bottom" constant="10" id="XWB-sa-IeC"/>
+                                    <constraint firstItem="OqB-fm-LLv" firstAttribute="trailing" secondItem="YNO-jP-V20" secondAttribute="trailing" id="Z7z-ni-xDW"/>
+                                    <constraint firstItem="OqB-fm-LLv" firstAttribute="top" secondItem="YNO-jP-V20" secondAttribute="top" id="aN1-7E-O9F"/>
                                     <constraint firstItem="Qv9-gG-qJn" firstAttribute="top" secondItem="LqE-os-4h3" secondAttribute="top" constant="27" id="hR2-KR-Ubg"/>
                                     <constraint firstItem="Z4e-Cl-seX" firstAttribute="leading" secondItem="LqE-os-4h3" secondAttribute="leading" constant="8" id="iSE-Hp-jmK"/>
                                     <constraint firstItem="wl4-oe-oJ8" firstAttribute="leading" secondItem="Z4e-Cl-seX" secondAttribute="leading" id="kmt-jl-c2k"/>
+                                    <constraint firstItem="2vo-M7-tMI" firstAttribute="top" secondItem="wl4-oe-oJ8" secondAttribute="bottom" constant="5" id="m09-rb-FTa"/>
                                     <constraint firstItem="Qv9-gG-qJn" firstAttribute="centerY" secondItem="Z4e-Cl-seX" secondAttribute="centerY" id="nkC-LU-Rp1"/>
                                     <constraint firstItem="YNO-jP-V20" firstAttribute="centerY" secondItem="wl4-oe-oJ8" secondAttribute="centerY" constant="-3" id="sXX-5O-qMk"/>
                                     <constraint firstItem="YNO-jP-V20" firstAttribute="top" secondItem="Qv9-gG-qJn" secondAttribute="bottom" constant="21" id="t1Q-VV-YFA"/>
-                                    <constraint firstAttribute="height" constant="163" id="wch-RT-Mul"/>
+                                    <constraint firstAttribute="height" constant="300" id="wch-RT-Mul"/>
+                                    <constraint firstItem="nKy-vr-CSb" firstAttribute="top" secondItem="2vo-M7-tMI" secondAttribute="bottom" constant="15" id="z88-fF-zpG"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -103,6 +207,7 @@
                         <outlet property="AddButton" destination="OqB-fm-LLv" id="ahQ-Ty-UmW"/>
                         <outlet property="AddImage" destination="YNO-jP-V20" id="AK2-CW-l15"/>
                         <outlet property="CustomView" destination="LqE-os-4h3" id="3C6-Fk-f0X"/>
+                        <outlet property="addwallet" destination="wch-RT-Mul" id="rzH-Cf-x0E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vie-gL-S9v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
