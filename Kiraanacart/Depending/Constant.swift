@@ -18,6 +18,8 @@ struct Constants
    static let BaseUrl_Apps = "https://appstore.jioboomer.dev/v1/"
 
     
+    static let kBasrUrl = "https://maps.googleapis.com/maps/api/place/autocomplete/json?"
+    static let kGooglePlacesAPIKey = "AIzaSyBNTFrf0CqZ-h4_GARYM3Nolqe6Cys5eK8"
     
      static let BM_Gradient_1 = UIColor(red:35.0/255.0 , green:194.0/255.0 , blue:199.0/255.0 , alpha: 1)
     
@@ -35,6 +37,7 @@ struct Constants
       static let BL_lightLineColor = UIColor(red:170.0/255.0 , green:170.0/255.0 , blue:170.0/255.0 , alpha: 0.1)
     
     
+      static let BL_lighgreyColor = UIColor(red:243.0/255.0 , green:243.0/255.0 , blue:248.0/255.0 , alpha: 0.1)
    
     
     //*****************************

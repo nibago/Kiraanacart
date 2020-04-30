@@ -141,13 +141,13 @@ class OtpViewController: UIViewController,UITextFieldDelegate {
         {
             
             prefs.set(1, forKey: "ISLOGGEDIN")
-
-        
             let storyBoard : UIStoryboard = UIStoryboard(name: "SelectLocationStoryboard", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SelectLocationViewController") as! SelectLocationViewController
             self.navigationController?.show(nextViewController, sender: nil)
             self.prefs.synchronize()
             
+            
+        } else {
             
         }
         

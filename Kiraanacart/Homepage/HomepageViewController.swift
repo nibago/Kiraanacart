@@ -11,7 +11,7 @@ import CoreLocation
 
 
 
-class HomepageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
+class HomepageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UITextFieldDelegate  {
     
     @IBOutlet weak var selfpickupButton: UIButton!
     @IBOutlet weak var DeliveryButton: UIButton!
@@ -160,6 +160,11 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     
     
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -236,6 +241,37 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as? CustomListCollectionViewCell1
             {
                 
+//                cell.contentView.layer.cornerRadius = 2.0
+//                    cell.contentView.layer.borderWidth = 1.0
+//                    cell.contentView.layer.borderColor = UIColor.clear.cgColor
+//                    cell.contentView.layer.masksToBounds = true
+//
+//                    cell.layer.backgroundColor = UIColor.white.cgColor
+//                    cell.layer.shadowColor = UIColor.gray.cgColor
+//                    cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)//CGSizeMake(0, 2.0);
+//                    cell.layer.shadowRadius = 2.0
+//                    cell.layer.shadowOpacity = 1.0
+//                    cell.layer.masksToBounds = false
+//                    cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+//
+                
+                
+          
+                cell.contentView.layer.cornerRadius = 10.0
+                   cell.contentView.layer.borderWidth = 1.0
+                   cell.contentView.layer.borderColor = UIColor.clear.cgColor
+                   cell.contentView.layer.masksToBounds = true;
+
+                cell.layer.shadowColor = UIColor(red:243/255, green: 243/255, blue: 248/255, alpha: 1).cgColor
+                   cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
+                   cell.layer.shadowRadius = 2.0
+                   cell.layer.shadowOpacity = 1.0
+                   cell.layer.masksToBounds = false;
+                   cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+
+                
+                
+                 //cell.backgroundColor = .white
                 let randomNumber = Int(arc4random_uniform(UInt32(imageArraytitle.count)))
                 cell.itemImage1.image = UIImage(named: imageArray[indexPath.row])
                 //    let image = imageArray[indexPath.row]

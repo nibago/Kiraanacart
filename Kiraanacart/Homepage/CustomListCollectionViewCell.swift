@@ -24,6 +24,7 @@ class CustomListCollectionViewCell1: UICollectionViewCell {
     @IBOutlet weak var itemImage1: UIImageView!
     @IBOutlet weak var ItemNameLabel: UILabel!
 
-    
+ 
+
     
 }
