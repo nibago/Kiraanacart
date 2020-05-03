@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreTelephony
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    let reachability = Reachability.init()
     var window: UIWindow?
     
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
     
+//        AIzaSyBaOTf-MOONWa43LBipkWbhbS44G6WsK2E
+        GMSServices.provideAPIKey("AIzaSyBaOTf-MOONWa43LBipkWbhbS44G6WsK2E")
+      
+        
+//        GMSServices.provideAPIKey("AIzaSyBYiWOXlewqvsbCPNGqCCHk2Dzm7TMLc1E")
+        
+//        let GoogleApiKey = "AIzaSyBYiWOXlewqvsbCPNGqCCHk2Dzm7TMLc1E"
+          
+        
+//        GMSServices.provideAPIKey("AIzaSyBNTFrf0CqZ-h4_GARYM3Nolqe6Cys5eK8")
+        
         
         // Setup the Network Info and create a CTCarrier object
               let networkInfo = CTTelephonyNetworkInfo()

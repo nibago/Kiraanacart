@@ -68,6 +68,9 @@
 		943A3F27244B028800E2B6FC /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A3F26244B028800E2B6FC /* ChangePasswordViewController.swift */; };
 		943A3F2A244B089200E2B6FC /* PrivacyStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943A3F29244B089200E2B6FC /* PrivacyStoryboard.storyboard */; };
 		943A3F2C244B08A200E2B6FC /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A3F2B244B08A200E2B6FC /* PrivacyViewController.swift */; };
+		94431627245C3B6700903AC2 /* PickupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94431626245C3B6700903AC2 /* PickupTableViewCell.swift */; };
+		94431629245C3BD800903AC2 /* PickupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94431628245C3BD800903AC2 /* PickupViewController.swift */; };
+		9443162B245C3C3400903AC2 /* StoreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9443162A245C3C3400903AC2 /* StoreListViewController.swift */; };
 		944B09CB244C9875002A8AC3 /* ManageAddressStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944B09CA244C9875002A8AC3 /* ManageAddressStoryboard.storyboard */; };
 		944B09CD244C9886002A8AC3 /* ManageAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944B09CC244C9886002A8AC3 /* ManageAddressViewController.swift */; };
 		944B2044244C3C7E00A4BCEE /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944B2043244C3C7E00A4BCEE /* HomepageViewController.swift */; };
@@ -204,6 +207,9 @@
 		943A3F26244B028800E2B6FC /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		943A3F29244B089200E2B6FC /* PrivacyStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyStoryboard.storyboard; sourceTree = "<group>"; };
 		943A3F2B244B08A200E2B6FC /* PrivacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		94431626245C3B6700903AC2 /* PickupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupTableViewCell.swift; sourceTree = "<group>"; };
+		94431628245C3BD800903AC2 /* PickupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupViewController.swift; sourceTree = "<group>"; };
+		9443162A245C3C3400903AC2 /* StoreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewController.swift; sourceTree = "<group>"; };
 		944B09CA244C9875002A8AC3 /* ManageAddressStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ManageAddressStoryboard.storyboard; sourceTree = "<group>"; };
 		944B09CC244C9886002A8AC3 /* ManageAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAddressViewController.swift; sourceTree = "<group>"; };
 		944B2043244C3C7E00A4BCEE /* HomepageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
@@ -614,6 +620,9 @@
 			isa = PBXGroup;
 			children = (
 				944D36CF24419320003D73EA /* ListOfStoresStoryboard.storyboard */,
+				94431626245C3B6700903AC2 /* PickupTableViewCell.swift */,
+				9443162A245C3C3400903AC2 /* StoreListViewController.swift */,
+				94431628245C3BD800903AC2 /* PickupViewController.swift */,
 				944D36D124419347003D73EA /* ListOfStoresViewController.swift */,
 				944D36D42441A652003D73EA /* CustomTableViewCell.swift */,
 			);
@@ -820,6 +829,7 @@
 				1858E095243AF81800FC403E /* Frameworks */,
 				1858E096243AF81800FC403E /* Resources */,
 				21D1E58A48DA6B8FEB410C20 /* [CP] Embed Pods Frameworks */,
+				B6D00B709C7DE8B054997FB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -922,6 +932,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kiraanacart/Pods-Kiraanacart-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B6D00B709C7DE8B054997FB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiraanacart/Pods-Kiraanacart-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kiraanacart/Pods-Kiraanacart-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kiraanacart/Pods-Kiraanacart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE66072312A8BF33BC76A328 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -981,12 +1008,14 @@
 				94862A0A2450104A00F3BB06 /* Constant.swift in Sources */,
 				94F51E65244080C500AC8169 /* TabBarViewController.swift in Sources */,
 				94DA6B6124583F6F0028997B /* BottomPopupTransitionHandler.swift in Sources */,
+				94431627245C3B6700903AC2 /* PickupTableViewCell.swift in Sources */,
 				94986EB824443D6F004F7A80 /* userinfoTableViewController.swift in Sources */,
 				94DA6B5E24583F6F0028997B /* BottomPopupDismissInteractionController.swift in Sources */,
 				9420BEB82448373D00CAF4B6 /* ContactusViewController.swift in Sources */,
 				94E947E42451B03C00753699 /* shopbyprViewController.swift in Sources */,
 				94633E8624546BF4003E3CEE /* UnderLineView.swift in Sources */,
 				941D0EB9244EDC110027E6FC /* orderDetailsTableViewCell.swift in Sources */,
+				9443162B245C3C3400903AC2 /* StoreListViewController.swift in Sources */,
 				943A3F2C244B08A200E2B6FC /* PrivacyViewController.swift in Sources */,
 				944B2046244C521100A4BCEE /* CustomListCollectionViewCell.swift in Sources */,
 				946DE7782456BB9B0048618C /* ESPullToRefresh+Manager.swift in Sources */,
@@ -1000,6 +1029,7 @@
 				1858E09C243AF81800FC403E /* AppDelegate.swift in Sources */,
 				94DA6B4A245836BD0028997B /* Reachability.swift in Sources */,
 				940E1D4524457BB1009AB382 /* offers.swift in Sources */,
+				94431629245C3BD800903AC2 /* PickupViewController.swift in Sources */,
 				94DA6B4F245838E10028997B /* GSMessage.swift in Sources */,
 				9426B62F244DBF71008BF6D9 /* CuponsViewController.swift in Sources */,
 				946DE7742456BB9B0048618C /* ESRefreshFooterAnimator.swift in Sources */,
@@ -1215,7 +1245,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TYJ7GUDH48;
+				DEVELOPMENT_TEAM = DFQ66NBPQ5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

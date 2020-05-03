@@ -35,7 +35,7 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
         
         
         let button2 = UIButton(type: .custom)
-        button2.tintColor = .systemGreen
+        button2.tintColor = .black
         button2.widthAnchor.constraint(equalToConstant: 32.0).isActive = true
         button2.heightAnchor.constraint(equalToConstant: 32.0).isActive = true
         button2.setImage(UIImage (named: "cart-(-white-)-icon"), for: .normal)
@@ -93,10 +93,6 @@ class ManageAddressViewController: UIViewController,UITableViewDataSource,UITabl
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 119
     }
-    
-    
-    
-    
     
     
     @IBAction func CurrentLocationButtonclick(_ sender: UIButton) {

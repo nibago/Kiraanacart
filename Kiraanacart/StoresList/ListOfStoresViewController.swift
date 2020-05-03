@@ -72,6 +72,15 @@ class ListOfStoresViewController: UIViewController,UITableViewDelegate,UITableVi
     }
     
     
+    @IBAction func segmentedControlButtonClickAction(_ sender: UISegmentedControl) {
+       if sender.selectedSegmentIndex == 0 {
+          print("First Segment Select")
+       }
+       else {
+          print("Second Segment Select")
+       }
+    }
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {

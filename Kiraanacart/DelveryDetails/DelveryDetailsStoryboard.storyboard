@@ -68,7 +68,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7p2-Ej-6bm">
-                                                <rect key="frame" x="10" y="269" width="394" height="35"/>
+                                                <rect key="frame" x="10" y="301" width="394" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="qvS-Eg-HHL"/>
                                                 </constraints>
@@ -84,8 +84,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-8m-SuC">
-                                                <rect key="frame" x="20" y="326" width="374" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8K-8m-SuC">
+                                                <rect key="frame" x="10" y="384" width="394" height="35"/>
                                                 <state key="normal" title="primium express Delivery with in 120 mins RS 30.00">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -95,84 +95,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myr-6m-Twe">
-                                                <rect key="frame" x="10" y="381" width="192" height="48"/>
-                                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="mBr-2o-Fj2"/>
-                                                </constraints>
-                                                <state key="normal" title="Today Slot">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRQ-fz-XhX">
-                                                <rect key="frame" x="212" y="381" width="192" height="48"/>
-                                                <color key="backgroundColor" red="0.0" green="0.34901960780000002" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="48" id="H4h-zz-lUQ"/>
-                                                </constraints>
-                                                <state key="normal" title="Tomorrow slot">
-                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjs-2x-H3m">
-                                                <rect key="frame" x="20" y="449" width="374" height="45"/>
-                                                <color key="backgroundColor" white="0.83260202628904101" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="6jD-gI-JaH"/>
-                                                </constraints>
-                                                <state key="normal" title="8 AM to 10 PM">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cau-Bl-ONh">
-                                                <rect key="frame" x="20" y="504" width="374" height="45"/>
-                                                <color key="backgroundColor" white="0.83260202630000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="x6b-p7-qEX"/>
-                                                </constraints>
-                                                <state key="normal" title="8 Am to 10 PM">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <state key="highlighted" title="11 AM to 01 PM">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlT-mo-pt2">
-                                                <rect key="frame" x="20" y="559" width="374" height="45"/>
-                                                <color key="backgroundColor" white="0.83260202630000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="3e5-qi-VrK"/>
-                                                </constraints>
-                                                <state key="normal" title="02 AM to 05 PM">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -192,68 +114,31 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Y-5G-Ea4">
-                                                <rect key="frame" x="20" y="614" width="374" height="45"/>
-                                                <color key="backgroundColor" white="0.83260202630000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Nga-9p-jfn"/>
-                                                </constraints>
-                                                <state key="normal" title="05AM to 08 PM">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <state key="highlighted">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="Cau-Bl-ONh" firstAttribute="leading" secondItem="Yjs-2x-H3m" secondAttribute="leading" id="3du-eJ-nnt"/>
                                             <constraint firstItem="xwa-rU-AEv" firstAttribute="leading" secondItem="93T-rz-mm2" secondAttribute="trailing" constant="11" id="3h7-ZP-qLW"/>
-                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="trailing" secondItem="7p2-Ej-6bm" secondAttribute="trailing" constant="-21" id="3o8-jA-xpD"/>
-                                            <constraint firstItem="Cau-Bl-ONh" firstAttribute="top" secondItem="Yjs-2x-H3m" secondAttribute="bottom" constant="10" id="4sp-jg-cUc"/>
+                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="trailing" secondItem="7p2-Ej-6bm" secondAttribute="trailing" id="3o8-jA-xpD"/>
                                             <constraint firstItem="93T-rz-mm2" firstAttribute="top" secondItem="kZl-uc-S0X" secondAttribute="bottom" constant="35" id="7h7-Jd-2Xa"/>
                                             <constraint firstItem="7p2-Ej-6bm" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="10" id="89Y-Yy-eYn"/>
                                             <constraint firstItem="xwa-rU-AEv" firstAttribute="top" secondItem="kZl-uc-S0X" secondAttribute="bottom" constant="146" id="8Xx-dV-N9u"/>
-                                            <constraint firstAttribute="trailing" secondItem="Yjs-2x-H3m" secondAttribute="trailing" constant="20" id="8a2-ln-FLe"/>
                                             <constraint firstAttribute="trailing" secondItem="7p2-Ej-6bm" secondAttribute="trailing" constant="10" id="8hv-aR-3Cw"/>
-                                            <constraint firstItem="22Y-5G-Ea4" firstAttribute="trailing" secondItem="BlT-mo-pt2" secondAttribute="trailing" id="AEZ-Zl-JwL"/>
-                                            <constraint firstItem="BlT-mo-pt2" firstAttribute="leading" secondItem="Cau-Bl-ONh" secondAttribute="leading" id="B6B-ue-GeE"/>
                                             <constraint firstItem="cl3-gx-T8o" firstAttribute="top" secondItem="Oer-DR-1Rr" secondAttribute="top" constant="30" id="BUf-Vy-oTt"/>
-                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="top" secondItem="7p2-Ej-6bm" secondAttribute="bottom" constant="22" id="FPU-Wg-0dR"/>
-                                            <constraint firstItem="BlT-mo-pt2" firstAttribute="trailing" secondItem="Cau-Bl-ONh" secondAttribute="trailing" id="GfY-wD-cpk"/>
+                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="top" secondItem="7p2-Ej-6bm" secondAttribute="bottom" constant="48" id="FPU-Wg-0dR"/>
                                             <constraint firstItem="cl3-gx-T8o" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="8" id="Ji6-hL-kbp"/>
                                             <constraint firstItem="93T-rz-mm2" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="5" id="KcI-DK-UdJ"/>
-                                            <constraint firstItem="sRQ-fz-XhX" firstAttribute="leading" secondItem="Myr-6m-Twe" secondAttribute="trailing" constant="10" id="P16-0S-PTe"/>
-                                            <constraint firstItem="22Y-5G-Ea4" firstAttribute="top" secondItem="BlT-mo-pt2" secondAttribute="bottom" constant="10" id="QlC-Zw-W1C"/>
                                             <constraint firstItem="6su-yI-gIu" firstAttribute="centerY" secondItem="Oer-DR-1Rr" secondAttribute="centerY" multiplier="1.8" constant="39.399999999999977" id="S5h-b5-zC3"/>
-                                            <constraint firstItem="Myr-6m-Twe" firstAttribute="top" secondItem="P8K-8m-SuC" secondAttribute="bottom" constant="20" id="STf-Xh-zvD"/>
                                             <constraint firstItem="kZl-uc-S0X" firstAttribute="leading" secondItem="cl3-gx-T8o" secondAttribute="trailing" constant="8" id="Sj7-YE-mc8"/>
-                                            <constraint firstItem="Yjs-2x-H3m" firstAttribute="top" secondItem="Myr-6m-Twe" secondAttribute="bottom" constant="20" id="VkM-Tv-7CX"/>
-                                            <constraint firstItem="Myr-6m-Twe" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="10" id="bQd-Bq-UO7"/>
                                             <constraint firstItem="kZl-uc-S0X" firstAttribute="centerY" secondItem="cl3-gx-T8o" secondAttribute="centerY" id="cPX-97-Tga"/>
                                             <constraint firstAttribute="trailing" secondItem="xwa-rU-AEv" secondAttribute="trailing" constant="5" id="cWA-gZ-Ee0"/>
-                                            <constraint firstItem="Cau-Bl-ONh" firstAttribute="trailing" secondItem="Yjs-2x-H3m" secondAttribute="trailing" id="czL-Xr-dEj"/>
-                                            <constraint firstItem="sRQ-fz-XhX" firstAttribute="top" secondItem="P8K-8m-SuC" secondAttribute="bottom" constant="20" id="gAD-gm-u2y"/>
                                             <constraint firstAttribute="trailing" secondItem="kZl-uc-S0X" secondAttribute="trailing" id="lUB-GG-kJS"/>
                                             <constraint firstItem="kZl-uc-S0X" firstAttribute="top" secondItem="Oer-DR-1Rr" secondAttribute="top" constant="30" id="m4c-oA-O4n"/>
                                             <constraint firstItem="6su-yI-gIu" firstAttribute="centerX" secondItem="Oer-DR-1Rr" secondAttribute="centerX" id="mQo-DX-c96"/>
-                                            <constraint firstItem="BlT-mo-pt2" firstAttribute="top" secondItem="Cau-Bl-ONh" secondAttribute="bottom" constant="10" id="mVR-Bh-O8v"/>
-                                            <constraint firstItem="sRQ-fz-XhX" firstAttribute="height" secondItem="Myr-6m-Twe" secondAttribute="height" id="nsU-fc-cDy"/>
-                                            <constraint firstAttribute="trailing" secondItem="sRQ-fz-XhX" secondAttribute="trailing" constant="10" id="rph-NM-BjQ"/>
-                                            <constraint firstItem="22Y-5G-Ea4" firstAttribute="leading" secondItem="BlT-mo-pt2" secondAttribute="leading" id="tO8-Gk-Gby"/>
-                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="leading" secondItem="7p2-Ej-6bm" secondAttribute="leading" constant="19" id="tfJ-EM-yiU"/>
-                                            <constraint firstItem="Yjs-2x-H3m" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="20" id="uRa-fk-LoW"/>
+                                            <constraint firstItem="P8K-8m-SuC" firstAttribute="leading" secondItem="7p2-Ej-6bm" secondAttribute="leading" id="tfJ-EM-yiU"/>
                                             <constraint firstAttribute="trailing" secondItem="6su-yI-gIu" secondAttribute="trailing" constant="10" id="vZF-We-2ur"/>
                                             <constraint firstItem="6su-yI-gIu" firstAttribute="leading" secondItem="Oer-DR-1Rr" secondAttribute="leading" constant="10" id="y9g-e8-b9w"/>
                                             <constraint firstItem="P8K-8m-SuC" firstAttribute="height" secondItem="7p2-Ej-6bm" secondAttribute="height" id="ygI-F3-swO"/>
-                                            <constraint firstItem="sRQ-fz-XhX" firstAttribute="width" secondItem="Myr-6m-Twe" secondAttribute="width" id="zug-XD-7x7"/>
-                                            <constraint firstItem="7p2-Ej-6bm" firstAttribute="top" secondItem="93T-rz-mm2" secondAttribute="bottom" constant="20" id="zx8-VI-1ye"/>
+                                            <constraint firstItem="7p2-Ej-6bm" firstAttribute="top" secondItem="93T-rz-mm2" secondAttribute="bottom" constant="52" id="zx8-VI-1ye"/>
                                         </constraints>
                                     </view>
                                 </subviews>

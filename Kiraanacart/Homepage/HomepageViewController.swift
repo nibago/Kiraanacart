@@ -241,23 +241,12 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as? CustomListCollectionViewCell1
             {
                 
-//                cell.contentView.layer.cornerRadius = 2.0
-//                    cell.contentView.layer.borderWidth = 1.0
-//                    cell.contentView.layer.borderColor = UIColor.clear.cgColor
-//                    cell.contentView.layer.masksToBounds = true
-//
-//                    cell.layer.backgroundColor = UIColor.white.cgColor
-//                    cell.layer.shadowColor = UIColor.gray.cgColor
-//                    cell.layer.shadowOffset = CGSize(width: 0, height: 2.0)//CGSizeMake(0, 2.0);
-//                    cell.layer.shadowRadius = 2.0
-//                    cell.layer.shadowOpacity = 1.0
-//                    cell.layer.masksToBounds = false
-//                    cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
-//
+                cell.itemImage1.layer.cornerRadius =  cell.itemImage1.frame.height/2
+
+                cell.itemImage1.layer.masksToBounds = true
                 
                 
-          
-                cell.contentView.layer.cornerRadius = 10.0
+                   cell.contentView.layer.cornerRadius = 10.0
                    cell.contentView.layer.borderWidth = 1.0
                    cell.contentView.layer.borderColor = UIColor.clear.cgColor
                    cell.contentView.layer.masksToBounds = true;
@@ -294,20 +283,20 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
             
             if indexPath.row == 0{
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StoreListViewController") as! StoreListViewController
                 self.navigationController?.show(nextViewController, sender: nil)
                 
             }else if indexPath.row == 1
             {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StoreListViewController") as! StoreListViewController
                 self.navigationController?.show(nextViewController, sender: nil)
             } else {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "ListOfStoresStoryboard", bundle:nil)
                 
                 
                 
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ListOfStoresViewController") as! ListOfStoresViewController
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "StoreListViewController") as! StoreListViewController
                 self.navigationController?.show(nextViewController, sender: nil)
             }
             
@@ -350,9 +339,6 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
     }
     
     
-    
-    
-    
     @IBAction func Selfpickup(_ sender: UIButton) {
         
         DeliveryButton.backgroundColor = .clear
@@ -368,14 +354,8 @@ class HomepageViewController: UIViewController,UICollectionViewDelegate, UIColle
         //DeliveryButton.backgroundColor = KCFonts.BM_White
         print("this click")
     }
-    
-    
-    
+   
 }
-
-
-
-
 
 extension HomepageViewController: BottomPopupDelegate {
     
